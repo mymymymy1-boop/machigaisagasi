@@ -1,0 +1,114 @@
+{
+  "differences": [
+    {
+      "id": "d1",
+      "kind": "color",
+      "description": "髪飾りの色変更",
+      "hitbox": [
+        510,
+        670,
+        40,
+        40
+      ]
+    },
+    {
+      "id": "d2",
+      "kind": "pattern",
+      "description": "ネクタイの模様変更",
+      "hitbox": [
+        300,
+        400,
+        40,
+        80
+      ]
+    },
+    {
+      "id": "d3",
+      "kind": "count",
+      "description": "もみじの葉の数変更",
+      "hitbox": [
+        600,
+        900,
+        60,
+        60
+      ]
+    },
+    {
+      "id": "d4",
+      "kind": "count",
+      "description": "絵馬の数変更",
+      "hitbox": [
+        850,
+        300,
+        100,
+        200
+      ]
+    },
+    {
+      "id": "d5",
+      "kind": "count",
+      "description": "提灯の数変更",
+      "hitbox": [
+        700,
+        500,
+        40,
+        80
+      ]
+    },
+    {
+      "id": "d6",
+      "kind": "position",
+      "description": "狛犬の口の開閉変更",
+      "hitbox": [
+        500,
+        500,
+        60,
+        60
+      ]
+    },
+    {
+      "id": "d7",
+      "kind": "color",
+      "description": "祖母の着物の色変更",
+      "hitbox": [
+        700,
+        800,
+        80,
+        120
+      ]
+    },
+    {
+      "id": "d8",
+      "kind": "count",
+      "description": "銀杏の木の数変更",
+      "hitbox": [
+        900,
+        200,
+        80,
+        160
+      ]
+    },
+    {
+      "id": "d9",
+      "kind": "count",
+      "description": "鳩の数変更",
+      "hitbox": [
+        200,
+        1200,
+        100,
+        60
+      ]
+    },
+    {
+      "id": "d10",
+      "kind": "count",
+      "description": "雲の数変更",
+      "hitbox": [
+        200,
+        100,
+        120,
+        60
+      ]
+    }
+  ]
+}

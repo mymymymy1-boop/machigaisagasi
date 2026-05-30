@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>プレイ可能テスト: Mode A + Mode B</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #FFF9E6; color: #333; font-family: "Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",system-ui,sans-serif; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; overscroll-behavior: none; }
+  header { position: sticky; top: 0; background: #FFEB99; padding: 10px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); z-index: 10; padding-top: calc(10px + env(safe-area-inset-top)); }
+  .hd-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .hd-title { font-size: 16px; font-weight: 700; }
+  .hd-progress { font-size: 14px; background: #fff3c4; border-radius: 999px; padding: 4px 12px; color: #b8530a; font-weight: 700; }
+  .mode-tabs { display: flex; gap: 8px; margin-top: 8px; }
+  .tab { flex: 1; padding: 10px; border: none; border-radius: 14px; background: #fff; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 700; color: #5a4a1a; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+  .tab.active { background: #FFD66A; color: #4a3a0e; }
+  main { padding: 12px; max-width: 1100px; margin: 0 auto; padding-bottom: 80px; }
+  .mode-a-row { display: flex; gap: 8px; margin-bottom: 12px; }
+  .img-wrap { position: relative; flex: 1; min-width: 0; background: #fff; border-radius: 14px; padding: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); overflow: hidden; }
+  .img-wrap img, .img-wrap canvas { display: block; width: 100%; height: auto; border-radius: 10px; user-drag: none; -webkit-user-drag: none; pointer-events: none; }
+  .img-wrap .found-svg { position: absolute; top: 4px; left: 4px; width: calc(100% - 8px); height: calc(100% - 8px); pointer-events: none; }
+  .img-wrap.tappable { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+  .mode-b-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 12px; }
+  .mode-b-cell { background: #fff; border-radius: 10px; padding: 3px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); position: relative; touch-action: manipulation; }
+  .mode-b-cell.cleared { background: #B5E48C; }
+  .mode-b-cell canvas { display: block; width: 100%; height: auto; border-radius: 8px; pointer-events: none; }
+  .mode-b-cell .num { position: absolute; top: 4px; left: 4px; background: #FFD66A; color: #4a3a0e; border-radius: 999px; width: 22px; height: 22px; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; z-index: 2; }
+  .mode-b-cell.cleared .num { background: #6BCB77; color: #fff; }
+  .mode-b-cell .check { position: absolute; top: 6px; right: 6px; font-size: 18px; color: #fff; background: #6BCB77; border-radius: 50%; width: 24px; height: 24px; display: none; align-items: center; justify-content: center; z-index: 2; }
+  .mode-b-cell.cleared .check { display: flex; }
+  .bubble { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #fff; border: 2px solid #FFD66A; border-radius: 16px; padding: 10px 18px; font-size: 14px; font-weight: 700; color: #4a3a0e; box-shadow: 0 4px 12px rgba(0,0,0,0.1); opacity: 0; transition: opacity 200ms, transform 200ms; pointer-events: none; z-index: 100; }
+  .bubble.show { opacity: 1; transform: translateX(-50%) translateY(-4px); }
+  .modal { position: fixed; inset: 0; background: rgba(255, 249, 230, 0.94); display: none; align-items: center; justify-content: center; z-index: 200; padding: 24px; }
+  .modal.show { display: flex; }
+  .modal-card { background: #fff; border-radius: 24px; padding: 28px 24px; max-width: 360px; width: 100%; text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+  .modal-card h2 { margin: 0 0 12px; font-size: 22px; color: #4a3a0e; }
+  .modal-card .stars { font-size: 36px; margin: 8px 0; }
+  .modal-card button { margin: 8px 4px; padding: 12px 22px; border: none; border-radius: 999px; background: #FFD66A; color: #4a3a0e; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer; touch-action: manipulation; }
+  @media (max-width: 720px) {
+    .mode-b-grid { grid-template-columns: repeat(3, 1fr); }
+    .mode-b-cell:nth-child(4) { grid-column: 1 / span 1; }
+    .mode-b-cell:nth-child(5) { grid-column: 2 / span 1; }
+  }
+  @media (max-width: 380px) {
+    .mode-b-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hd-row">
+    <div class="hd-title" id="hd-title">まちがいさがし</div>
+    <div class="hd-progress" id="hd-progress">0 / 10</div>
+  </div>
+  <div class="mode-tabs">
+    <button class="tab active" id="tab-a" data-mode="A">2まいの まちがい (10こ)</button>
+    <button class="tab" id="tab-b" data-mode="B">5まいの ちがい (5こ)</button>
+  </div>
+</header>
+
+<main>
+  <!-- MODE A -->
+  <section id="mode-a-section">
+    <div class="mode-a-row">
+      <div class="img-wrap tappable" id="wrap-a-left">
+        <img id="img-a-left" alt="ひだり">
+        <svg class="found-svg" id="svg-a-left" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+      <div class="img-wrap tappable" id="wrap-a-right">
+        <img id="img-a-right" alt="みぎ">
+        <svg class="found-svg" id="svg-a-right" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODE B -->
+  <section id="mode-b-section" style="display:none">
+    <div class="mode-b-grid" id="mode-b-grid"></div>
+  </section>
+</main>
+
+<div class="bubble" id="bubble"></div>
+
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <h2 id="modal-title">よく できたね！</h2>
+    <div class="stars" id="modal-stars">⭐⭐⭐</div>
+    <p id="modal-text" style="margin: 12px 0;"></p>
+    <button id="modal-again">もういちど</button>
+    <button id="modal-other">べつの モード</button>
+  </div>
+</div>
+
+<script>
+(async () => {
+  const IMG_W = 1024, IMG_H = 1536;
+
+  // Load all data
+  const [hbResp, ovResp] = await Promise.all([
+    fetch('data/pilot/modeA-hitboxes.json').then(r => r.json()),
+    fetch('data/pilot/modeB-overlays.json').then(r => r.json()),
+  ]);
+  const modeAData = { hitboxes: hbResp.differences, found: new Set() };
+  const modeBData = { overlays: ovResp.variants, cleared: new Set() };
+  const baseAImg = new Image();
+  const variantAImg = new Image();
+  const baseBImg = new Image();
+
+  function loadImg(im, src) { return new Promise(res => { im.onload = res; im.src = src; }); }
+  await Promise.all([
+    loadImg(baseAImg, 'data/pilot/modeA-base.png'),
+    loadImg(variantAImg, 'data/pilot/modeA-variant.png'),
+    loadImg(baseBImg, 'data/pilot/modeB-base.png'),
+  ]);
+
+  // Setup mode A images
+  document.getElementById('img-a-left').src = baseAImg.src;
+  document.getElementById('img-a-right').src = variantAImg.src;
+
+  // ============== Mode A ==============
+  function hookModeA() {
+    const HIT_TOL = 30;
+    function onTap(ev) {
+      ev.preventDefault();
+      const wrap = ev.currentTarget;
+      const img = wrap.querySelector('img');
+      const rect = img.getBoundingClientRect();
+      const cx = ev.clientX - rect.left;
+      const cy = ev.clientY - rect.top;
+      // Convert to image-internal coords
+      const sx = (cx / rect.width) * IMG_W;
+      const sy = (cy / rect.height) * IMG_H;
+      // Find first unfound hitbox containing (sx, sy)
+      for (let i = 0; i < modeAData.hitboxes.length; i++) {
+        if (modeAData.found.has(i)) continue;
+        const [bx, by, bw, bh] = modeAData.hitboxes[i].hitbox;
+        if (sx >= bx - HIT_TOL && sx <= bx + bw + HIT_TOL
+            && sy >= by - HIT_TOL && sy <= by + bh + HIT_TOL) {
+          markFoundA(i);
+          return;
+        }
+      }
+      // miss
+      showBubble('もういちど みてみよう');
+    }
+    document.getElementById('wrap-a-left').addEventListener('pointerdown', onTap);
+    document.getElementById('wrap-a-right').addEventListener('pointerdown', onTap);
+  }
+
+  function markFoundA(idx) {
+    modeAData.found.add(idx);
+    const hb = modeAData.hitboxes[idx];
+    const [bx, by, bw, bh] = hb.hitbox;
+    const ccx = bx + bw/2;
+    const ccy = by + bh/2;
+    const r = Math.max(bw, bh) / 2 + 12;
+    drawFoundCircle('svg-a-left', ccx, ccy, r);
+    drawFoundCircle('svg-a-right', ccx, ccy, r);
+    showBubble('みつけたね！');
+    updateProgressA();
+    if (modeAData.found.size >= modeAData.hitboxes.length) {
+      setTimeout(() => showModal('A'), 600);
+    }
+  }
+
+  function drawFoundCircle(svgId, cx, cy, r) {
+    const svg = document.getElementById(svgId);
+    const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c.setAttribute('cx', cx); c.setAttribute('cy', cy); c.setAttribute('r', r);
+    c.setAttribute('fill', 'none'); c.setAttribute('stroke', '#FF6B6B');
+    c.setAttribute('stroke-width', 8); c.setAttribute('opacity', '0.9');
+    svg.appendChild(c);
+  }
+
+  function updateProgressA() {
+    document.getElementById('hd-progress').textContent =
+      modeAData.found.size + ' / ' + modeAData.hitboxes.length;
+  }
+
+  // ============== Mode B ==============
+  function renderModeB() {
+    const grid = document.getElementById('mode-b-grid');
+    grid.innerHTML = '';
+    modeBData.overlays.forEach((ov, idx) => {
+      const cell = document.createElement('div');
+      cell.className = 'mode-b-cell';
+      cell.dataset.idx = idx;
+      cell.innerHTML = `<div class="num">${idx+1}</div><div class="check">✓</div>`;
+      const canvas = document.createElement('canvas');
+      canvas.width = IMG_W; canvas.height = IMG_H;
+      cell.appendChild(canvas);
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(baseBImg, 0, 0, IMG_W, IMG_H);
+      drawOverlay(ctx, ov);
+      cell.addEventListener('pointerdown', (ev) => onTapB(ev, idx, canvas));
+      grid.appendChild(cell);
+    });
+    updateProgressB();
+  }
+
+  function drawOverlay(ctx, ov) {
+    const [x, y, w, h] = ov.hitbox;
+    const cx = x + w/2, cy = y + h/2;
+    if (ov.kind === 'cover-rect') {
+      ctx.fillStyle = ov.params.fill;
+      ctx.fillRect(x, y, w, h);
+    } else if (ov.kind === 'shape-add') {
+      if (ov.params.shape === 'flower') {
+        drawFlower(ctx, cx, cy, ov.params.size, ov.params.color);
+      } else if (ov.params.shape === 'butterfly') {
+        drawButterfly(ctx, cx, cy, ov.params.size, ov.params.color);
+      }
+    }
+  }
+
+  function drawFlower(ctx, cx, cy, size, color) {
+    const r = size * 0.18, dist = size * 0.28;
+    ctx.strokeStyle = '#333'; ctx.lineWidth = 3;
+    for (let i = 0; i < 5; i++) {
+      const a = i * 2*Math.PI/5 - Math.PI/2;
+      const px = cx + Math.cos(a) * dist;
+      const py = cy + Math.sin(a) * dist;
+      ctx.fillStyle = color;
+      ctx.beginPath(); ctx.arc(px, py, r, 0, 2*Math.PI); ctx.fill(); ctx.stroke();
+    }
+    ctx.fillStyle = '#FFD93D';
+    ctx.beginPath(); ctx.arc(cx, cy, size*0.16, 0, 2*Math.PI); ctx.fill(); ctx.stroke();
+  }
+
+  function drawButterfly(ctx, cx, cy, size, color) {
+    ctx.fillStyle = color;
+    ctx.strokeStyle = '#333'; ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.ellipse(cx - size*0.22, cy, size*0.28, size*0.38, -0.35, 0, 2*Math.PI);
+    ctx.fill(); ctx.stroke();
+    ctx.beginPath();
+    ctx.ellipse(cx + size*0.22, cy, size*0.28, size*0.38, 0.35, 0, 2*Math.PI);
+    ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#333';
+    ctx.beginPath();
+    ctx.ellipse(cx, cy, size*0.06, size*0.34, 0, 0, 2*Math.PI);
+    ctx.fill();
+    // antennae
+    ctx.strokeStyle = '#333'; ctx.lineWidth = 2; ctx.beginPath();
+    ctx.moveTo(cx - 4, cy - size*0.32); ctx.lineTo(cx - 14, cy - size*0.5);
+    ctx.moveTo(cx + 4, cy - size*0.32); ctx.lineTo(cx + 14, cy - size*0.5);
+    ctx.stroke();
+  }
+
+  function onTapB(ev, idx, canvas) {
+    ev.preventDefault();
+    if (modeBData.cleared.has(idx)) return;
+    const rect = canvas.getBoundingClientRect();
+    const cx = ev.clientX - rect.left;
+    const cy = ev.clientY - rect.top;
+    const sx = (cx / rect.width) * IMG_W;
+    const sy = (cy / rect.height) * IMG_H;
+    const HIT_TOL = 50;
+    const ov = modeBData.overlays[idx];
+    const [bx, by, bw, bh] = ov.hitbox;
+    if (sx >= bx - HIT_TOL && sx <= bx + bw + HIT_TOL
+        && sy >= by - HIT_TOL && sy <= by + bh + HIT_TOL) {
+      modeBData.cleared.add(idx);
+      const cell = document.querySelector(`.mode-b-cell[data-idx="${idx}"]`);
+      cell.classList.add('cleared');
+      showBubble('せいかい！');
+      updateProgressB();
+      if (modeBData.cleared.size >= modeBData.overlays.length) {
+        setTimeout(() => showModal('B'), 600);
+      }
+    } else {
+      showBubble('ちがう ばしょ かな');
+    }
+  }
+
+  function updateProgressB() {
+    document.getElementById('hd-progress').textContent =
+      modeBData.cleared.size + ' / ' + modeBData.overlays.length;
+  }
+
+  // ============== UI helpers ==============
+  let bubbleTimer = null;
+  function showBubble(text) {
+    const b = document.getElementById('bubble');
+    b.textContent = text;
+    b.classList.add('show');
+    clearTimeout(bubbleTimer);
+    bubbleTimer = setTimeout(() => b.classList.remove('show'), 1200);
+  }
+
+  function showModal(mode) {
+    const m = document.getElementById('modal');
+    document.getElementById('modal-title').textContent = 'ぜんぶ できたね！';
+    document.getElementById('modal-stars').textContent = '⭐⭐⭐';
+    document.getElementById('modal-text').textContent =
+      mode === 'A' ? '10こ ぜんぶ みつけたよ' : '5まい ぜんぶ みつけたよ';
+    m.classList.add('show');
+  }
+
+  document.getElementById('modal-again').addEventListener('pointerdown', () => {
+    document.getElementById('modal').classList.remove('show');
+    resetCurrentMode();
+  });
+  document.getElementById('modal-other').addEventListener('pointerdown', () => {
+    document.getElementById('modal').classList.remove('show');
+    toggleMode(currentMode === 'A' ? 'B' : 'A');
+  });
+
+  function resetCurrentMode() {
+    if (currentMode === 'A') {
+      modeAData.found.clear();
+      document.getElementById('svg-a-left').innerHTML = '';
+      document.getElementById('svg-a-right').innerHTML = '';
+      updateProgressA();
+    } else {
+      modeBData.cleared.clear();
+      renderModeB();
+    }
+  }
+
+  // ============== Mode switching ==============
+  let currentMode = 'A';
+  function toggleMode(mode) {
+    currentMode = mode;
+    document.getElementById('tab-a').classList.toggle('active', mode === 'A');
+    document.getElementById('tab-b').classList.toggle('active', mode === 'B');
+    document.getElementById('mode-a-section').style.display = mode === 'A' ? '' : 'none';
+    document.getElementById('mode-b-section').style.display = mode === 'B' ? '' : 'none';
+    document.getElementById('hd-title').textContent =
+      mode === 'A' ? '2まいで 10こ さがそう' : '5まい それぞれの ちがいを さがそう';
+    if (mode === 'A') updateProgressA(); else updateProgressB();
+  }
+  document.getElementById('tab-a').addEventListener('pointerdown', () => toggleMode('A'));
+  document.getElementById('tab-b').addEventListener('pointerdown', () => toggleMode('B'));
+
+  // Init
+  hookModeA();
+  renderModeB();
+  updateProgressA();
+})();
+</script>
+</body>
+</html>
