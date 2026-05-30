@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>プレビュー v2: 難関校レベル (5問テスト)</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #FFF9E6; color: #333; font-family: "Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",system-ui,sans-serif; }
+  header { position: sticky; top: 0; background: #FFEB99; padding: 16px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); z-index: 10; }
+  h1 { margin: 0; font-size: 20px; }
+  .sub { font-size: 13px; color: #5a4a1a; margin-top: 4px; }
+  main { padding: 20px 12px 80px; max-width: 1100px; margin: 0 auto; }
+  .problem { background: #fff; border-radius: 24px; padding: 16px; margin-bottom: 28px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+  .problem h2 { margin: 0 0 12px; font-size: 18px; color: #4a3a0e; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+  .pair > div { background: #FFF9E6; border-radius: 16px; padding: 6px; }
+  .pair img { display: block; width: 100%; height: auto; border-radius: 10px; }
+  .pair .label { font-size: 12px; color: #888; text-align: center; padding: 3px 0; }
+  .diffs { background: #FFFAE5; border-radius: 14px; padding: 10px 14px; font-size: 13px; color: #5a4a1a; }
+  .diffs summary { cursor: pointer; font-weight: 700; font-size: 14px; padding: 4px 0; }
+  .diffs ol { margin: 6px 0 0; padding-left: 22px; }
+  .diffs li { padding: 1px 0; }
+  .nav { display: flex; gap: 12px; justify-content: center; padding: 16px; flex-wrap: wrap; }
+  .nav a { padding: 10px 18px; background: #FFEB99; border-radius: 999px; text-decoration: none; color: #4a3a0e; font-weight: 700; font-size: 14px; }
+  @media (max-width: 480px) {
+    .pair { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>プレビュー v2: 難関私立小受験レベル</h1>
+  <div class="sub">gpt-image-1 / quality:high / 1024×1536 / 多人物・密度大・微差</div>
+</header>
+<main>
+
+<div class="problem">
+  <h2>1. 幼稚園の自由時間 (園児5人＋先生)</h2>
+  <div class="pair">
+    <div><img src="data/test-v2/youchien-jiyu-jikan-base.png" alt="幼稚園 base"><div class="label">ひだり (もと)</div></div>
+    <div><img src="data/test-v2/youchien-jiyu-jikan-variant.png" alt="幼稚園 variant"><div class="label">みぎ (まちがいあり)</div></div>
+  </div>
+  <details class="diffs">
+    <summary>指示した10の微差</summary>
+    <ol>
+      <li>中央の女の子のリボンを黄色→赤</li>
+      <li>積み木の数 7→6個</li>
+      <li>時計の長針 15分→20分</li>
+      <li>クレヨンの本数 12→11本</li>
+      <li>名前カードの「あ」→「お」</li>
+      <li>黒板「きょうのおはなし」→「きょうのなはなし」</li>
+      <li>先生のエプロンの花柄 3→4個</li>
+      <li>掲示のチョウチョ 3→2匹</li>
+      <li>ミニカーを左右逆向き</li>
+      <li>ラグの水玉 白→黄</li>
+    </ol>
+  </details>
+</div>
+
+<div class="problem">
+  <h2>2. 七夕の飾り (家族3人 + 笹 + 飾り多数)</h2>
+  <div class="pair">
+    <div><img src="data/test-v2/tanabata-kazari-base.png" alt="七夕 base"><div class="label">ひだり</div></div>
+    <div><img src="data/test-v2/tanabata-kazari-variant.png" alt="七夕 variant"><div class="label">みぎ</div></div>
+  </div>
+  <details class="diffs">
+    <summary>指示した10の微差</summary>
+    <ol>
+      <li>青い短冊 2→1枚</li>
+      <li>父のメガネ 丸→四角</li>
+      <li>お団子 6→5個</li>
+      <li>夜空の星 7→6個</li>
+      <li>輪つなぎ 7色→6色</li>
+      <li>招き猫の挙げる手 左→右</li>
+      <li>コケシ 2→1体</li>
+      <li>男の子の甚平に雲マーク1つ追加</li>
+      <li>ちょうちん 2→3個</li>
+      <li>書道作品「た」→「な」</li>
+    </ol>
+  </details>
+</div>
+
+<div class="problem">
+  <h2>3. おべんとうづくり (キッチン)</h2>
+  <div class="pair">
+    <div><img src="data/test-v2/kitchen-bento-base.png" alt="bento base"><div class="label">ひだり</div></div>
+    <div><img src="data/test-v2/kitchen-bento-variant.png" alt="bento variant"><div class="label">みぎ</div></div>
+  </div>
+  <details class="diffs">
+    <summary>指示した10の微差</summary>
+    <ol>
+      <li>唐揚げ 4→3個</li>
+      <li>ミニトマト 2→3個</li>
+      <li>たこさんウインナー 2→1個</li>
+      <li>お弁当箱 ピンク→黄色</li>
+      <li>女の子の片方のリボン 赤→青</li>
+      <li>時計 7:30→7:45</li>
+      <li>冷蔵庫のメモ 3→2枚</li>
+      <li>きゅうり 3→4切れ</li>
+      <li>調味料瓶 3→2本</li>
+      <li>小鳥 2→1羽</li>
+    </ol>
+  </details>
+</div>
+
+<div class="problem">
+  <h2>4. 動物園の入口 (家族＋動物多数＋看板)</h2>
+  <div class="pair">
+    <div><img src="data/test-v2/doubutsuen-iriguchi-base.png" alt="zoo base"><div class="label">ひだり</div></div>
+    <div><img src="data/test-v2/doubutsuen-iriguchi-variant.png" alt="zoo variant"><div class="label">みぎ</div></div>
+  </div>
+  <details class="diffs">
+    <summary>指示した10の微差</summary>
+    <ol>
+      <li>看板「どうぶつえん」→「とうぶつえん」</li>
+      <li>子供の帽子 緑→黄色</li>
+      <li>パンダ 2→1頭</li>
+      <li>風船 7→6個</li>
+      <li>女の子のヘアピン 2→1個</li>
+      <li>自販機のジュース 6→5本</li>
+      <li>サル 3→4匹</li>
+      <li>看板の矢印 5→4本</li>
+      <li>フラミンゴ 5→4羽</li>
+      <li>ゴミ箱 2→3個</li>
+    </ol>
+  </details>
+</div>
+
+<div class="problem">
+  <h2>5. 七五三のおまいり (家族6人＋神社)</h2>
+  <div class="pair">
+    <div><img src="data/test-v2/shichi-go-san-base.png" alt="753 base"><div class="label">ひだり</div></div>
+    <div><img src="data/test-v2/shichi-go-san-variant.png" alt="753 variant"><div class="label">みぎ</div></div>
+  </div>
+  <details class="diffs">
+    <summary>指示した10の微差</summary>
+    <ol>
+      <li>女の子の髪飾り 黄→赤</li>
+      <li>父のネクタイ 無地→縞模様</li>
+      <li>もみじ落ち葉 8→7枚</li>
+      <li>絵馬 10→9個</li>
+      <li>提灯 2→1個</li>
+      <li>狛犬の口 両方とも開けた状態</li>
+      <li>祖母の着物 紫→茶</li>
+      <li>銀杏の木 2→3本</li>
+      <li>鳩 2→3羽</li>
+      <li>雲 3→2つ</li>
+    </ol>
+  </details>
+</div>
+
+</main>
+<div class="nav">
+  <a href="preview.html">← v1 (単体動物)</a>
+  <a href="./">ホームへ</a>
+</div>
+</body>
+</html>
