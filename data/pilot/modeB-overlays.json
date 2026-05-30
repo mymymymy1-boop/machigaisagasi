@@ -3,47 +3,12 @@
   "baseImg": "modeB-base.png",
   "imgW": 1024,
   "imgH": 1536,
-  "note": "5 clone-region 方式: 各 cell に base 画像内の小パーツを別位置にコピーして1ヶ所だけ追加。",
+  "note": "微差版: 30-40px の muted シェイプ。base に溶け込む配置。",
   "variants": [
-    {
-      "id": "v1",
-      "label": "1まいめ",
-      "hint": "赤いチューリップが1本増えている",
-      "hitbox": [440, 1380, 80, 120],
-      "kind": "clone-region",
-      "params": { "src": [770, 1340, 80, 120] }
-    },
-    {
-      "id": "v2",
-      "label": "2まいめ",
-      "hint": "雲が1つ増えている(空の右上)",
-      "hitbox": [580, 40, 120, 70],
-      "kind": "clone-region",
-      "params": { "src": [380, 110, 120, 70] }
-    },
-    {
-      "id": "v3",
-      "label": "3まいめ",
-      "hint": "鳥が1羽増えている(空の右上)",
-      "hitbox": [810, 110, 90, 55],
-      "kind": "clone-region",
-      "params": { "src": [260, 120, 90, 55] }
-    },
-    {
-      "id": "v4",
-      "label": "4まいめ",
-      "hint": "黄色いたんぽぽが1本増えている",
-      "hitbox": [290, 1430, 60, 70],
-      "kind": "clone-region",
-      "params": { "src": [530, 1430, 60, 70] }
-    },
-    {
-      "id": "v5",
-      "label": "5まいめ",
-      "hint": "ちょうちょが1匹増えている",
-      "hitbox": [180, 1220, 55, 55],
-      "kind": "clone-region",
-      "params": { "src": [410, 760, 55, 55] }
-    }
+    { "id": "v1", "label": "1まいめ", "hint": "ピンクの花 (右下の花畑)", "hitbox": [580, 1400, 40, 40], "kind": "shape-add", "params": { "shape": "flower", "size": 34, "color": "#E89BAA" } },
+    { "id": "v2", "label": "2まいめ", "hint": "雲 (右上の空)", "hitbox": [820, 50, 90, 55], "kind": "shape-add", "params": { "shape": "cloud", "size": 75, "color": "#FFFDF2" } },
+    { "id": "v3", "label": "3まいめ", "hint": "ちょうちょ (中央右の空)", "hitbox": [620, 230, 40, 40], "kind": "shape-add", "params": { "shape": "butterfly", "size": 36, "color": "#D69A4C" } },
+    { "id": "v4", "label": "4まいめ", "hint": "もみじ葉 (砂場の右脇)", "hitbox": [380, 920, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-maple", "size": 32, "color": "#B85439" } },
+    { "id": "v5", "label": "5まいめ", "hint": "ぎんなん葉 (桜の木の根元)", "hitbox": [810, 580, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-ginkgo", "size": 34, "color": "#D4A35E" } }
   ]
 }

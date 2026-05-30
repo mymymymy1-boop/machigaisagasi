@@ -3,77 +3,17 @@
   "baseImg": "modeA-base.png",
   "imgW": 1024,
   "imgH": 1536,
-  "note": "全 clone-region 方式: base 画像内の小パーツ (もみじ落葉/ぎんなん/雲/石など) をコピーして空きスペースに貼る。絵柄ピクセル完全一致 → 本当に微妙な差分。",
+  "note": "微差版: 35-40px の muted autumn 色シェイプを base の空き領域に配置。線は細く、色は base 同系統。",
   "overlays": [
-    {
-      "id": "a1",
-      "hint": "もみじの落葉が1枚増えている(鳥居の右の空)",
-      "hitbox": [620, 230, 50, 50],
-      "kind": "clone-region",
-      "params": { "src": [410, 870, 50, 50] }
-    },
-    {
-      "id": "a2",
-      "hint": "ぎんなんの葉が1枚、鳥居の横木に乗っている",
-      "hitbox": [340, 280, 40, 40],
-      "kind": "clone-region",
-      "params": { "src": [340, 1300, 40, 40] }
-    },
-    {
-      "id": "a3",
-      "hint": "雲が右上にもう1つ増えている",
-      "hitbox": [820, 80, 100, 60],
-      "kind": "clone-region",
-      "params": { "src": [430, 110, 100, 60] }
-    },
-    {
-      "id": "a4",
-      "hint": "石畳の上にもみじの葉が1枚落ちている",
-      "hitbox": [470, 740, 40, 40],
-      "kind": "clone-region",
-      "params": { "src": [660, 850, 40, 40] }
-    },
-    {
-      "id": "a5",
-      "hint": "石畳の上にぎんなんの葉が1枚増えている",
-      "hitbox": [560, 870, 38, 38],
-      "kind": "clone-region",
-      "params": { "src": [840, 1310, 38, 38] }
-    },
-    {
-      "id": "a6",
-      "hint": "鳩のすぐ右にぎんなんの葉が1枚増えている",
-      "hitbox": [155, 1490, 40, 40],
-      "kind": "clone-region",
-      "params": { "src": [280, 1500, 40, 40] }
-    },
-    {
-      "id": "a7",
-      "hint": "左の灯籠の手前にもみじの葉が1枚増えている",
-      "hitbox": [180, 760, 45, 45],
-      "kind": "clone-region",
-      "params": { "src": [480, 990, 45, 45] }
-    },
-    {
-      "id": "a8",
-      "hint": "右の銀杏の木の枝にもみじの葉が1枚混じる",
-      "hitbox": [830, 290, 40, 40],
-      "kind": "clone-region",
-      "params": { "src": [570, 1100, 40, 40] }
-    },
-    {
-      "id": "a9",
-      "hint": "石畳の中央に小さな石が1個追加",
-      "hitbox": [495, 1010, 45, 45],
-      "kind": "clone-region",
-      "params": { "src": [380, 820, 45, 45] }
-    },
-    {
-      "id": "a10",
-      "hint": "左上、太陽の左に雲がもう1つ追加",
-      "hitbox": [70, 70, 90, 55],
-      "kind": "clone-region",
-      "params": { "src": [140, 100, 90, 55] }
-    }
+    { "id": "a1", "hint": "もみじ葉 (左の銀杏の枝先付近)", "hitbox": [110, 200, 40, 40], "kind": "shape-add", "params": { "shape": "leaf-maple", "size": 36, "color": "#B85439" } },
+    { "id": "a2", "hint": "ぎんなんの葉 (右の銀杏のすぐ手前)", "hitbox": [900, 380, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-ginkgo", "size": 34, "color": "#D4A35E" } },
+    { "id": "a3", "hint": "雲 (太陽の右の空)", "hitbox": [620, 60, 80, 50], "kind": "shape-add", "params": { "shape": "cloud", "size": 70, "color": "#FFFDF2" } },
+    { "id": "a4", "hint": "石畳の隙間に小さな石", "hitbox": [495, 1010, 40, 35], "kind": "shape-add", "params": { "shape": "acorn", "size": 32, "color": "#8B6F47" } },
+    { "id": "a5", "hint": "もみじ葉 (右下の地面)", "hitbox": [840, 1290, 36, 36], "kind": "shape-add", "params": { "shape": "leaf-maple", "size": 32, "color": "#A65033" } },
+    { "id": "a6", "hint": "ぎんなん葉 (鳩の右側)", "hitbox": [155, 1480, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-ginkgo", "size": 34, "color": "#C49751" } },
+    { "id": "a7", "hint": "もみじ葉 (鳥居の左の柱付近)", "hitbox": [200, 340, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-maple", "size": 34, "color": "#A85436" } },
+    { "id": "a8", "hint": "ぎんなん葉 (左下の地面)", "hitbox": [70, 1380, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-ginkgo", "size": 34, "color": "#D4A35E" } },
+    { "id": "a9", "hint": "雲 (左上の空)", "hitbox": [70, 70, 80, 50], "kind": "shape-add", "params": { "shape": "cloud", "size": 70, "color": "#FFFDF2" } },
+    { "id": "a10", "hint": "もみじ葉 (鳥居の上の梁)", "hitbox": [490, 280, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-maple", "size": 32, "color": "#B85439" } }
   ]
 }
