@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>プレビュー: AI画像版 5問テスト</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #FFF9E6; color: #333; font-family: "Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",system-ui,sans-serif; }
+  header { position: sticky; top: 0; background: #FFEB99; padding: 16px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06); z-index: 10; }
+  h1 { margin: 0; font-size: 22px; }
+  .sub { font-size: 14px; color: #5a4a1a; margin-top: 4px; }
+  main { padding: 24px 16px 64px; max-width: 900px; margin: 0 auto; }
+  .problem { background: #fff; border-radius: 24px; padding: 20px; margin-bottom: 32px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+  .problem h2 { margin: 0 0 16px; font-size: 20px; color: #4a3a0e; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+  .pair > div { background: #FFF9E6; border-radius: 16px; padding: 8px; }
+  .pair img { display: block; width: 100%; height: auto; border-radius: 12px; }
+  .pair .label { font-size: 13px; color: #888; text-align: center; padding: 4px 0; }
+  .diffs { background: #FFFAE5; border-radius: 16px; padding: 12px 16px; font-size: 14px; color: #5a4a1a; }
+  .diffs summary { cursor: pointer; font-weight: 700; font-size: 15px; padding: 4px 0; }
+  .diffs ol { margin: 8px 0 0; padding-left: 24px; }
+  .diffs li { padding: 2px 0; }
+  .nav { display: flex; gap: 12px; justify-content: center; padding: 16px; }
+  .nav a { padding: 12px 20px; background: #FFEB99; border-radius: 999px; text-decoration: none; color: #4a3a0e; font-weight: 700; }
+  @media (max-width: 480px) {
+    .pair { grid-template-columns: 1fr; }
+    .pair > div + div { margin-top: 0; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>プレビュー: AI画像版 (5問テスト)</h1>
+  <div class="sub">gpt-image-1 で生成 — クオリティ確認用</div>
+</header>
+<main>
+
+<div class="problem">
+  <h2>もんだい 1: ねこ (りびんぐ)</h2>
+  <div class="pair">
+    <div><img src="data/test/neko-livingroom-base.png" alt="ねこ ベース"><div class="label">ひだり (もと)</div></div>
+    <div><img src="data/test/neko-livingroom-variant.png" alt="ねこ バリアント"><div class="label">みぎ (まちがいあり)</div></div>
+  </div>
+  <details class="diffs">
+    <summary>指示した10個の差分</summary>
+    <ol>
+      <li>ねこの首輪を外す</li>
+      <li>カーテンの色を青から黄色に変える</li>
+      <li>クッションの色を赤からむらさきに変える</li>
+      <li>花瓶の花を3本から1本に減らす</li>
+      <li>壁のハートの絵を月の絵に変える</li>
+      <li>ラグの色を緑からピンクに変える</li>
+      <li>時計を四角い時計に変える</li>
+      <li>小鳥を1羽から2羽に増やす</li>
+      <li>ねこのしっぽの向きを反対側にする</li>
+      <li>窓の右下にコップを1つ追加</li>
+    </ol>
+  </details>
+</div>
+
+<div class="problem">
+  <h2>もんだい 2: いぬ (こうえん)</h2>
+  <div class="pair">
+    <div><img src="data/test/inu-park-base.png" alt="いぬ ベース"><div class="label">ひだり (もと)</div></div>
+    <div><img src="data/test/inu-park-variant.png" alt="いぬ バリアント"><div class="label">みぎ (まちがいあり)</div></div>
+  </div>
+  <details class="diffs">
+    <summary>指示した10個の差分</summary>
+    <ol>
+      <li>犬の首輪を青から赤に変える</li>
+      <li>木の葉を緑から黄色に変える</li>
+      <li>ベンチを赤から青に変える</li>
+      <li>ボールを黄色からオレンジに変える</li>
+      <li>雲を2つから3つに増やす</li>
+      <li>チューリップを3本から2本に減らす</li>
+      <li>犬の耳を立たせる</li>
+      <li>丘の右側に小さな家を1軒追加</li>
+      <li>空にお日さまを1つ追加</li>
+      <li>ボールの位置をベンチの下に移動</li>
+    </ol>
+  </details>
+</div>
+
+<div class="problem">
+  <h2>もんだい 3: りんご (かご)</h2>
+  <div class="pair">
+    <div><img src="data/test/ringo-basket-base.png" alt="りんご ベース"><div class="label">ひだり (もと)</div></div>
+    <div><img src="data/test/ringo-basket-variant.png" alt="りんご バリアント"><div class="label">みぎ (まちがいあり)</div></div>
+  </div>
+  <details class="diffs">
+    <summary>指示した10個の差分</summary>
+    <ol>
+      <li>かごの中のりんごを5個から4個に減らす</li>
+      <li>転がっているりんごの色を赤から黄色に変える</li>
+      <li>テーブルクロスの色をピンクに変える</li>
+      <li>窓の形を四角に変える</li>
+      <li>雲を1つから2つに増やす</li>
+      <li>ナプキンの色を黄色から青に変える</li>
+      <li>かごの色を茶色から白に変える</li>
+      <li>りんごの葉を1枚追加</li>
+      <li>テーブルの右下にスプーンを1本追加</li>
+      <li>空のグラデーションを夕方の色（オレンジ）に変える</li>
+    </ol>
+  </details>
+</div>
+
+<div class="problem">
+  <h2>もんだい 4: くるま (どうろ)</h2>
+  <div class="pair">
+    <div><img src="data/test/kuruma-road-base.png" alt="くるま ベース"><div class="label">ひだり (もと)</div></div>
+    <div><img src="data/test/kuruma-road-variant.png" alt="くるま バリアント"><div class="label">みぎ (まちがいあり)</div></div>
+  </div>
+  <details class="diffs">
+    <summary>指示した10個の差分</summary>
+    <ol>
+      <li>車の色を赤から青に変える</li>
+      <li>車のタイヤの色を黒からオレンジに変える</li>
+      <li>家の屋根の色を赤から緑に変える</li>
+      <li>煙突の煙の数を増やす</li>
+      <li>お日さまの色を黄色からオレンジに変える</li>
+      <li>雲を2つから3つに増やす</li>
+      <li>道路標識の形を三角から丸に変える</li>
+      <li>左脇の赤い花を黄色に変える</li>
+      <li>木の幹に小さな鳥を1羽追加</li>
+      <li>車のフロント窓を黒く変える</li>
+    </ol>
+  </details>
+</div>
+
+<div class="problem">
+  <h2>もんだい 5: すべりだい (こうえん)</h2>
+  <div class="pair">
+    <div><img src="data/test/suberidai-park-base.png" alt="すべりだい ベース"><div class="label">ひだり (もと)</div></div>
+    <div><img src="data/test/suberidai-park-variant.png" alt="すべりだい バリアント"><div class="label">みぎ (まちがいあり)</div></div>
+  </div>
+  <details class="diffs">
+    <summary>指示した10個の差分</summary>
+    <ol>
+      <li>すべり台の色を赤から青に変える</li>
+      <li>ブランコを2台から1台に減らす</li>
+      <li>木の葉を緑からオレンジに変える</li>
+      <li>雲を2つから3つに増やす</li>
+      <li>黄色い花をピンクと黄色に変える</li>
+      <li>ボールの色を水色からピンクに変える</li>
+      <li>飛んでいる鳥を1羽から2羽に増やす</li>
+      <li>すべり台のはしごの段数を増やす</li>
+      <li>ブランコのチェーンの色を黒から赤に変える</li>
+      <li>地面に小さなウサギを1匹追加</li>
+    </ol>
+  </details>
+</div>
+
+</main>
+<div class="nav">
+  <a href="./">← ホームへ (現行SVG版)</a>
+</div>
+</body>
+</html>
