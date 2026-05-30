@@ -3,77 +3,17 @@
   "baseImg": "modeA-base.png",
   "imgW": 1024,
   "imgH": 1536,
-  "note": "Mode A 統一方式: 左=base, 右=base+10overlay。すべて illustration-only。",
+  "note": "10 emoji overlay (全 ADD、cover-rect なし)。シーンに小物を増やすかたち。",
   "overlays": [
-    {
-      "id": "a1",
-      "hitbox": [840, 360, 120, 200],
-      "kind": "cover-rect",
-      "params": { "fill": "#E8C99E" },
-      "hint": "絵馬掛けの一部を木板色で覆う(絵馬が数枚消える)"
-    },
-    {
-      "id": "a2",
-      "hitbox": [300, 1280, 90, 90],
-      "kind": "cover-rect",
-      "params": { "fill": "#F2E6C9" },
-      "hint": "もみじの落ち葉1枚を地面色で覆う"
-    },
-    {
-      "id": "a3",
-      "hitbox": [200, 130, 90, 90],
-      "kind": "shape-add",
-      "params": { "shape": "bird", "color": "#5A8FCF", "size": 70 },
-      "hint": "空に青い小鳥を1羽追加"
-    },
-    {
-      "id": "a4",
-      "hitbox": [50, 220, 100, 130],
-      "kind": "cover-rect",
-      "params": { "fill": "#C7E0AA" },
-      "hint": "もみじ(赤い木)の葉の一部を木の緑で覆う"
-    },
-    {
-      "id": "a5",
-      "hitbox": [550, 1350, 90, 90],
-      "kind": "shape-add",
-      "params": { "shape": "flower", "color": "#FF8FB3", "size": 65 },
-      "hint": "石畳の脇にピンクの花を1つ追加"
-    },
-    {
-      "id": "a6",
-      "hitbox": [380, 1380, 100, 100],
-      "kind": "cover-rect",
-      "params": { "fill": "#F2E6C9" },
-      "hint": "鳩1羽を地面色で覆う(消える)"
-    },
-    {
-      "id": "a7",
-      "hitbox": [80, 540, 100, 130],
-      "kind": "shape-add",
-      "params": { "shape": "lantern", "color": "#E85C5C", "size": 90 },
-      "hint": "灯籠の隣に提灯を1個追加"
-    },
-    {
-      "id": "a8",
-      "hitbox": [580, 110, 110, 70],
-      "kind": "tint",
-      "params": { "fill": "rgba(255, 165, 90, 0.55)" },
-      "hint": "雲を1つオレンジに染める"
-    },
-    {
-      "id": "a9",
-      "hitbox": [690, 660, 80, 80],
-      "kind": "shape-add",
-      "params": { "shape": "butterfly", "color": "#FFD93D", "size": 65 },
-      "hint": "黄色いちょうちょを1匹追加"
-    },
-    {
-      "id": "a10",
-      "hitbox": [720, 1230, 120, 130],
-      "kind": "cover-rect",
-      "params": { "fill": "#F2E6C9" },
-      "hint": "右下の灯籠の影の部分を地面色で隠す(灯籠が消える)"
-    }
+    { "id": "a1",  "hitbox": [120, 110, 100, 100], "kind": "emoji", "params": { "char": "🦋", "size": 110 }, "hint": "ちょうちょ追加 (左上の空)" },
+    { "id": "a2",  "hitbox": [650, 100, 100, 100], "kind": "emoji", "params": { "char": "🐦", "size": 110 }, "hint": "小鳥追加 (右上の空)" },
+    { "id": "a3",  "hitbox": [450, 230, 100, 100], "kind": "emoji", "params": { "char": "🌸", "size": 110 }, "hint": "桜の花びら追加 (鳥居の手前)" },
+    { "id": "a4",  "hitbox": [60, 700, 100, 100],  "kind": "emoji", "params": { "char": "🍡", "size": 110 }, "hint": "お団子追加 (左の灯籠の隣)" },
+    { "id": "a5",  "hitbox": [880, 720, 100, 100], "kind": "emoji", "params": { "char": "🐞", "size": 100 }, "hint": "てんとうむし追加 (右側、絵馬の手前)" },
+    { "id": "a6",  "hitbox": [380, 1380, 100, 100], "kind": "emoji", "params": { "char": "🐰", "size": 110 }, "hint": "うさぎ追加 (下の地面)" },
+    { "id": "a7",  "hitbox": [820, 1300, 100, 100], "kind": "emoji", "params": { "char": "🍂", "size": 110 }, "hint": "落ち葉追加 (右下)" },
+    { "id": "a8",  "hitbox": [200, 1340, 100, 100], "kind": "emoji", "params": { "char": "🍁", "size": 110 }, "hint": "もみじの葉追加 (左下)" },
+    { "id": "a9",  "hitbox": [700, 580, 100, 100], "kind": "emoji", "params": { "char": "🐞", "size": 100 }, "hint": "てんとうむし追加 (中央右)" },
+    { "id": "a10", "hitbox": [50, 250, 100, 100],  "kind": "emoji", "params": { "char": "🌟", "size": 110 }, "hint": "ほし追加 (左上の木の枝)" }
   ]
 }

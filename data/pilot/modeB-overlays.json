@@ -3,46 +3,12 @@
   "baseImg": "modeB-base.png",
   "imgW": 1024,
   "imgH": 1536,
+  "note": "5 emoji overlay (Mode B 統一)。各 cell に独自の1ヶ所変化。",
   "variants": [
-    {
-      "id": "v1",
-      "label": "1まいめ",
-      "hitbox": [700, 1360, 100, 130],
-      "kind": "cover-rect",
-      "params": { "fill": "#A8C97A" },
-      "hint": "あかいチューリップが1本少なくなった (緑で隠す)"
-    },
-    {
-      "id": "v2",
-      "label": "2まいめ",
-      "hitbox": [240, 1420, 80, 80],
-      "kind": "shape-add",
-      "params": { "shape": "flower", "color": "#FF6B6B", "size": 60 },
-      "hint": "黄色いたんぽぽの間に、赤い花を1つ追加"
-    },
-    {
-      "id": "v3",
-      "label": "3まいめ",
-      "hitbox": [600, 220, 80, 80],
-      "kind": "shape-add",
-      "params": { "shape": "butterfly", "color": "#FFD93D", "size": 60 },
-      "hint": "空に黄色いちょうちょを1匹追加"
-    },
-    {
-      "id": "v4",
-      "label": "4まいめ",
-      "hitbox": [60, 970, 110, 110],
-      "kind": "cover-rect",
-      "params": { "fill": "#E8D38A" },
-      "hint": "砂場のバケツを砂で覆う (バケツが消える)"
-    },
-    {
-      "id": "v5",
-      "label": "5まいめ",
-      "hitbox": [840, 280, 100, 110],
-      "kind": "cover-rect",
-      "params": { "fill": "#A8C97A" },
-      "hint": "桜の花の一部を緑で隠す (花が減る)"
-    }
+    { "id": "v1", "label": "1まいめ", "hitbox": [700, 1380, 100, 100], "kind": "emoji", "params": { "char": "🌸", "size": 110 }, "hint": "桜の花追加 (花畑のあたり)" },
+    { "id": "v2", "label": "2まいめ", "hitbox": [240, 1400, 100, 100], "kind": "emoji", "params": { "char": "🐝", "size": 110 }, "hint": "ハチ追加 (たんぽぽ畑)" },
+    { "id": "v3", "label": "3まいめ", "hitbox": [600, 200, 100, 100],  "kind": "emoji", "params": { "char": "🦋", "size": 110 }, "hint": "ちょうちょ追加 (空)" },
+    { "id": "v4", "label": "4まいめ", "hitbox": [80, 1000, 100, 100],  "kind": "emoji", "params": { "char": "🌟", "size": 110 }, "hint": "ほし追加 (砂場のあたり)" },
+    { "id": "v5", "label": "5まいめ", "hitbox": [840, 280, 100, 100],  "kind": "emoji", "params": { "char": "🐞", "size": 100 }, "hint": "てんとうむし追加 (桜の木の枝)" }
   ]
 }

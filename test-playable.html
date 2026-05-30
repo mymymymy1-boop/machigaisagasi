@@ -122,6 +122,15 @@
     } else if (ov.kind === 'tint') {
       ctx.fillStyle = ov.params.fill;
       ctx.fillRect(x, y, w, h);
+    } else if (ov.kind === 'emoji') {
+      // Apple Color Emoji / system emoji rendering — high quality vector on iOS/macOS
+      const size = ov.params.size || Math.min(w, h);
+      ctx.save();
+      ctx.font = `${size}px "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", system-ui, sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(ov.params.char, cx, cy);
+      ctx.restore();
     } else if (ov.kind === 'shape-add') {
       const shape = ov.params.shape;
       const color = ov.params.color;
