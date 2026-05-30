@@ -113,24 +113,20 @@
   ]);
 
   // ============== Drawing primitives ==============
-  function drawOverlay(ctx, ov) {
+  // 全 overlay は base 絵柄に溶け込ませる方針:
+  // - dark warm outline #3a2d1a (純黒ではない、絵本テイスト寄り)
+  // - 細めの線 2-2.5px
+  // - 彩度低めの fill
+  // - サイズ 40-55px 程度
+  const LINE_COLOR = '#3a2d1a';
+
+  function drawOverlay(ctx, ov, baseImg) {
     const [x, y, w, h] = ov.hitbox;
     const cx = x + w/2, cy = y + h/2;
-    if (ov.kind === 'cover-rect') {
-      ctx.fillStyle = ov.params.fill;
-      ctx.fillRect(x, y, w, h);
-    } else if (ov.kind === 'tint') {
-      ctx.fillStyle = ov.params.fill;
-      ctx.fillRect(x, y, w, h);
-    } else if (ov.kind === 'emoji') {
-      // Apple Color Emoji / system emoji rendering — high quality vector on iOS/macOS
-      const size = ov.params.size || Math.min(w, h);
-      ctx.save();
-      ctx.font = `${size}px "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", system-ui, sans-serif`;
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText(ov.params.char, cx, cy);
-      ctx.restore();
+    if (ov.kind === 'clone-region') {
+      // base 画像の一部をそのまま別位置にコピー (絵柄完全一致)
+      const src = ov.params.src;
+      ctx.drawImage(baseImg, src[0], src[1], src[2], src[3], x, y, w, h);
     } else if (ov.kind === 'shape-add') {
       const shape = ov.params.shape;
       const color = ov.params.color;
@@ -139,7 +135,116 @@
       else if (shape === 'butterfly') drawButterfly(ctx, cx, cy, size, color);
       else if (shape === 'bird') drawBird(ctx, cx, cy, size, color);
       else if (shape === 'lantern') drawLantern(ctx, cx, cy, size, color);
+      else if (shape === 'mushroom') drawMushroom(ctx, cx, cy, size, color);
+      else if (shape === 'leaf-maple') drawMapleLeaf(ctx, cx, cy, size, color);
+      else if (shape === 'leaf-ginkgo') drawGinkgoLeaf(ctx, cx, cy, size, color);
+      else if (shape === 'acorn') drawAcorn(ctx, cx, cy, size, color);
+      else if (shape === 'cloud') drawCloud(ctx, cx, cy, size, color);
     }
+  }
+
+  function drawMushroom(ctx, cx, cy, size, color) {
+    ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 2.5;
+    // cap (round top)
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(cx, cy - size*0.05, size*0.4, Math.PI, 0);
+    ctx.lineTo(cx + size*0.4, cy + size*0.05);
+    ctx.lineTo(cx - size*0.4, cy + size*0.05);
+    ctx.closePath();
+    ctx.fill(); ctx.stroke();
+    // white dots on cap
+    ctx.fillStyle = '#FFF9E6';
+    ctx.beginPath(); ctx.arc(cx - size*0.18, cy - size*0.05, size*0.07, 0, 2*Math.PI); ctx.fill();
+    ctx.beginPath(); ctx.arc(cx + size*0.15, cy - size*0.15, size*0.06, 0, 2*Math.PI); ctx.fill();
+    // stem
+    ctx.fillStyle = '#FBE8C6';
+    ctx.beginPath();
+    ctx.rect(cx - size*0.18, cy + size*0.05, size*0.36, size*0.3);
+    ctx.fill(); ctx.stroke();
+  }
+
+  function drawMapleLeaf(ctx, cx, cy, size, color) {
+    ctx.fillStyle = color;
+    ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 2;
+    ctx.save();
+    ctx.translate(cx, cy);
+    const r = size * 0.5;
+    ctx.beginPath();
+    for (let i = 0; i < 5; i++) {
+      const a = i * (2*Math.PI/5) - Math.PI/2;
+      const x1 = Math.cos(a) * r;
+      const y1 = Math.sin(a) * r;
+      const a2 = a + Math.PI/5;
+      const x2 = Math.cos(a2) * r * 0.42;
+      const y2 = Math.sin(a2) * r * 0.42;
+      if (i === 0) ctx.moveTo(x1, y1); else ctx.lineTo(x1, y1);
+      ctx.lineTo(x2, y2);
+    }
+    ctx.closePath();
+    ctx.fill(); ctx.stroke();
+    // stem
+    ctx.beginPath();
+    ctx.moveTo(0, r * 0.4); ctx.lineTo(0, r * 0.95);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawGinkgoLeaf(ctx, cx, cy, size, color) {
+    ctx.fillStyle = color;
+    ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 2;
+    ctx.save();
+    ctx.translate(cx, cy);
+    // fan shape
+    ctx.beginPath();
+    ctx.moveTo(0, size*0.35);
+    ctx.quadraticCurveTo(-size*0.5, -size*0.15, -size*0.3, -size*0.35);
+    ctx.quadraticCurveTo(-size*0.1, -size*0.25, 0, -size*0.3);
+    ctx.quadraticCurveTo(size*0.1, -size*0.25, size*0.3, -size*0.35);
+    ctx.quadraticCurveTo(size*0.5, -size*0.15, 0, size*0.35);
+    ctx.fill(); ctx.stroke();
+    // stem
+    ctx.beginPath();
+    ctx.moveTo(0, size*0.35); ctx.lineTo(0, size*0.55);
+    ctx.stroke();
+    // center vein
+    ctx.beginPath();
+    ctx.moveTo(0, size*0.35); ctx.lineTo(0, -size*0.2);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawAcorn(ctx, cx, cy, size, color) {
+    ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 2;
+    // body (oval)
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.ellipse(cx, cy + size*0.05, size*0.25, size*0.32, 0, 0, 2*Math.PI);
+    ctx.fill(); ctx.stroke();
+    // cap
+    ctx.fillStyle = '#6B5544';
+    ctx.beginPath();
+    ctx.arc(cx, cy - size*0.2, size*0.28, Math.PI, 0);
+    ctx.lineTo(cx + size*0.28, cy - size*0.15);
+    ctx.lineTo(cx - size*0.28, cy - size*0.15);
+    ctx.closePath();
+    ctx.fill(); ctx.stroke();
+    // stem
+    ctx.beginPath();
+    ctx.moveTo(cx, cy - size*0.4); ctx.lineTo(cx, cy - size*0.5);
+    ctx.stroke();
+  }
+
+  function drawCloud(ctx, cx, cy, size, color) {
+    ctx.fillStyle = color;
+    ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(cx - size*0.25, cy + size*0.05, size*0.22, 0, 2*Math.PI);
+    ctx.arc(cx, cy - size*0.05, size*0.28, 0, 2*Math.PI);
+    ctx.arc(cx + size*0.25, cy + size*0.05, size*0.22, 0, 2*Math.PI);
+    ctx.arc(cx + size*0.05, cy + size*0.18, size*0.20, 0, 2*Math.PI);
+    ctx.arc(cx - size*0.1, cy + size*0.18, size*0.18, 0, 2*Math.PI);
+    ctx.fill(); ctx.stroke();
   }
 
   function drawFlower(ctx, cx, cy, size, color) {
@@ -239,7 +344,7 @@
     const rctx = right.getContext('2d');
     lctx.drawImage(baseAImg, 0, 0, IMG_W, IMG_H);
     rctx.drawImage(baseAImg, 0, 0, IMG_W, IMG_H);
-    modeA.overlays.forEach(ov => drawOverlay(rctx, ov));
+    modeA.overlays.forEach(ov => drawOverlay(rctx, ov, baseAImg));
   }
 
   function hookModeA() {
@@ -305,7 +410,7 @@
       cell.appendChild(canvas);
       const ctx = canvas.getContext('2d');
       ctx.drawImage(baseBImg, 0, 0, IMG_W, IMG_H);
-      drawOverlay(ctx, ov);
+      drawOverlay(ctx, ov, baseBImg);
       cell.addEventListener('pointerdown', (ev) => onTapB(ev, idx, canvas));
       grid.appendChild(cell);
     });

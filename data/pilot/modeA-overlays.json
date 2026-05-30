@@ -3,17 +3,77 @@
   "baseImg": "modeA-base.png",
   "imgW": 1024,
   "imgH": 1536,
-  "note": "10 emoji overlay (全 ADD、cover-rect なし)。シーンに小物を増やすかたち。",
+  "note": "全 clone-region 方式: base 画像内の小パーツ (もみじ落葉/ぎんなん/雲/石など) をコピーして空きスペースに貼る。絵柄ピクセル完全一致 → 本当に微妙な差分。",
   "overlays": [
-    { "id": "a1",  "hitbox": [120, 110, 100, 100], "kind": "emoji", "params": { "char": "🦋", "size": 110 }, "hint": "ちょうちょ追加 (左上の空)" },
-    { "id": "a2",  "hitbox": [650, 100, 100, 100], "kind": "emoji", "params": { "char": "🐦", "size": 110 }, "hint": "小鳥追加 (右上の空)" },
-    { "id": "a3",  "hitbox": [450, 230, 100, 100], "kind": "emoji", "params": { "char": "🌸", "size": 110 }, "hint": "桜の花びら追加 (鳥居の手前)" },
-    { "id": "a4",  "hitbox": [60, 700, 100, 100],  "kind": "emoji", "params": { "char": "🍡", "size": 110 }, "hint": "お団子追加 (左の灯籠の隣)" },
-    { "id": "a5",  "hitbox": [880, 720, 100, 100], "kind": "emoji", "params": { "char": "🐞", "size": 100 }, "hint": "てんとうむし追加 (右側、絵馬の手前)" },
-    { "id": "a6",  "hitbox": [380, 1380, 100, 100], "kind": "emoji", "params": { "char": "🐰", "size": 110 }, "hint": "うさぎ追加 (下の地面)" },
-    { "id": "a7",  "hitbox": [820, 1300, 100, 100], "kind": "emoji", "params": { "char": "🍂", "size": 110 }, "hint": "落ち葉追加 (右下)" },
-    { "id": "a8",  "hitbox": [200, 1340, 100, 100], "kind": "emoji", "params": { "char": "🍁", "size": 110 }, "hint": "もみじの葉追加 (左下)" },
-    { "id": "a9",  "hitbox": [700, 580, 100, 100], "kind": "emoji", "params": { "char": "🐞", "size": 100 }, "hint": "てんとうむし追加 (中央右)" },
-    { "id": "a10", "hitbox": [50, 250, 100, 100],  "kind": "emoji", "params": { "char": "🌟", "size": 110 }, "hint": "ほし追加 (左上の木の枝)" }
+    {
+      "id": "a1",
+      "hint": "もみじの落葉が1枚増えている(鳥居の右の空)",
+      "hitbox": [620, 230, 50, 50],
+      "kind": "clone-region",
+      "params": { "src": [410, 870, 50, 50] }
+    },
+    {
+      "id": "a2",
+      "hint": "ぎんなんの葉が1枚、鳥居の横木に乗っている",
+      "hitbox": [340, 280, 40, 40],
+      "kind": "clone-region",
+      "params": { "src": [340, 1300, 40, 40] }
+    },
+    {
+      "id": "a3",
+      "hint": "雲が右上にもう1つ増えている",
+      "hitbox": [820, 80, 100, 60],
+      "kind": "clone-region",
+      "params": { "src": [430, 110, 100, 60] }
+    },
+    {
+      "id": "a4",
+      "hint": "石畳の上にもみじの葉が1枚落ちている",
+      "hitbox": [470, 740, 40, 40],
+      "kind": "clone-region",
+      "params": { "src": [660, 850, 40, 40] }
+    },
+    {
+      "id": "a5",
+      "hint": "石畳の上にぎんなんの葉が1枚増えている",
+      "hitbox": [560, 870, 38, 38],
+      "kind": "clone-region",
+      "params": { "src": [840, 1310, 38, 38] }
+    },
+    {
+      "id": "a6",
+      "hint": "鳩のすぐ右にぎんなんの葉が1枚増えている",
+      "hitbox": [155, 1490, 40, 40],
+      "kind": "clone-region",
+      "params": { "src": [280, 1500, 40, 40] }
+    },
+    {
+      "id": "a7",
+      "hint": "左の灯籠の手前にもみじの葉が1枚増えている",
+      "hitbox": [180, 760, 45, 45],
+      "kind": "clone-region",
+      "params": { "src": [480, 990, 45, 45] }
+    },
+    {
+      "id": "a8",
+      "hint": "右の銀杏の木の枝にもみじの葉が1枚混じる",
+      "hitbox": [830, 290, 40, 40],
+      "kind": "clone-region",
+      "params": { "src": [570, 1100, 40, 40] }
+    },
+    {
+      "id": "a9",
+      "hint": "石畳の中央に小さな石が1個追加",
+      "hitbox": [495, 1010, 45, 45],
+      "kind": "clone-region",
+      "params": { "src": [380, 820, 45, 45] }
+    },
+    {
+      "id": "a10",
+      "hint": "左上、太陽の左に雲がもう1つ追加",
+      "hitbox": [70, 70, 90, 55],
+      "kind": "clone-region",
+      "params": { "src": [140, 100, 90, 55] }
+    }
   ]
 }

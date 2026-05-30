@@ -3,12 +3,47 @@
   "baseImg": "modeB-base.png",
   "imgW": 1024,
   "imgH": 1536,
-  "note": "5 emoji overlay (Mode B 統一)。各 cell に独自の1ヶ所変化。",
+  "note": "5 clone-region 方式: 各 cell に base 画像内の小パーツを別位置にコピーして1ヶ所だけ追加。",
   "variants": [
-    { "id": "v1", "label": "1まいめ", "hitbox": [700, 1380, 100, 100], "kind": "emoji", "params": { "char": "🌸", "size": 110 }, "hint": "桜の花追加 (花畑のあたり)" },
-    { "id": "v2", "label": "2まいめ", "hitbox": [240, 1400, 100, 100], "kind": "emoji", "params": { "char": "🐝", "size": 110 }, "hint": "ハチ追加 (たんぽぽ畑)" },
-    { "id": "v3", "label": "3まいめ", "hitbox": [600, 200, 100, 100],  "kind": "emoji", "params": { "char": "🦋", "size": 110 }, "hint": "ちょうちょ追加 (空)" },
-    { "id": "v4", "label": "4まいめ", "hitbox": [80, 1000, 100, 100],  "kind": "emoji", "params": { "char": "🌟", "size": 110 }, "hint": "ほし追加 (砂場のあたり)" },
-    { "id": "v5", "label": "5まいめ", "hitbox": [840, 280, 100, 100],  "kind": "emoji", "params": { "char": "🐞", "size": 100 }, "hint": "てんとうむし追加 (桜の木の枝)" }
+    {
+      "id": "v1",
+      "label": "1まいめ",
+      "hint": "赤いチューリップが1本増えている",
+      "hitbox": [440, 1380, 80, 120],
+      "kind": "clone-region",
+      "params": { "src": [770, 1340, 80, 120] }
+    },
+    {
+      "id": "v2",
+      "label": "2まいめ",
+      "hint": "雲が1つ増えている(空の右上)",
+      "hitbox": [580, 40, 120, 70],
+      "kind": "clone-region",
+      "params": { "src": [380, 110, 120, 70] }
+    },
+    {
+      "id": "v3",
+      "label": "3まいめ",
+      "hint": "鳥が1羽増えている(空の右上)",
+      "hitbox": [810, 110, 90, 55],
+      "kind": "clone-region",
+      "params": { "src": [260, 120, 90, 55] }
+    },
+    {
+      "id": "v4",
+      "label": "4まいめ",
+      "hint": "黄色いたんぽぽが1本増えている",
+      "hitbox": [290, 1430, 60, 70],
+      "kind": "clone-region",
+      "params": { "src": [530, 1430, 60, 70] }
+    },
+    {
+      "id": "v5",
+      "label": "5まいめ",
+      "hint": "ちょうちょが1匹増えている",
+      "hitbox": [180, 1220, 55, 55],
+      "kind": "clone-region",
+      "params": { "src": [410, 760, 55, 55] }
+    }
   ]
 }
