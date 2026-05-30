@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
-<title>プレイ可能テスト: Mode A + Mode B</title>
+<title>プレイ可能テスト v2: 統一 overlay 方式</title>
 <style>
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; background: #FFF9E6; color: #333; font-family: "Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",system-ui,sans-serif; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; overscroll-behavior: none; }
@@ -60,15 +60,15 @@
 </header>
 
 <main>
-  <!-- MODE A -->
+  <!-- MODE A: 統一 overlay 方式 (左=base, 右=base+10overlay の canvas) -->
   <section id="mode-a-section">
     <div class="mode-a-row">
-      <div class="img-wrap tappable" id="wrap-a-left">
-        <img id="img-a-left" alt="ひだり">
+      <div class="img-wrap" id="wrap-a-left">
+        <canvas id="canvas-a-left"></canvas>
         <svg class="found-svg" id="svg-a-left" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMid meet"></svg>
       </div>
       <div class="img-wrap tappable" id="wrap-a-right">
-        <img id="img-a-right" alt="みぎ">
+        <canvas id="canvas-a-right"></canvas>
         <svg class="found-svg" id="svg-a-right" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMid meet"></svg>
       </div>
     </div>
@@ -96,121 +96,40 @@
 (async () => {
   const IMG_W = 1024, IMG_H = 1536;
 
-  // Load all data
-  const [hbResp, ovResp] = await Promise.all([
-    fetch('data/pilot/modeA-hitboxes.json').then(r => r.json()),
+  // Load data
+  const [aData, bData] = await Promise.all([
+    fetch('data/pilot/modeA-overlays.json').then(r => r.json()),
     fetch('data/pilot/modeB-overlays.json').then(r => r.json()),
   ]);
-  const modeAData = { hitboxes: hbResp.differences, found: new Set() };
-  const modeBData = { overlays: ovResp.variants, cleared: new Set() };
-  const baseAImg = new Image();
-  const variantAImg = new Image();
-  const baseBImg = new Image();
+  const modeA = { overlays: aData.overlays, found: new Set() };
+  const modeB = { overlays: bData.variants, cleared: new Set() };
 
-  function loadImg(im, src) { return new Promise(res => { im.onload = res; im.src = src; }); }
-  await Promise.all([
-    loadImg(baseAImg, 'data/pilot/modeA-base.png'),
-    loadImg(variantAImg, 'data/pilot/modeA-variant.png'),
-    loadImg(baseBImg, 'data/pilot/modeB-base.png'),
+  function loadImg(src) {
+    return new Promise(res => { const im = new Image(); im.onload = () => res(im); im.src = src; });
+  }
+  const [baseAImg, baseBImg] = await Promise.all([
+    loadImg('data/pilot/modeA-base.png'),
+    loadImg('data/pilot/modeB-base.png'),
   ]);
 
-  // Setup mode A images
-  document.getElementById('img-a-left').src = baseAImg.src;
-  document.getElementById('img-a-right').src = variantAImg.src;
-
-  // ============== Mode A ==============
-  function hookModeA() {
-    const HIT_TOL = 30;
-    function onTap(ev) {
-      ev.preventDefault();
-      const wrap = ev.currentTarget;
-      const img = wrap.querySelector('img');
-      const rect = img.getBoundingClientRect();
-      const cx = ev.clientX - rect.left;
-      const cy = ev.clientY - rect.top;
-      // Convert to image-internal coords
-      const sx = (cx / rect.width) * IMG_W;
-      const sy = (cy / rect.height) * IMG_H;
-      // Find first unfound hitbox containing (sx, sy)
-      for (let i = 0; i < modeAData.hitboxes.length; i++) {
-        if (modeAData.found.has(i)) continue;
-        const [bx, by, bw, bh] = modeAData.hitboxes[i].hitbox;
-        if (sx >= bx - HIT_TOL && sx <= bx + bw + HIT_TOL
-            && sy >= by - HIT_TOL && sy <= by + bh + HIT_TOL) {
-          markFoundA(i);
-          return;
-        }
-      }
-      // miss
-      showBubble('もういちど みてみよう');
-    }
-    document.getElementById('wrap-a-left').addEventListener('pointerdown', onTap);
-    document.getElementById('wrap-a-right').addEventListener('pointerdown', onTap);
-  }
-
-  function markFoundA(idx) {
-    modeAData.found.add(idx);
-    const hb = modeAData.hitboxes[idx];
-    const [bx, by, bw, bh] = hb.hitbox;
-    const ccx = bx + bw/2;
-    const ccy = by + bh/2;
-    const r = Math.max(bw, bh) / 2 + 12;
-    drawFoundCircle('svg-a-left', ccx, ccy, r);
-    drawFoundCircle('svg-a-right', ccx, ccy, r);
-    showBubble('みつけたね！');
-    updateProgressA();
-    if (modeAData.found.size >= modeAData.hitboxes.length) {
-      setTimeout(() => showModal('A'), 600);
-    }
-  }
-
-  function drawFoundCircle(svgId, cx, cy, r) {
-    const svg = document.getElementById(svgId);
-    const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    c.setAttribute('cx', cx); c.setAttribute('cy', cy); c.setAttribute('r', r);
-    c.setAttribute('fill', 'none'); c.setAttribute('stroke', '#FF6B6B');
-    c.setAttribute('stroke-width', 8); c.setAttribute('opacity', '0.9');
-    svg.appendChild(c);
-  }
-
-  function updateProgressA() {
-    document.getElementById('hd-progress').textContent =
-      modeAData.found.size + ' / ' + modeAData.hitboxes.length;
-  }
-
-  // ============== Mode B ==============
-  function renderModeB() {
-    const grid = document.getElementById('mode-b-grid');
-    grid.innerHTML = '';
-    modeBData.overlays.forEach((ov, idx) => {
-      const cell = document.createElement('div');
-      cell.className = 'mode-b-cell';
-      cell.dataset.idx = idx;
-      cell.innerHTML = `<div class="num">${idx+1}</div><div class="check">✓</div>`;
-      const canvas = document.createElement('canvas');
-      canvas.width = IMG_W; canvas.height = IMG_H;
-      cell.appendChild(canvas);
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(baseBImg, 0, 0, IMG_W, IMG_H);
-      drawOverlay(ctx, ov);
-      cell.addEventListener('pointerdown', (ev) => onTapB(ev, idx, canvas));
-      grid.appendChild(cell);
-    });
-    updateProgressB();
-  }
-
+  // ============== Drawing primitives ==============
   function drawOverlay(ctx, ov) {
     const [x, y, w, h] = ov.hitbox;
     const cx = x + w/2, cy = y + h/2;
     if (ov.kind === 'cover-rect') {
       ctx.fillStyle = ov.params.fill;
       ctx.fillRect(x, y, w, h);
+    } else if (ov.kind === 'tint') {
+      ctx.fillStyle = ov.params.fill;
+      ctx.fillRect(x, y, w, h);
     } else if (ov.kind === 'shape-add') {
-      if (ov.params.shape === 'flower') {
-        drawFlower(ctx, cx, cy, ov.params.size, ov.params.color);
-      } else if (ov.params.shape === 'butterfly') {
-        drawButterfly(ctx, cx, cy, ov.params.size, ov.params.color);
-      }
+      const shape = ov.params.shape;
+      const color = ov.params.color;
+      const size = ov.params.size;
+      if (shape === 'flower') drawFlower(ctx, cx, cy, size, color);
+      else if (shape === 'butterfly') drawButterfly(ctx, cx, cy, size, color);
+      else if (shape === 'bird') drawBird(ctx, cx, cy, size, color);
+      else if (shape === 'lantern') drawLantern(ctx, cx, cy, size, color);
     }
   }
 
@@ -241,34 +160,168 @@
     ctx.beginPath();
     ctx.ellipse(cx, cy, size*0.06, size*0.34, 0, 0, 2*Math.PI);
     ctx.fill();
-    // antennae
-    ctx.strokeStyle = '#333'; ctx.lineWidth = 2; ctx.beginPath();
+    ctx.strokeStyle = '#333'; ctx.lineWidth = 2;
+    ctx.beginPath();
     ctx.moveTo(cx - 4, cy - size*0.32); ctx.lineTo(cx - 14, cy - size*0.5);
     ctx.moveTo(cx + 4, cy - size*0.32); ctx.lineTo(cx + 14, cy - size*0.5);
     ctx.stroke();
   }
 
+  function drawBird(ctx, cx, cy, size, color) {
+    // Stylized bird: body oval + V-shape wings + small triangle beak
+    ctx.fillStyle = color;
+    ctx.strokeStyle = '#333'; ctx.lineWidth = 3;
+    // body
+    ctx.beginPath();
+    ctx.ellipse(cx, cy, size*0.35, size*0.22, 0, 0, 2*Math.PI);
+    ctx.fill(); ctx.stroke();
+    // wing
+    ctx.beginPath();
+    ctx.moveTo(cx - size*0.15, cy - size*0.1);
+    ctx.quadraticCurveTo(cx, cy - size*0.4, cx + size*0.2, cy - size*0.1);
+    ctx.quadraticCurveTo(cx, cy, cx - size*0.15, cy - size*0.1);
+    ctx.fill(); ctx.stroke();
+    // beak
+    ctx.fillStyle = '#FFA63D';
+    ctx.beginPath();
+    ctx.moveTo(cx + size*0.32, cy - size*0.04);
+    ctx.lineTo(cx + size*0.46, cy);
+    ctx.lineTo(cx + size*0.32, cy + size*0.04);
+    ctx.closePath();
+    ctx.fill(); ctx.stroke();
+    // eye
+    ctx.fillStyle = '#333';
+    ctx.beginPath(); ctx.arc(cx + size*0.18, cy - size*0.04, size*0.04, 0, 2*Math.PI); ctx.fill();
+  }
+
+  function drawLantern(ctx, cx, cy, size, color) {
+    // Japanese lantern (提灯): round red body with horizontal bands and black top/bottom caps
+    ctx.fillStyle = color;
+    ctx.strokeStyle = '#333'; ctx.lineWidth = 3;
+    const w = size * 0.5, h = size * 0.7;
+    // body
+    ctx.beginPath();
+    ctx.ellipse(cx, cy, w/2, h/2, 0, 0, 2*Math.PI);
+    ctx.fill(); ctx.stroke();
+    // top cap
+    ctx.fillStyle = '#333';
+    ctx.fillRect(cx - w*0.4, cy - h*0.55, w*0.8, h*0.08);
+    // bottom cap
+    ctx.fillRect(cx - w*0.4, cy + h*0.47, w*0.8, h*0.08);
+    // bands
+    ctx.strokeStyle = '#333'; ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(cx - w*0.45, cy - h*0.15); ctx.lineTo(cx + w*0.45, cy - h*0.15);
+    ctx.moveTo(cx - w*0.45, cy + h*0.15); ctx.lineTo(cx + w*0.45, cy + h*0.15);
+    ctx.stroke();
+    // string from top
+    ctx.beginPath();
+    ctx.moveTo(cx, cy - h*0.6); ctx.lineTo(cx, cy - h*0.85);
+    ctx.stroke();
+  }
+
+  // ============== Mode A rendering ==============
+  function renderModeA() {
+    const left = document.getElementById('canvas-a-left');
+    const right = document.getElementById('canvas-a-right');
+    left.width = IMG_W; left.height = IMG_H;
+    right.width = IMG_W; right.height = IMG_H;
+    const lctx = left.getContext('2d');
+    const rctx = right.getContext('2d');
+    lctx.drawImage(baseAImg, 0, 0, IMG_W, IMG_H);
+    rctx.drawImage(baseAImg, 0, 0, IMG_W, IMG_H);
+    modeA.overlays.forEach(ov => drawOverlay(rctx, ov));
+  }
+
+  function hookModeA() {
+    const HIT_TOL = 30;
+    document.getElementById('wrap-a-right').addEventListener('pointerdown', (ev) => {
+      ev.preventDefault();
+      const canvas = document.getElementById('canvas-a-right');
+      const rect = canvas.getBoundingClientRect();
+      const cx = ev.clientX - rect.left;
+      const cy = ev.clientY - rect.top;
+      const sx = (cx / rect.width) * IMG_W;
+      const sy = (cy / rect.height) * IMG_H;
+      for (let i = 0; i < modeA.overlays.length; i++) {
+        if (modeA.found.has(i)) continue;
+        const [bx, by, bw, bh] = modeA.overlays[i].hitbox;
+        if (sx >= bx - HIT_TOL && sx <= bx + bw + HIT_TOL
+            && sy >= by - HIT_TOL && sy <= by + bh + HIT_TOL) {
+          markFoundA(i);
+          return;
+        }
+      }
+      showBubble('もういちど みてみよう');
+    });
+  }
+
+  function markFoundA(idx) {
+    modeA.found.add(idx);
+    const [bx, by, bw, bh] = modeA.overlays[idx].hitbox;
+    const ccx = bx + bw/2, ccy = by + bh/2;
+    const r = Math.max(bw, bh) / 2 + 16;
+    drawFoundCircle('svg-a-left', ccx, ccy, r);
+    drawFoundCircle('svg-a-right', ccx, ccy, r);
+    showBubble('みつけたね！');
+    updateProgressA();
+    if (modeA.found.size >= modeA.overlays.length) setTimeout(() => showModal('A'), 600);
+  }
+
+  function drawFoundCircle(svgId, cx, cy, r) {
+    const svg = document.getElementById(svgId);
+    const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c.setAttribute('cx', cx); c.setAttribute('cy', cy); c.setAttribute('r', r);
+    c.setAttribute('fill', 'none'); c.setAttribute('stroke', '#FF6B6B');
+    c.setAttribute('stroke-width', 8); c.setAttribute('opacity', '0.9');
+    svg.appendChild(c);
+  }
+
+  function updateProgressA() {
+    document.getElementById('hd-progress').textContent =
+      modeA.found.size + ' / ' + modeA.overlays.length;
+  }
+
+  // ============== Mode B rendering ==============
+  function renderModeB() {
+    const grid = document.getElementById('mode-b-grid');
+    grid.innerHTML = '';
+    modeB.overlays.forEach((ov, idx) => {
+      const cell = document.createElement('div');
+      cell.className = 'mode-b-cell';
+      cell.dataset.idx = idx;
+      cell.innerHTML = `<div class="num">${idx+1}</div><div class="check">✓</div>`;
+      const canvas = document.createElement('canvas');
+      canvas.width = IMG_W; canvas.height = IMG_H;
+      cell.appendChild(canvas);
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(baseBImg, 0, 0, IMG_W, IMG_H);
+      drawOverlay(ctx, ov);
+      cell.addEventListener('pointerdown', (ev) => onTapB(ev, idx, canvas));
+      grid.appendChild(cell);
+    });
+    updateProgressB();
+  }
+
   function onTapB(ev, idx, canvas) {
     ev.preventDefault();
-    if (modeBData.cleared.has(idx)) return;
+    if (modeB.cleared.has(idx)) return;
     const rect = canvas.getBoundingClientRect();
     const cx = ev.clientX - rect.left;
     const cy = ev.clientY - rect.top;
     const sx = (cx / rect.width) * IMG_W;
     const sy = (cy / rect.height) * IMG_H;
     const HIT_TOL = 50;
-    const ov = modeBData.overlays[idx];
+    const ov = modeB.overlays[idx];
     const [bx, by, bw, bh] = ov.hitbox;
     if (sx >= bx - HIT_TOL && sx <= bx + bw + HIT_TOL
         && sy >= by - HIT_TOL && sy <= by + bh + HIT_TOL) {
-      modeBData.cleared.add(idx);
+      modeB.cleared.add(idx);
       const cell = document.querySelector(`.mode-b-cell[data-idx="${idx}"]`);
       cell.classList.add('cleared');
       showBubble('せいかい！');
       updateProgressB();
-      if (modeBData.cleared.size >= modeBData.overlays.length) {
-        setTimeout(() => showModal('B'), 600);
-      }
+      if (modeB.cleared.size >= modeB.overlays.length) setTimeout(() => showModal('B'), 600);
     } else {
       showBubble('ちがう ばしょ かな');
     }
@@ -276,7 +329,7 @@
 
   function updateProgressB() {
     document.getElementById('hd-progress').textContent =
-      modeBData.cleared.size + ' / ' + modeBData.overlays.length;
+      modeB.cleared.size + ' / ' + modeB.overlays.length;
   }
 
   // ============== UI helpers ==============
@@ -309,12 +362,12 @@
 
   function resetCurrentMode() {
     if (currentMode === 'A') {
-      modeAData.found.clear();
+      modeA.found.clear();
       document.getElementById('svg-a-left').innerHTML = '';
       document.getElementById('svg-a-right').innerHTML = '';
       updateProgressA();
     } else {
-      modeBData.cleared.clear();
+      modeB.cleared.clear();
       renderModeB();
     }
   }
@@ -335,6 +388,7 @@
   document.getElementById('tab-b').addEventListener('pointerdown', () => toggleMode('B'));
 
   // Init
+  renderModeA();
   hookModeA();
   renderModeB();
   updateProgressA();
