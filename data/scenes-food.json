@@ -1,0 +1,99 @@
+{
+  "scenes": [
+    {
+      "id": "food-ringo",
+      "category": "food",
+      "name": "ringo",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><rect width=\"400\" height=\"400\" fill=\"#FFFFFF\"/><g id=\"apple-body-left\"><path d=\"M200 130 C140 130 90 180 90 250 C90 320 140 360 180 360 C195 360 200 350 200 340 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"apple-body-right\"><path d=\"M200 130 C260 130 310 180 310 250 C310 320 260 360 220 360 C205 360 200 350 200 340 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"apple-top-dip\"><path d=\"M170 150 Q200 130 230 150\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"apple-stem\"><rect x=\"196\" y=\"100\" width=\"10\" height=\"40\" rx=\"3\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"apple-leaf\"><path d=\"M205 110 Q250 90 260 130 Q230 135 205 125 Z\" fill=\"#B5E48C\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M210 115 Q235 115 255 125\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"apple-shine\"><ellipse cx=\"150\" cy=\"200\" rx=\"18\" ry=\"30\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"apple-cheek-left\"><circle cx=\"145\" cy=\"275\" r=\"15\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"apple-cheek-right\"><circle cx=\"255\" cy=\"275\" r=\"15\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"apple-eye-left\"><circle cx=\"170\" cy=\"240\" r=\"6\" fill=\"#333\"/></g><g id=\"apple-eye-right\"><circle cx=\"230\" cy=\"240\" r=\"6\" fill=\"#333\"/></g><g id=\"apple-mouth\"><path d=\"M185 290 Q200 305 215 290\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g></svg>",
+      "elements": [
+        { "id": "apple-body-left", "label": "りんごのひだり", "bbox": [85, 125, 120, 240] },
+        { "id": "apple-body-right", "label": "りんごのみぎ", "bbox": [195, 125, 120, 240] },
+        { "id": "apple-top-dip", "label": "うえのくぼみ", "bbox": [165, 130, 70, 25] },
+        { "id": "apple-stem", "label": "りんごのじく", "bbox": [193, 97, 16, 46] },
+        { "id": "apple-leaf", "label": "みどりのはっぱ", "bbox": [203, 88, 62, 50] },
+        { "id": "apple-shine", "label": "ひかるところ", "bbox": [130, 168, 40, 64] },
+        { "id": "apple-cheek-left", "label": "ひだりのほっぺ", "bbox": [128, 258, 34, 34] },
+        { "id": "apple-cheek-right", "label": "みぎのほっぺ", "bbox": [238, 258, 34, 34] },
+        { "id": "apple-eye-left", "label": "ひだりのめ", "bbox": [162, 232, 16, 16] },
+        { "id": "apple-eye-right", "label": "みぎのめ", "bbox": [222, 232, 16, 16] },
+        { "id": "apple-mouth", "label": "わらうくち", "bbox": [182, 285, 36, 20] }
+      ]
+    },
+    {
+      "id": "food-keiki",
+      "category": "food",
+      "name": "keiki",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><rect width=\"400\" height=\"400\" fill=\"#FFFFFF\"/><g id=\"cake-plate\"><ellipse cx=\"200\" cy=\"360\" rx=\"160\" ry=\"18\" fill=\"#E8C5E5\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cake-bottom-layer\"><rect x=\"90\" y=\"260\" width=\"220\" height=\"90\" rx=\"6\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cake-cream-drip\"><path d=\"M90 270 Q105 290 120 270 Q135 295 150 270 Q165 290 180 270 Q195 295 210 270 Q225 290 240 270 Q255 295 270 270 Q285 290 300 270 L310 270 L310 260 L90 260 Z\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cake-top-layer\"><rect x=\"120\" y=\"180\" width=\"160\" height=\"80\" rx=\"6\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cake-strawberry-left\"><path d=\"M150 175 Q140 195 155 200 Q170 195 160 175 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M148 170 L162 170\" fill=\"none\" stroke=\"#B5E48C\" stroke-width=\"4\"/></g><g id=\"cake-strawberry-right\"><path d=\"M240 175 Q230 195 245 200 Q260 195 250 175 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M238 170 L252 170\" fill=\"none\" stroke=\"#B5E48C\" stroke-width=\"4\"/></g><g id=\"cake-candle\"><rect x=\"193\" y=\"120\" width=\"14\" height=\"60\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"193\" y1=\"140\" x2=\"207\" y2=\"140\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"cake-flame\"><path d=\"M200 90 Q190 105 195 120 Q200 115 200 120 Q200 115 205 120 Q210 105 200 90 Z\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cake-dot-pink\"><circle cx=\"160\" cy=\"230\" r=\"7\" fill=\"#E8C5E5\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"cake-dot-yellow\"><circle cx=\"200\" cy=\"230\" r=\"7\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"cake-dot-blue\"><circle cx=\"240\" cy=\"230\" r=\"7\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"2\"/></g></svg>",
+      "elements": [
+        { "id": "cake-plate", "label": "おさら", "bbox": [40, 342, 320, 36] },
+        { "id": "cake-bottom-layer", "label": "したのケーキ", "bbox": [87, 257, 226, 95] },
+        { "id": "cake-cream-drip", "label": "クリーム", "bbox": [87, 257, 226, 40] },
+        { "id": "cake-top-layer", "label": "うえのケーキ", "bbox": [117, 177, 166, 86] },
+        { "id": "cake-strawberry-left", "label": "ひだりのいちご", "bbox": [137, 167, 30, 36] },
+        { "id": "cake-strawberry-right", "label": "みぎのいちご", "bbox": [227, 167, 30, 36] },
+        { "id": "cake-candle", "label": "ろうそく", "bbox": [190, 117, 20, 66] },
+        { "id": "cake-flame", "label": "ほのお", "bbox": [187, 87, 26, 36] },
+        { "id": "cake-dot-pink", "label": "ピンクのつぶ", "bbox": [151, 221, 18, 18] },
+        { "id": "cake-dot-yellow", "label": "きいろのつぶ", "bbox": [191, 221, 18, 18] },
+        { "id": "cake-dot-blue", "label": "あおいつぶ", "bbox": [231, 221, 18, 18] }
+      ]
+    },
+    {
+      "id": "food-obentou",
+      "category": "food",
+      "name": "obentou",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><rect width=\"400\" height=\"400\" fill=\"#FFFFFF\"/><g id=\"bento-box\"><rect x=\"50\" y=\"100\" width=\"300\" height=\"230\" rx=\"15\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bento-inner\"><rect x=\"65\" y=\"115\" width=\"270\" height=\"200\" rx=\"8\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g><g id=\"bento-divider\"><line x1=\"200\" y1=\"115\" x2=\"200\" y2=\"315\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"bento-rice\"><path d=\"M75 130 L185 130 L185 220 L75 220 Z\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bento-umeboshi\"><circle cx=\"130\" cy=\"175\" r=\"14\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bento-onigiri\"><path d=\"M130 240 L160 295 L100 295 Z\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"108\" y=\"275\" width=\"44\" height=\"15\" fill=\"#333\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"bento-tamagoyaki\"><rect x=\"215\" y=\"135\" width=\"50\" height=\"40\" rx=\"4\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"230\" y1=\"135\" x2=\"230\" y2=\"175\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"250\" y1=\"135\" x2=\"250\" y2=\"175\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"bento-broccoli\"><circle cx=\"295\" cy=\"150\" r=\"12\" fill=\"#B5E48C\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"310\" cy=\"160\" r=\"10\" fill=\"#B5E48C\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"285\" cy=\"165\" r=\"10\" fill=\"#B5E48C\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bento-sausage\"><path d=\"M220 230 Q240 215 260 230 Q280 245 300 230 L300 260 L220 260 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bento-cherry-tomato\"><circle cx=\"245\" cy=\"285\" r=\"12\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g></svg>",
+      "elements": [
+        { "id": "bento-box", "label": "おべんとうばこ", "bbox": [47, 97, 306, 236] },
+        { "id": "bento-inner", "label": "なかのしろい", "bbox": [62, 112, 276, 206] },
+        { "id": "bento-divider", "label": "まんなかのしきり", "bbox": [198, 115, 4, 200] },
+        { "id": "bento-rice", "label": "しろいごはん", "bbox": [72, 127, 116, 96] },
+        { "id": "bento-umeboshi", "label": "うめぼし", "bbox": [113, 158, 34, 34] },
+        { "id": "bento-onigiri", "label": "おにぎり", "bbox": [97, 237, 66, 62] },
+        { "id": "bento-tamagoyaki", "label": "たまごやき", "bbox": [212, 132, 56, 46] },
+        { "id": "bento-broccoli", "label": "みどりのやさい", "bbox": [273, 137, 50, 40] },
+        { "id": "bento-sausage", "label": "あかいウインナー", "bbox": [217, 212, 86, 50] },
+        { "id": "bento-cherry-tomato", "label": "ミニトマト", "bbox": [230, 270, 30, 30] }
+      ]
+    },
+    {
+      "id": "food-aisu",
+      "category": "food",
+      "name": "aisu",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><rect width=\"400\" height=\"400\" fill=\"#FFFFFF\"/><g id=\"aisu-cone\"><path d=\"M150 220 L250 220 L210 370 L190 370 Z\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"aisu-cone-pattern\"><line x1=\"165\" y1=\"240\" x2=\"235\" y2=\"240\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"170\" y1=\"260\" x2=\"230\" y2=\"260\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"175\" y1=\"280\" x2=\"225\" y2=\"280\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"180\" y1=\"300\" x2=\"220\" y2=\"300\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"155\" y1=\"240\" x2=\"200\" y2=\"340\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"245\" y1=\"240\" x2=\"200\" y2=\"340\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"aisu-scoop-bottom\"><circle cx=\"200\" cy=\"200\" r=\"55\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"aisu-scoop-middle\"><circle cx=\"175\" cy=\"150\" r=\"45\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"aisu-scoop-top\"><circle cx=\"225\" cy=\"125\" r=\"42\" fill=\"#E8C5E5\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"aisu-cherry\"><circle cx=\"225\" cy=\"80\" r=\"10\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"aisu-cherry-stem\"><path d=\"M225 80 Q235 65 245 55\" fill=\"none\" stroke=\"#D4A373\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"aisu-cherry-leaf\"><path d=\"M245 55 Q258 50 260 62 Q252 60 245 55 Z\" fill=\"#B5E48C\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"aisu-sprinkle-left\"><line x1=\"150\" y1=\"140\" x2=\"160\" y2=\"145\" stroke=\"#FFEB99\" stroke-width=\"4\" stroke-linecap=\"round\"/></g><g id=\"aisu-sprinkle-right\"><line x1=\"240\" y1=\"110\" x2=\"248\" y2=\"118\" stroke=\"#90BFD9\" stroke-width=\"4\" stroke-linecap=\"round\"/></g><g id=\"aisu-sprinkle-bottom\"><line x1=\"190\" y1=\"195\" x2=\"200\" y2=\"200\" stroke=\"#FFB5A7\" stroke-width=\"4\" stroke-linecap=\"round\"/></g></svg>",
+      "elements": [
+        { "id": "aisu-cone", "label": "コーン", "bbox": [147, 217, 106, 156] },
+        { "id": "aisu-cone-pattern", "label": "コーンのもよう", "bbox": [152, 237, 96, 106] },
+        { "id": "aisu-scoop-bottom", "label": "したのアイス", "bbox": [142, 142, 116, 116] },
+        { "id": "aisu-scoop-middle", "label": "ピンクのアイス", "bbox": [127, 102, 96, 96] },
+        { "id": "aisu-scoop-top", "label": "うえのアイス", "bbox": [180, 80, 90, 90] },
+        { "id": "aisu-cherry", "label": "さくらんぼ", "bbox": [212, 67, 26, 26] },
+        { "id": "aisu-cherry-stem", "label": "さくらんぼのじく", "bbox": [222, 53, 28, 30] },
+        { "id": "aisu-cherry-leaf", "label": "ちいさいはっぱ", "bbox": [243, 47, 22, 20] },
+        { "id": "aisu-sprinkle-left", "label": "ひだりのトッピング", "bbox": [147, 137, 16, 12] },
+        { "id": "aisu-sprinkle-right", "label": "みぎのトッピング", "bbox": [237, 107, 14, 14] },
+        { "id": "aisu-sprinkle-bottom", "label": "したのトッピング", "bbox": [187, 192, 16, 12] }
+      ]
+    },
+    {
+      "id": "food-pan",
+      "category": "food",
+      "name": "pan",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><rect width=\"400\" height=\"400\" fill=\"#FFFFFF\"/><g id=\"pan-board\"><rect x=\"40\" y=\"320\" width=\"320\" height=\"40\" rx=\"6\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"pan-body\"><path d=\"M80 150 Q80 100 130 90 Q200 70 270 90 Q320 100 320 150 L320 320 L80 320 Z\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"pan-top-curve\"><path d=\"M80 150 Q140 110 200 130 Q260 110 320 150\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"pan-crust-left\"><path d=\"M80 150 Q70 200 80 320\" fill=\"none\" stroke=\"#D4A373\" stroke-width=\"4\"/></g><g id=\"pan-crust-right\"><path d=\"M320 150 Q330 200 320 320\" fill=\"none\" stroke=\"#D4A373\" stroke-width=\"4\"/></g><g id=\"pan-slice-line\"><line x1=\"200\" y1=\"130\" x2=\"200\" y2=\"320\" stroke=\"#333\" stroke-width=\"3\" stroke-dasharray=\"6,6\"/></g><g id=\"pan-butter\"><path d=\"M140 210 L185 195 L190 230 L145 245 Z\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"pan-jam\"><path d=\"M225 200 Q255 195 280 215 Q275 240 240 245 Q220 235 225 200 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"pan-seed-left\"><circle cx=\"130\" cy=\"170\" r=\"4\" fill=\"#333\"/></g><g id=\"pan-seed-middle\"><circle cx=\"200\" cy=\"160\" r=\"4\" fill=\"#333\"/></g><g id=\"pan-seed-right\"><circle cx=\"270\" cy=\"170\" r=\"4\" fill=\"#333\"/></g><g id=\"pan-steam\"><path d=\"M180 70 Q175 55 185 45 Q195 35 190 20\" fill=\"none\" stroke=\"#90BFD9\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M210 70 Q205 55 215 45 Q225 35 220 20\" fill=\"none\" stroke=\"#90BFD9\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g></svg>",
+      "elements": [
+        { "id": "pan-board", "label": "まないた", "bbox": [37, 317, 326, 46] },
+        { "id": "pan-body", "label": "しょくぱん", "bbox": [77, 75, 246, 248] },
+        { "id": "pan-top-curve", "label": "うえのまるみ", "bbox": [77, 108, 246, 30] },
+        { "id": "pan-crust-left", "label": "ひだりのみみ", "bbox": [65, 147, 18, 176] },
+        { "id": "pan-crust-right", "label": "みぎのみみ", "bbox": [317, 147, 18, 176] },
+        { "id": "pan-slice-line", "label": "まんなかのせん", "bbox": [197, 127, 6, 196] },
+        { "id": "pan-butter", "label": "きいろいバター", "bbox": [137, 192, 56, 56] },
+        { "id": "pan-jam", "label": "ピンクのジャム", "bbox": [217, 192, 68, 56] },
+        { "id": "pan-seed-left", "label": "ひだりのつぶ", "bbox": [125, 165, 10, 10] },
+        { "id": "pan-seed-middle", "label": "まんなかのつぶ", "bbox": [195, 155, 10, 10] },
+        { "id": "pan-seed-right", "label": "みぎのつぶ", "bbox": [265, 165, 10, 10] },
+        { "id": "pan-steam", "label": "あたたかいゆげ", "bbox": [172, 17, 56, 58] }
+      ]
+    }
+  ]
+}

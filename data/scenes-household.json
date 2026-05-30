@@ -1,0 +1,103 @@
+{
+  "scenes": [
+    {
+      "id": "household-isu-tsukue",
+      "category": "household",
+      "name": "いすとつくえ",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><rect width=\"400\" height=\"400\" fill=\"#FFFFFF\"/><g id=\"floor\"><line x1=\"20\" y1=\"360\" x2=\"380\" y2=\"360\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"desk-top\"><rect x=\"60\" y=\"180\" width=\"280\" height=\"30\" fill=\"#D4A373\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"desk-leg-left\"><rect x=\"80\" y=\"210\" width=\"20\" height=\"150\" fill=\"#D4A373\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"desk-leg-right\"><rect x=\"300\" y=\"210\" width=\"20\" height=\"150\" fill=\"#D4A373\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"desk-drawer\"><rect x=\"180\" y=\"215\" width=\"100\" height=\"35\" fill=\"#FFE5B4\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"230\" cy=\"232\" r=\"4\" fill=\"#333\"/></g><g id=\"book\"><rect x=\"120\" y=\"160\" width=\"50\" height=\"20\" fill=\"#90BFD9\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"pencil\"><rect x=\"200\" y=\"170\" width=\"60\" height=\"8\" fill=\"#FFEB99\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"260,170 270,174 260,178\" fill=\"#333\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"chair-seat\"><rect x=\"60\" y=\"260\" width=\"90\" height=\"20\" fill=\"#FFB5A7\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"chair-back\"><rect x=\"60\" y=\"190\" width=\"15\" height=\"75\" fill=\"#FFB5A7\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"chair-leg-front\"><rect x=\"65\" y=\"280\" width=\"10\" height=\"80\" fill=\"#FFB5A7\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"chair-leg-back\"><rect x=\"135\" y=\"280\" width=\"10\" height=\"80\" fill=\"#FFB5A7\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g></svg>",
+      "elements": [
+        {"id": "floor", "label": "ゆか", "bbox": [20, 358, 360, 4]},
+        {"id": "desk-top", "label": "つくえのいた", "bbox": [60, 180, 280, 30]},
+        {"id": "desk-leg-left", "label": "つくえのひだりあし", "bbox": [80, 210, 20, 150]},
+        {"id": "desk-leg-right", "label": "つくえのみぎあし", "bbox": [300, 210, 20, 150]},
+        {"id": "desk-drawer", "label": "ひきだし", "bbox": [180, 215, 100, 35]},
+        {"id": "book", "label": "ほん", "bbox": [120, 160, 50, 20]},
+        {"id": "pencil", "label": "えんぴつ", "bbox": [200, 168, 70, 12]},
+        {"id": "chair-seat", "label": "いすのざめん", "bbox": [60, 260, 90, 20]},
+        {"id": "chair-back", "label": "いすのせもたれ", "bbox": [60, 190, 15, 75]},
+        {"id": "chair-leg-front", "label": "いすのまえあし", "bbox": [65, 280, 10, 80]},
+        {"id": "chair-leg-back", "label": "いすのうしろあし", "bbox": [135, 280, 10, 80]}
+      ]
+    },
+    {
+      "id": "household-tokei",
+      "category": "household",
+      "name": "とけい",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><rect width=\"400\" height=\"400\" fill=\"#FFFFFF\"/><g id=\"clock-frame\"><circle cx=\"200\" cy=\"200\" r=\"150\" fill=\"#FFE5B4\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"clock-face\"><circle cx=\"200\" cy=\"200\" r=\"130\" fill=\"#FFFFFF\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"number-12\"><text x=\"200\" y=\"95\" font-family=\"Arial\" font-size=\"24\" text-anchor=\"middle\" fill=\"#333\" font-weight=\"bold\">12</text></g><g id=\"number-3\"><text x=\"310\" y=\"210\" font-family=\"Arial\" font-size=\"24\" text-anchor=\"middle\" fill=\"#333\" font-weight=\"bold\">3</text></g><g id=\"number-6\"><text x=\"200\" y=\"320\" font-family=\"Arial\" font-size=\"24\" text-anchor=\"middle\" fill=\"#333\" font-weight=\"bold\">6</text></g><g id=\"number-9\"><text x=\"90\" y=\"210\" font-family=\"Arial\" font-size=\"24\" text-anchor=\"middle\" fill=\"#333\" font-weight=\"bold\">9</text></g><g id=\"hour-hand\"><line x1=\"200\" y1=\"200\" x2=\"200\" y2=\"130\" stroke=\"#333\" stroke-width=\"8\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></g><g id=\"minute-hand\"><line x1=\"200\" y1=\"200\" x2=\"280\" y2=\"200\" stroke=\"#333\" stroke-width=\"5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></g><g id=\"center-dot\"><circle cx=\"200\" cy=\"200\" r=\"8\" fill=\"#FFB5A7\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"top-ring\"><rect x=\"190\" y=\"30\" width=\"20\" height=\"25\" fill=\"#D4A373\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bell-left\"><circle cx=\"110\" cy=\"75\" r=\"22\" fill=\"#FFEB99\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bell-right\"><circle cx=\"290\" cy=\"75\" r=\"22\" fill=\"#FFEB99\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g></svg>",
+      "elements": [
+        {"id": "clock-frame", "label": "とけいのわく", "bbox": [50, 50, 300, 300]},
+        {"id": "clock-face", "label": "とけいのもじばん", "bbox": [70, 70, 260, 260]},
+        {"id": "number-12", "label": "じゅうにのすうじ", "bbox": [180, 78, 40, 22]},
+        {"id": "number-3", "label": "さんのすうじ", "bbox": [298, 195, 24, 22]},
+        {"id": "number-6", "label": "ろくのすうじ", "bbox": [188, 303, 24, 22]},
+        {"id": "number-9", "label": "きゅうのすうじ", "bbox": [78, 195, 24, 22]},
+        {"id": "hour-hand", "label": "みじかいはり", "bbox": [196, 130, 8, 70]},
+        {"id": "minute-hand", "label": "ながいはり", "bbox": [200, 196, 80, 8]},
+        {"id": "center-dot", "label": "まんなかのてん", "bbox": [192, 192, 16, 16]},
+        {"id": "top-ring", "label": "うえのかなぐ", "bbox": [190, 30, 20, 25]},
+        {"id": "bell-left", "label": "ひだりのベル", "bbox": [88, 53, 44, 44]},
+        {"id": "bell-right", "label": "みぎのベル", "bbox": [268, 53, 44, 44]}
+      ]
+    },
+    {
+      "id": "household-denki",
+      "category": "household",
+      "name": "でんきスタンド",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><rect width=\"400\" height=\"400\" fill=\"#FFFFFF\"/><g id=\"lamp-shade\"><polygon points=\"130,60 270,60 300,170 100,170\" fill=\"#FFE5B4\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"shade-top\"><ellipse cx=\"200\" cy=\"60\" rx=\"70\" ry=\"12\" fill=\"#D4A373\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"shade-bottom\"><ellipse cx=\"200\" cy=\"170\" rx=\"100\" ry=\"15\" fill=\"#FFEB99\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bulb\"><circle cx=\"200\" cy=\"195\" r=\"22\" fill=\"#FFFFFF\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"light-ray-left\"><line x1=\"160\" y1=\"195\" x2=\"130\" y2=\"195\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"light-ray-right\"><line x1=\"240\" y1=\"195\" x2=\"270\" y2=\"195\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"light-ray-down\"><line x1=\"200\" y1=\"230\" x2=\"200\" y2=\"255\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"neck\"><rect x=\"195\" y=\"210\" width=\"10\" height=\"60\" fill=\"#D4A373\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"pole\"><rect x=\"196\" y=\"270\" width=\"8\" height=\"80\" fill=\"#D4A373\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"base\"><ellipse cx=\"200\" cy=\"355\" rx=\"70\" ry=\"15\" fill=\"#90BFD9\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"switch\"><circle cx=\"260\" cy=\"310\" r=\"10\" fill=\"#FFB5A7\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cord\"><path d=\"M 200 355 Q 320 360 360 380\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g></svg>",
+      "elements": [
+        {"id": "lamp-shade", "label": "ランプのかさ", "bbox": [100, 60, 200, 110]},
+        {"id": "shade-top", "label": "かさのうえ", "bbox": [130, 48, 140, 24]},
+        {"id": "shade-bottom", "label": "かさのした", "bbox": [100, 155, 200, 30]},
+        {"id": "bulb", "label": "でんきゅう", "bbox": [178, 173, 44, 44]},
+        {"id": "light-ray-left", "label": "ひだりのひかり", "bbox": [128, 193, 34, 4]},
+        {"id": "light-ray-right", "label": "みぎのひかり", "bbox": [238, 193, 34, 4]},
+        {"id": "light-ray-down", "label": "したのひかり", "bbox": [198, 228, 4, 30]},
+        {"id": "neck", "label": "ランプのくび", "bbox": [195, 210, 10, 60]},
+        {"id": "pole", "label": "ぼう", "bbox": [196, 270, 8, 80]},
+        {"id": "base", "label": "だい", "bbox": [130, 340, 140, 30]},
+        {"id": "switch", "label": "スイッチ", "bbox": [250, 300, 20, 20]},
+        {"id": "cord", "label": "コード", "bbox": [200, 355, 160, 25]}
+      ]
+    },
+    {
+      "id": "household-daidokoro",
+      "category": "household",
+      "name": "だいどころ",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><rect width=\"400\" height=\"400\" fill=\"#FFFFFF\"/><g id=\"counter\"><rect x=\"30\" y=\"220\" width=\"340\" height=\"40\" fill=\"#D4A373\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cabinet\"><rect x=\"30\" y=\"260\" width=\"340\" height=\"100\" fill=\"#FFE5B4\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cabinet-door-left\"><line x1=\"200\" y1=\"260\" x2=\"200\" y2=\"360\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"180\" cy=\"310\" r=\"5\" fill=\"#333\"/></g><g id=\"cabinet-door-right\"><circle cx=\"220\" cy=\"310\" r=\"5\" fill=\"#333\"/></g><g id=\"sink\"><rect x=\"60\" y=\"170\" width=\"130\" height=\"50\" fill=\"#90BFD9\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"faucet\"><path d=\"M 100 170 L 100 120 L 150 120 L 150 150\" fill=\"none\" stroke=\"#333\" stroke-width=\"5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></g><g id=\"stove\"><rect x=\"220\" y=\"180\" width=\"140\" height=\"40\" fill=\"#FFB5A7\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"burner-left\"><circle cx=\"255\" cy=\"200\" r=\"12\" fill=\"#333\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"burner-right\"><circle cx=\"325\" cy=\"200\" r=\"12\" fill=\"#333\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"pot\"><ellipse cx=\"290\" cy=\"160\" rx=\"30\" ry=\"10\" fill=\"#FFEB99\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"260\" y=\"140\" width=\"60\" height=\"25\" fill=\"#FFEB99\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"260\" y1=\"150\" x2=\"250\" y2=\"148\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"apple\"><circle cx=\"100\" cy=\"195\" r=\"15\" fill=\"#FFB5A7\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"100\" y1=\"180\" x2=\"100\" y2=\"172\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"window\"><rect x=\"140\" y=\"50\" width=\"120\" height=\"60\" fill=\"#90BFD9\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"200\" y1=\"50\" x2=\"200\" y2=\"110\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g></svg>",
+      "elements": [
+        {"id": "counter", "label": "だいどころのだい", "bbox": [30, 220, 340, 40]},
+        {"id": "cabinet", "label": "とだな", "bbox": [30, 260, 340, 100]},
+        {"id": "cabinet-door-left", "label": "ひだりのとびら", "bbox": [30, 260, 170, 100]},
+        {"id": "cabinet-door-right", "label": "みぎのとびら", "bbox": [200, 260, 170, 100]},
+        {"id": "sink", "label": "ながしだい", "bbox": [60, 170, 130, 50]},
+        {"id": "faucet", "label": "じゃぐち", "bbox": [95, 115, 60, 60]},
+        {"id": "stove", "label": "コンロ", "bbox": [220, 180, 140, 40]},
+        {"id": "burner-left", "label": "ひだりのひぐち", "bbox": [240, 185, 30, 30]},
+        {"id": "burner-right", "label": "みぎのひぐち", "bbox": [310, 185, 30, 30]},
+        {"id": "pot", "label": "なべ", "bbox": [250, 138, 70, 35]},
+        {"id": "apple", "label": "りんご", "bbox": [82, 170, 36, 42]},
+        {"id": "window", "label": "まど", "bbox": [140, 50, 120, 60]}
+      ]
+    },
+    {
+      "id": "household-ofuro",
+      "category": "household",
+      "name": "おふろ",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><rect width=\"400\" height=\"400\" fill=\"#FFFFFF\"/><g id=\"tile-floor\"><rect x=\"20\" y=\"340\" width=\"360\" height=\"40\" fill=\"#E8C5E5\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"140\" y1=\"340\" x2=\"140\" y2=\"380\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"260\" y1=\"340\" x2=\"260\" y2=\"380\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"tub-body\"><path d=\"M 50 200 Q 50 340 100 340 L 300 340 Q 350 340 350 200 Z\" fill=\"#FFE5B4\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"tub-rim\"><ellipse cx=\"200\" cy=\"200\" rx=\"150\" ry=\"22\" fill=\"#D4A373\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"water\"><ellipse cx=\"200\" cy=\"205\" rx=\"135\" ry=\"15\" fill=\"#90BFD9\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bubble-left\"><circle cx=\"110\" cy=\"195\" r=\"12\" fill=\"#FFFFFF\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bubble-mid\"><circle cx=\"200\" cy=\"190\" r=\"14\" fill=\"#FFFFFF\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bubble-right\"><circle cx=\"285\" cy=\"195\" r=\"10\" fill=\"#FFFFFF\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"duck\"><ellipse cx=\"165\" cy=\"170\" rx=\"22\" ry=\"15\" fill=\"#FFEB99\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"185\" cy=\"158\" r=\"12\" fill=\"#FFEB99\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"195,158 205,160 195,164\" fill=\"#FFB5A7\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"188\" cy=\"155\" r=\"2\" fill=\"#333\"/></g><g id=\"shower-head\"><circle cx=\"330\" cy=\"100\" r=\"18\" fill=\"#90BFD9\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"330\" y1=\"82\" x2=\"330\" y2=\"50\" stroke=\"#333\" stroke-width=\"5\" stroke-linejoin=\"round\"/></g><g id=\"shower-drop-1\"><line x1=\"320\" y1=\"125\" x2=\"315\" y2=\"145\" stroke=\"#90BFD9\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"shower-drop-2\"><line x1=\"340\" y1=\"125\" x2=\"345\" y2=\"145\" stroke=\"#90BFD9\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"soap\"><ellipse cx=\"80\" cy=\"320\" rx=\"22\" ry=\"10\" fill=\"#FFB5A7\" stroke=\"black\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g></svg>",
+      "elements": [
+        {"id": "tile-floor", "label": "タイルのゆか", "bbox": [20, 340, 360, 40]},
+        {"id": "tub-body", "label": "おふろのからだ", "bbox": [50, 200, 300, 140]},
+        {"id": "tub-rim", "label": "おふろのふち", "bbox": [50, 178, 300, 44]},
+        {"id": "water", "label": "おゆ", "bbox": [65, 190, 270, 30]},
+        {"id": "bubble-left", "label": "ひだりのあわ", "bbox": [98, 183, 24, 24]},
+        {"id": "bubble-mid", "label": "まんなかのあわ", "bbox": [186, 176, 28, 28]},
+        {"id": "bubble-right", "label": "みぎのあわ", "bbox": [275, 185, 20, 20]},
+        {"id": "duck", "label": "あひる", "bbox": [143, 145, 65, 40]},
+        {"id": "shower-head", "label": "シャワー", "bbox": [312, 50, 36, 68]},
+        {"id": "shower-drop-1", "label": "ひだりのみずたま", "bbox": [313, 125, 9, 22]},
+        {"id": "shower-drop-2", "label": "みぎのみずたま", "bbox": [338, 125, 9, 22]},
+        {"id": "soap", "label": "せっけん", "bbox": [58, 310, 44, 20]}
+      ]
+    }
+  ]
+}

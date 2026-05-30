@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="まちがいさがし">
+<meta name="theme-color" content="#FFEB99">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
+<link rel="stylesheet" href="styles.css">
+<title>まちがいさがし</title>
+<script src="app.js" defer></script>
+</head>
+<body>
+
+<div id="app">
+
+<section id="home" class="screen active" aria-labelledby="home-title">
+  <h1 id="home-title">ようこそ</h1>
+  <div class="mode-buttons">
+    <button id="btn-mode-a" class="mode-button" type="button">
+      <span class="mode-label">まちがいさがし</span>
+      <span id="home-badge-a" class="mode-progress" data-mode="a" aria-live="polite">0 / 100</span>
+    </button>
+    <button id="btn-mode-b" class="mode-button" type="button">
+      <span class="mode-label">なかまはずれ</span>
+      <span id="home-badge-b" class="mode-progress" data-mode="b" aria-live="polite">0 / 100</span>
+    </button>
+  </div>
+  <div id="sticker-card" class="sticker-card" aria-label="ごほうび シール"></div>
+</section>
+
+<section id="problem-a" class="screen" aria-labelledby="problem-a-title">
+  <header class="problem-header">
+    <button class="back-button" type="button" data-target="home" aria-label="もどる">もどる</button>
+    <p class="progress-text" id="progress-a">もんだい 1 / 100</p>
+    <p class="found-counter" id="found-a" aria-live="polite">みつけた 0 / 10</p>
+  </header>
+  <h2 id="problem-a-title" class="visually-hidden">まちがいさがし</h2>
+  <div class="images-row">
+    <div class="image-pane">
+      <svg id="svg-a-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="ひだりのえ"></svg>
+    </div>
+    <div class="image-pane">
+      <svg id="svg-a-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="みぎのえ"></svg>
+    </div>
+  </div>
+</section>
+
+<section id="problem-b" class="screen" aria-labelledby="problem-b-title">
+  <header class="problem-header">
+    <button class="back-button" type="button" data-target="home" aria-label="もどる">もどる</button>
+    <p class="progress-text" id="progress-b">もんだい 1 / 100</p>
+  </header>
+  <h2 id="problem-b-title" class="visually-hidden">なかまはずれ</h2>
+  <div class="images-grid">
+    <div class="image-cell"><svg id="svg-b-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="1ばんめ"></svg></div>
+    <div class="image-cell"><svg id="svg-b-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="2ばんめ"></svg></div>
+    <div class="image-cell"><svg id="svg-b-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="3ばんめ"></svg></div>
+    <div class="image-cell"><svg id="svg-b-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="4ばんめ"></svg></div>
+    <div class="image-cell"><svg id="svg-b-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="5ばんめ"></svg></div>
+  </div>
+</section>
+
+<section id="result" class="screen" aria-labelledby="result-title">
+  <div class="result__card">
+    <h2 id="result-title" class="result__title">クリア</h2>
+    <div id="result-stars" class="result__stars" aria-label="ほし"></div>
+    <div id="result-stamp" class="result__stamp" aria-hidden="true">よくできました</div>
+    <p class="result__message">よく がんばったね</p>
+    <div class="result__buttons">
+      <button id="btn-result-next" class="primary-button" type="button">つぎへ</button>
+      <button id="btn-result-home" class="secondary-button" type="button">ホームに もどる</button>
+    </div>
+  </div>
+</section>
+
+<section id="celebration" class="screen" aria-labelledby="celebration-title">
+  <div class="celebration__confetti" id="celebration-confetti" aria-hidden="true"></div>
+  <div class="celebration__sparkles" aria-hidden="true">
+    <svg class="celebration__sparkle celebration__sparkle--1" viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#FFD93D"/></svg>
+    <svg class="celebration__sparkle celebration__sparkle--2" viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#FF6B6B"/></svg>
+    <svg class="celebration__sparkle celebration__sparkle--3" viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#88C57B"/></svg>
+    <svg class="celebration__sparkle celebration__sparkle--4" viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#7ED0FF"/></svg>
+  </div>
+  <div class="celebration__inner">
+    <h2 id="celebration-title" class="celebration__title">ぜんぶ できたね！</h2>
+    <div class="celebration__stars" id="celebration-stars" aria-label="ほし">
+      <span class="celebration__star">★</span>
+      <span class="celebration__star">★</span>
+      <span class="celebration__star">★</span>
+    </div>
+    <div class="celebration__mascot" id="celebration-mascot" aria-hidden="true">
+      <svg viewBox="0 0 120 120" width="140" height="140">
+        <circle cx="60" cy="60" r="54" fill="#FFEFC9" stroke="#FFD966" stroke-width="6"/>
+        <circle cx="44" cy="54" r="6" fill="#333"/>
+        <circle cx="76" cy="54" r="6" fill="#333"/>
+        <path d="M42 74 Q60 90 78 74" stroke="#333" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <circle cx="32" cy="68" r="5" fill="#FF9AA2" opacity="0.7"/>
+        <circle cx="88" cy="68" r="5" fill="#FF9AA2" opacity="0.7"/>
+      </svg>
+    </div>
+    <p class="celebration__text">よく がんばりました</p>
+    <div class="celebration__stamp-summary">
+      <p class="celebration__stamp-label">あつめた スタンプ</p>
+      <p class="celebration__stamp-count" id="celebration-stamp-count">0</p>
+      <div class="celebration__sticker-board sticker-board" id="celebration-sticker-board"></div>
+    </div>
+    <div class="celebration__buttons">
+      <button id="btn-regen" class="primary-button" type="button">あたらしい もんだいを つくる</button>
+      <button class="secondary-button" type="button" data-target="home">ホームに もどる</button>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div id="mascot" class="mascot" data-face="happy">
+  <div id="mascot-bubble" class="mascot__bubble" aria-live="polite"></div>
+  <svg class="mascot__face mascot__face--happy" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <circle cx="22" cy="26" r="3.5" fill="#333"/>
+    <circle cx="42" cy="26" r="3.5" fill="#333"/>
+    <path d="M20 40 Q32 50 44 40" stroke="#333" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+    <circle cx="14" cy="36" r="4" fill="#FFB6B6" opacity="0.6"/>
+    <circle cx="50" cy="36" r="4" fill="#FFB6B6" opacity="0.6"/>
+  </svg>
+  <svg class="mascot__face mascot__face--cheer" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path d="M16 24 Q22 18 28 24" stroke="#333" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+    <path d="M36 24 Q42 18 48 24" stroke="#333" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+    <path d="M18 38 Q32 54 46 38 Q32 46 18 38 Z" fill="#FF6B6B" stroke="#333" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="14" cy="34" r="4" fill="#FFB6B6" opacity="0.6"/>
+    <circle cx="50" cy="34" r="4" fill="#FFB6B6" opacity="0.6"/>
+  </svg>
+  <svg class="mascot__face mascot__face--think" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <circle cx="22" cy="26" r="3" fill="#333"/>
+    <circle cx="42" cy="26" r="3" fill="#333"/>
+    <path d="M20 22 L28 24" stroke="#333" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M44 24 L36 22" stroke="#333" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M24 42 Q32 38 40 42" stroke="#333" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </svg>
+</div>
+
+</body>
+</html>

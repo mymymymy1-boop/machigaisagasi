@@ -1,0 +1,168 @@
+{
+  "scenes": [
+    {
+      "id": "animals-neko",
+      "category": "animals",
+      "name": "ねこ",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><g id=\"cat-body\"><ellipse cx=\"200\" cy=\"260\" rx=\"100\" ry=\"80\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cat-head\"><circle cx=\"200\" cy=\"160\" r=\"75\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cat-ear-left\"><path d=\"M145 110 L130 60 L175 95 Z\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cat-ear-right\"><path d=\"M255 110 L270 60 L225 95 Z\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cat-eye-left\"><circle cx=\"175\" cy=\"155\" r=\"8\" fill=\"#333\"/></g><g id=\"cat-eye-right\"><circle cx=\"225\" cy=\"155\" r=\"8\" fill=\"#333\"/></g><g id=\"cat-nose\"><path d=\"M195 180 L205 180 L200 188 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g><g id=\"cat-mouth\"><path d=\"M200 188 Q190 198 185 195 M200 188 Q210 198 215 195\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cat-whiskers\"><path d=\"M150 178 L120 175 M150 185 L120 190 M250 178 L280 175 M250 185 L280 190\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"cat-tail\"><path d=\"M295 270 Q340 240 335 190 Q330 170 320 175\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cat-collar\"><ellipse cx=\"200\" cy=\"225\" rx=\"50\" ry=\"10\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"232\" r=\"6\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"cat-paw\"><ellipse cx=\"170\" cy=\"335\" rx=\"22\" ry=\"12\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\"/><ellipse cx=\"230\" cy=\"335\" rx=\"22\" ry=\"12\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\"/></g></svg>",
+      "elements": [
+        { "id": "cat-body", "label": "ねこのからだ", "bbox": [100, 180, 200, 160] },
+        { "id": "cat-head", "label": "ねこのあたま", "bbox": [125, 85, 150, 150] },
+        { "id": "cat-ear-left", "label": "ひだりのみみ", "bbox": [125, 55, 55, 60] },
+        { "id": "cat-ear-right", "label": "みぎのみみ", "bbox": [220, 55, 55, 60] },
+        { "id": "cat-eye-left", "label": "ひだりのめ", "bbox": [165, 145, 20, 20] },
+        { "id": "cat-eye-right", "label": "みぎのめ", "bbox": [215, 145, 20, 20] },
+        { "id": "cat-nose", "label": "おはな", "bbox": [193, 178, 14, 12] },
+        { "id": "cat-mouth", "label": "おくち", "bbox": [183, 185, 34, 18] },
+        { "id": "cat-whiskers", "label": "ひげ", "bbox": [120, 173, 160, 22] },
+        { "id": "cat-tail", "label": "しっぽ", "bbox": [290, 165, 55, 115] },
+        { "id": "cat-collar", "label": "くびわ", "bbox": [148, 213, 104, 28] },
+        { "id": "cat-paw", "label": "あんよ", "bbox": [146, 320, 108, 28] }
+      ]
+    },
+    {
+      "id": "animals-inu",
+      "category": "animals",
+      "name": "いぬ",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><g id=\"dog-body\"><ellipse cx=\"200\" cy=\"265\" rx=\"105\" ry=\"75\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"dog-head\"><circle cx=\"200\" cy=\"165\" r=\"70\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"dog-ear-left\"><ellipse cx=\"140\" cy=\"145\" rx=\"22\" ry=\"45\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"dog-ear-right\"><ellipse cx=\"260\" cy=\"145\" rx=\"22\" ry=\"45\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"dog-eye-left\"><circle cx=\"178\" cy=\"160\" r=\"8\" fill=\"#333\"/></g><g id=\"dog-eye-right\"><circle cx=\"222\" cy=\"160\" r=\"8\" fill=\"#333\"/></g><g id=\"dog-snout\"><ellipse cx=\"200\" cy=\"195\" rx=\"30\" ry=\"22\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"dog-nose\"><ellipse cx=\"200\" cy=\"185\" rx=\"10\" ry=\"7\" fill=\"#333\"/></g><g id=\"dog-mouth\"><path d=\"M200 200 Q190 213 182 208 M200 200 Q210 213 218 208\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"dog-tongue\"><ellipse cx=\"200\" cy=\"212\" rx=\"8\" ry=\"6\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"dog-tail\"><path d=\"M300 240 Q345 215 340 180\" fill=\"none\" stroke=\"#333\" stroke-width=\"8\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></g><g id=\"dog-collar\"><ellipse cx=\"200\" cy=\"230\" rx=\"48\" ry=\"9\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"238\" r=\"5\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"dog-paw\"><ellipse cx=\"160\" cy=\"335\" rx=\"22\" ry=\"12\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\"/><ellipse cx=\"240\" cy=\"335\" rx=\"22\" ry=\"12\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\"/></g></svg>",
+      "elements": [
+        { "id": "dog-body", "label": "いぬのからだ", "bbox": [95, 190, 210, 150] },
+        { "id": "dog-head", "label": "いぬのあたま", "bbox": [130, 95, 140, 140] },
+        { "id": "dog-ear-left", "label": "ひだりのみみ", "bbox": [118, 100, 44, 90] },
+        { "id": "dog-ear-right", "label": "みぎのみみ", "bbox": [238, 100, 44, 90] },
+        { "id": "dog-eye-left", "label": "ひだりのめ", "bbox": [168, 150, 20, 20] },
+        { "id": "dog-eye-right", "label": "みぎのめ", "bbox": [212, 150, 20, 20] },
+        { "id": "dog-snout", "label": "おはなのまわり", "bbox": [170, 173, 60, 44] },
+        { "id": "dog-nose", "label": "おはな", "bbox": [190, 178, 20, 14] },
+        { "id": "dog-mouth", "label": "おくち", "bbox": [180, 195, 40, 22] },
+        { "id": "dog-tongue", "label": "した", "bbox": [192, 206, 16, 12] },
+        { "id": "dog-tail", "label": "しっぽ", "bbox": [295, 175, 55, 75] },
+        { "id": "dog-collar", "label": "くびわ", "bbox": [150, 218, 100, 28] },
+        { "id": "dog-paw", "label": "あんよ", "bbox": [136, 320, 128, 28] }
+      ]
+    },
+    {
+      "id": "animals-usagi",
+      "category": "animals",
+      "name": "うさぎ",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><g id=\"rabbit-body\"><ellipse cx=\"200\" cy=\"275\" rx=\"85\" ry=\"75\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"rabbit-head\"><circle cx=\"200\" cy=\"195\" r=\"65\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"rabbit-ear-left\"><ellipse cx=\"170\" cy=\"95\" rx=\"18\" ry=\"55\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><ellipse cx=\"170\" cy=\"100\" rx=\"9\" ry=\"40\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"rabbit-ear-right\"><ellipse cx=\"230\" cy=\"95\" rx=\"18\" ry=\"55\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><ellipse cx=\"230\" cy=\"100\" rx=\"9\" ry=\"40\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"rabbit-eye-left\"><circle cx=\"180\" cy=\"190\" r=\"8\" fill=\"#333\"/></g><g id=\"rabbit-eye-right\"><circle cx=\"220\" cy=\"190\" r=\"8\" fill=\"#333\"/></g><g id=\"rabbit-nose\"><path d=\"M193 215 L207 215 L200 222 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g><g id=\"rabbit-mouth\"><path d=\"M200 222 L200 230 M200 230 Q193 235 188 232 M200 230 Q207 235 212 232\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"rabbit-cheek\"><circle cx=\"160\" cy=\"220\" r=\"10\" fill=\"#FFB5A7\" opacity=\"0.6\"/><circle cx=\"240\" cy=\"220\" r=\"10\" fill=\"#FFB5A7\" opacity=\"0.6\"/></g><g id=\"rabbit-tail\"><circle cx=\"285\" cy=\"285\" r=\"18\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"rabbit-paw\"><ellipse cx=\"165\" cy=\"340\" rx=\"22\" ry=\"12\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/><ellipse cx=\"235\" cy=\"340\" rx=\"22\" ry=\"12\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"rabbit-ribbon\"><path d=\"M195 145 L185 138 L195 152 Z M205 145 L215 138 L205 152 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\" stroke-linejoin=\"round\"/><circle cx=\"200\" cy=\"145\" r=\"4\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"2\"/></g></svg>",
+      "elements": [
+        { "id": "rabbit-body", "label": "うさぎのからだ", "bbox": [115, 200, 170, 150] },
+        { "id": "rabbit-head", "label": "うさぎのあたま", "bbox": [135, 130, 130, 130] },
+        { "id": "rabbit-ear-left", "label": "ひだりのみみ", "bbox": [150, 40, 40, 110] },
+        { "id": "rabbit-ear-right", "label": "みぎのみみ", "bbox": [210, 40, 40, 110] },
+        { "id": "rabbit-eye-left", "label": "ひだりのめ", "bbox": [170, 180, 20, 20] },
+        { "id": "rabbit-eye-right", "label": "みぎのめ", "bbox": [210, 180, 20, 20] },
+        { "id": "rabbit-nose", "label": "おはな", "bbox": [190, 212, 20, 14] },
+        { "id": "rabbit-mouth", "label": "おくち", "bbox": [185, 225, 30, 14] },
+        { "id": "rabbit-cheek", "label": "ほっぺ", "bbox": [148, 208, 104, 24] },
+        { "id": "rabbit-tail", "label": "しっぽ", "bbox": [264, 264, 42, 42] },
+        { "id": "rabbit-paw", "label": "あんよ", "bbox": [141, 325, 118, 30] },
+        { "id": "rabbit-ribbon", "label": "りぼん", "bbox": [180, 135, 40, 22] }
+      ]
+    },
+    {
+      "id": "animals-panda",
+      "category": "animals",
+      "name": "ぱんだ",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><g id=\"panda-body\"><ellipse cx=\"200\" cy=\"270\" rx=\"95\" ry=\"75\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"panda-head\"><circle cx=\"200\" cy=\"170\" r=\"75\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"panda-ear-left\"><circle cx=\"145\" cy=\"115\" r=\"22\" fill=\"#333\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"panda-ear-right\"><circle cx=\"255\" cy=\"115\" r=\"22\" fill=\"#333\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"panda-eye-patch-left\"><ellipse cx=\"175\" cy=\"165\" rx=\"18\" ry=\"22\" fill=\"#333\" transform=\"rotate(-15 175 165)\"/></g><g id=\"panda-eye-patch-right\"><ellipse cx=\"225\" cy=\"165\" rx=\"18\" ry=\"22\" fill=\"#333\" transform=\"rotate(15 225 165)\"/></g><g id=\"panda-eye-left\"><circle cx=\"175\" cy=\"165\" r=\"6\" fill=\"#FFFFFF\"/></g><g id=\"panda-eye-right\"><circle cx=\"225\" cy=\"165\" r=\"6\" fill=\"#FFFFFF\"/></g><g id=\"panda-nose\"><ellipse cx=\"200\" cy=\"195\" rx=\"9\" ry=\"6\" fill=\"#333\"/></g><g id=\"panda-mouth\"><path d=\"M200 202 L200 212 M200 212 Q193 218 188 215 M200 212 Q207 218 212 215\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"panda-arm-left\"><ellipse cx=\"125\" cy=\"260\" rx=\"22\" ry=\"40\" fill=\"#333\" stroke=\"#333\" stroke-width=\"3\" transform=\"rotate(-20 125 260)\"/></g><g id=\"panda-arm-right\"><ellipse cx=\"275\" cy=\"260\" rx=\"22\" ry=\"40\" fill=\"#333\" stroke=\"#333\" stroke-width=\"3\" transform=\"rotate(20 275 260)\"/></g><g id=\"panda-leg\"><ellipse cx=\"170\" cy=\"335\" rx=\"25\" ry=\"15\" fill=\"#333\" stroke=\"#333\" stroke-width=\"3\"/><ellipse cx=\"230\" cy=\"335\" rx=\"25\" ry=\"15\" fill=\"#333\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"panda-bamboo\"><rect x=\"195\" y=\"260\" width=\"10\" height=\"35\" fill=\"#B5E48C\" stroke=\"#333\" stroke-width=\"2\"/><path d=\"M192 270 L208 270 M192 282 L208 282\" stroke=\"#333\" stroke-width=\"2\"/></g></svg>",
+      "elements": [
+        { "id": "panda-body", "label": "ぱんだのからだ", "bbox": [105, 195, 190, 150] },
+        { "id": "panda-head", "label": "ぱんだのあたま", "bbox": [125, 95, 150, 150] },
+        { "id": "panda-ear-left", "label": "ひだりのみみ", "bbox": [121, 91, 48, 48] },
+        { "id": "panda-ear-right", "label": "みぎのみみ", "bbox": [231, 91, 48, 48] },
+        { "id": "panda-eye-patch-left", "label": "ひだりのくろいめ", "bbox": [155, 142, 40, 46] },
+        { "id": "panda-eye-patch-right", "label": "みぎのくろいめ", "bbox": [205, 142, 40, 46] },
+        { "id": "panda-eye-left", "label": "ひだりのめ", "bbox": [169, 159, 12, 12] },
+        { "id": "panda-eye-right", "label": "みぎのめ", "bbox": [219, 159, 12, 12] },
+        { "id": "panda-nose", "label": "おはな", "bbox": [189, 187, 22, 16] },
+        { "id": "panda-mouth", "label": "おくち", "bbox": [185, 200, 30, 22] },
+        { "id": "panda-arm-left", "label": "ひだりのうで", "bbox": [98, 215, 50, 90] },
+        { "id": "panda-arm-right", "label": "みぎのうで", "bbox": [252, 215, 50, 90] },
+        { "id": "panda-leg", "label": "あんよ", "bbox": [141, 318, 118, 32] },
+        { "id": "panda-bamboo", "label": "たけ", "bbox": [188, 256, 24, 42] }
+      ]
+    },
+    {
+      "id": "animals-tori",
+      "category": "animals",
+      "name": "とり",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><g id=\"bird-body\"><ellipse cx=\"200\" cy=\"230\" rx=\"95\" ry=\"75\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bird-head\"><circle cx=\"200\" cy=\"140\" r=\"55\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bird-eye-left\"><circle cx=\"183\" cy=\"135\" r=\"7\" fill=\"#333\"/><circle cx=\"185\" cy=\"133\" r=\"2\" fill=\"#FFFFFF\"/></g><g id=\"bird-eye-right\"><circle cx=\"217\" cy=\"135\" r=\"7\" fill=\"#333\"/><circle cx=\"219\" cy=\"133\" r=\"2\" fill=\"#FFFFFF\"/></g><g id=\"bird-beak\"><path d=\"M190 155 L210 155 L200 175 Z\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bird-cheek\"><circle cx=\"165\" cy=\"155\" r=\"8\" fill=\"#FFB5A7\" opacity=\"0.7\"/><circle cx=\"235\" cy=\"155\" r=\"8\" fill=\"#FFB5A7\" opacity=\"0.7\"/></g><g id=\"bird-wing-left\"><path d=\"M125 215 Q105 240 120 275 Q145 270 155 240 Z\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bird-wing-right\"><path d=\"M275 215 Q295 240 280 275 Q255 270 245 240 Z\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bird-tail\"><path d=\"M290 230 L335 215 L335 245 L320 240 L335 265 Z\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bird-leg-left\"><path d=\"M180 300 L175 340\" stroke=\"#D4A373\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M175 340 L165 345 M175 340 L185 345 M175 340 L175 350\" stroke=\"#D4A373\" stroke-width=\"3\" stroke-linecap=\"round\"/></g><g id=\"bird-leg-right\"><path d=\"M220 300 L225 340\" stroke=\"#D4A373\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M225 340 L215 345 M225 340 L235 345 M225 340 L225 350\" stroke=\"#D4A373\" stroke-width=\"3\" stroke-linecap=\"round\"/></g><g id=\"bird-crest\"><path d=\"M195 90 L200 70 L205 90 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g><g id=\"bird-tummy\"><ellipse cx=\"200\" cy=\"250\" rx=\"45\" ry=\"35\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"2\"/></g></svg>",
+      "elements": [
+        { "id": "bird-body", "label": "とりのからだ", "bbox": [105, 155, 190, 150] },
+        { "id": "bird-head", "label": "とりのあたま", "bbox": [145, 85, 110, 110] },
+        { "id": "bird-eye-left", "label": "ひだりのめ", "bbox": [174, 126, 18, 18] },
+        { "id": "bird-eye-right", "label": "みぎのめ", "bbox": [208, 126, 18, 18] },
+        { "id": "bird-beak", "label": "くちばし", "bbox": [188, 153, 24, 24] },
+        { "id": "bird-cheek", "label": "ほっぺ", "bbox": [155, 145, 90, 20] },
+        { "id": "bird-wing-left", "label": "ひだりのつばさ", "bbox": [98, 210, 60, 70] },
+        { "id": "bird-wing-right", "label": "みぎのつばさ", "bbox": [242, 210, 60, 70] },
+        { "id": "bird-tail", "label": "しっぽ", "bbox": [288, 212, 50, 56] },
+        { "id": "bird-leg-left", "label": "ひだりのあし", "bbox": [161, 298, 28, 56] },
+        { "id": "bird-leg-right", "label": "みぎのあし", "bbox": [211, 298, 28, 56] },
+        { "id": "bird-crest", "label": "あたまのかざり", "bbox": [191, 68, 18, 26] },
+        { "id": "bird-tummy", "label": "おなか", "bbox": [153, 213, 94, 74] }
+      ]
+    },
+    {
+      "id": "animals-sakana",
+      "category": "animals",
+      "name": "さかな",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><g id=\"fish-body\"><ellipse cx=\"200\" cy=\"200\" rx=\"115\" ry=\"75\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"fish-tail\"><path d=\"M310 200 L370 150 L355 200 L370 250 Z\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"fish-eye\"><circle cx=\"150\" cy=\"185\" r=\"15\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"148\" cy=\"185\" r=\"7\" fill=\"#333\"/><circle cx=\"146\" cy=\"183\" r=\"2\" fill=\"#FFFFFF\"/></g><g id=\"fish-mouth\"><path d=\"M105 210 Q95 215 95 220 Q95 225 105 225\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"fish-fin-top\"><path d=\"M200 130 L185 90 L220 105 L215 130 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"fish-fin-bottom\"><path d=\"M210 265 L195 305 L240 295 L235 270 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"fish-fin-side\"><path d=\"M195 225 L165 260 L210 245 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"fish-scale-1\"><path d=\"M200 175 Q215 185 200 195 Q185 185 200 175 Z\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"fish-scale-2\"><path d=\"M230 195 Q245 205 230 215 Q215 205 230 195 Z\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"fish-scale-3\"><path d=\"M260 175 Q275 185 260 195 Q245 185 260 175 Z\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"fish-scale-4\"><path d=\"M260 215 Q275 225 260 235 Q245 225 260 215 Z\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"fish-bubble\"><circle cx=\"60\" cy=\"150\" r=\"10\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"75\" cy=\"110\" r=\"6\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"50\" cy=\"90\" r=\"8\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/></g></svg>",
+      "elements": [
+        { "id": "fish-body", "label": "さかなのからだ", "bbox": [85, 125, 230, 150] },
+        { "id": "fish-tail", "label": "おびれ", "bbox": [305, 145, 70, 110] },
+        { "id": "fish-eye", "label": "め", "bbox": [133, 168, 34, 34] },
+        { "id": "fish-mouth", "label": "おくち", "bbox": [90, 205, 22, 26] },
+        { "id": "fish-fin-top", "label": "うえのひれ", "bbox": [180, 85, 45, 50] },
+        { "id": "fish-fin-bottom", "label": "したのひれ", "bbox": [190, 265, 55, 45] },
+        { "id": "fish-fin-side", "label": "よこのひれ", "bbox": [162, 220, 52, 45] },
+        { "id": "fish-scale-1", "label": "うろこいち", "bbox": [185, 173, 30, 24] },
+        { "id": "fish-scale-2", "label": "うろこに", "bbox": [215, 193, 30, 24] },
+        { "id": "fish-scale-3", "label": "うろこさん", "bbox": [245, 173, 30, 24] },
+        { "id": "fish-scale-4", "label": "うろこよん", "bbox": [245, 213, 30, 24] },
+        { "id": "fish-bubble", "label": "あわ", "bbox": [40, 80, 50, 80] }
+      ]
+    },
+    {
+      "id": "animals-zou",
+      "category": "animals",
+      "name": "ぞう",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><g id=\"elephant-body\"><ellipse cx=\"215\" cy=\"235\" rx=\"110\" ry=\"75\" fill=\"#E8C5E5\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"elephant-head\"><circle cx=\"140\" cy=\"195\" r=\"55\" fill=\"#E8C5E5\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"elephant-ear\"><ellipse cx=\"110\" cy=\"175\" rx=\"30\" ry=\"40\" fill=\"#E8C5E5\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"elephant-eye\"><circle cx=\"148\" cy=\"185\" r=\"6\" fill=\"#333\"/><circle cx=\"150\" cy=\"183\" r=\"2\" fill=\"#FFFFFF\"/></g><g id=\"elephant-trunk\"><path d=\"M115 220 Q70 250 75 295 Q80 325 110 320 Q120 318 118 305\" fill=\"#E8C5E5\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"elephant-tusk\"><path d=\"M125 225 L110 250 L120 245 Z\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g><g id=\"elephant-mouth\"><path d=\"M150 220 Q160 225 168 220\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g><g id=\"elephant-leg-front\"><rect x=\"155\" y=\"290\" width=\"30\" height=\"55\" rx=\"6\" fill=\"#E8C5E5\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"elephant-leg-back\"><rect x=\"255\" y=\"290\" width=\"30\" height=\"55\" rx=\"6\" fill=\"#E8C5E5\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"elephant-tail\"><path d=\"M320 225 Q345 235 350 260\" fill=\"none\" stroke=\"#333\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"352\" cy=\"263\" r=\"6\" fill=\"#333\"/></g><g id=\"elephant-toenail\"><circle cx=\"165\" cy=\"340\" r=\"3\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"175\" cy=\"340\" r=\"3\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"265\" cy=\"340\" r=\"3\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"275\" cy=\"340\" r=\"3\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"elephant-cheek\"><circle cx=\"165\" cy=\"210\" r=\"8\" fill=\"#FFB5A7\" opacity=\"0.6\"/></g></svg>",
+      "elements": [
+        { "id": "elephant-body", "label": "ぞうのからだ", "bbox": [105, 160, 220, 150] },
+        { "id": "elephant-head", "label": "ぞうのあたま", "bbox": [85, 140, 110, 110] },
+        { "id": "elephant-ear", "label": "みみ", "bbox": [80, 135, 60, 80] },
+        { "id": "elephant-eye", "label": "め", "bbox": [140, 177, 18, 18] },
+        { "id": "elephant-trunk", "label": "はな", "bbox": [70, 215, 60, 110] },
+        { "id": "elephant-tusk", "label": "きば", "bbox": [108, 222, 22, 30] },
+        { "id": "elephant-mouth", "label": "おくち", "bbox": [147, 215, 24, 14] },
+        { "id": "elephant-leg-front", "label": "まえあし", "bbox": [153, 288, 34, 60] },
+        { "id": "elephant-leg-back", "label": "うしろあし", "bbox": [253, 288, 34, 60] },
+        { "id": "elephant-tail", "label": "しっぽ", "bbox": [318, 222, 42, 50] },
+        { "id": "elephant-toenail", "label": "つめ", "bbox": [158, 335, 122, 12] },
+        { "id": "elephant-cheek", "label": "ほっぺ", "bbox": [155, 200, 20, 20] }
+      ]
+    },
+    {
+      "id": "animals-nezumi",
+      "category": "animals",
+      "name": "ねずみ",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><g id=\"mouse-body\"><ellipse cx=\"200\" cy=\"245\" rx=\"90\" ry=\"70\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"mouse-head\"><circle cx=\"200\" cy=\"160\" r=\"60\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"mouse-ear-left\"><circle cx=\"155\" cy=\"110\" r=\"28\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"155\" cy=\"112\" r=\"18\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"mouse-ear-right\"><circle cx=\"245\" cy=\"110\" r=\"28\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"245\" cy=\"112\" r=\"18\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"mouse-eye-left\"><circle cx=\"180\" cy=\"160\" r=\"6\" fill=\"#333\"/><circle cx=\"182\" cy=\"158\" r=\"2\" fill=\"#FFFFFF\"/></g><g id=\"mouse-eye-right\"><circle cx=\"220\" cy=\"160\" r=\"6\" fill=\"#333\"/><circle cx=\"222\" cy=\"158\" r=\"2\" fill=\"#FFFFFF\"/></g><g id=\"mouse-nose\"><ellipse cx=\"200\" cy=\"185\" rx=\"7\" ry=\"5\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"mouse-mouth\"><path d=\"M200 190 L200 198 M200 198 Q193 203 188 200 M200 198 Q207 203 212 200\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g><g id=\"mouse-whiskers\"><path d=\"M175 185 L150 180 M175 192 L150 195 M225 185 L250 180 M225 192 L250 195\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"mouse-tail\"><path d=\"M285 260 Q330 275 340 245 Q345 220 320 215\" fill=\"none\" stroke=\"#333\" stroke-width=\"4\" stroke-linecap=\"round\"/></g><g id=\"mouse-paw\"><ellipse cx=\"170\" cy=\"320\" rx=\"18\" ry=\"10\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\"/><ellipse cx=\"230\" cy=\"320\" rx=\"18\" ry=\"10\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"mouse-cheese\"><path d=\"M255 290 L290 290 L300 315 L265 320 Z\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"272\" cy=\"302\" r=\"3\" fill=\"#D4A373\"/><circle cx=\"285\" cy=\"308\" r=\"2.5\" fill=\"#D4A373\"/></g></svg>",
+      "elements": [
+        { "id": "mouse-body", "label": "ねずみのからだ", "bbox": [110, 175, 180, 140] },
+        { "id": "mouse-head", "label": "ねずみのあたま", "bbox": [140, 100, 120, 120] },
+        { "id": "mouse-ear-left", "label": "ひだりのみみ", "bbox": [125, 80, 60, 60] },
+        { "id": "mouse-ear-right", "label": "みぎのみみ", "bbox": [215, 80, 60, 60] },
+        { "id": "mouse-eye-left", "label": "ひだりのめ", "bbox": [172, 152, 16, 16] },
+        { "id": "mouse-eye-right", "label": "みぎのめ", "bbox": [212, 152, 16, 16] },
+        { "id": "mouse-nose", "label": "おはな", "bbox": [191, 178, 18, 14] },
+        { "id": "mouse-mouth", "label": "おくち", "bbox": [185, 188, 30, 18] },
+        { "id": "mouse-whiskers", "label": "ひげ", "bbox": [148, 178, 104, 22] },
+        { "id": "mouse-tail", "label": "しっぽ", "bbox": [280, 210, 70, 60] },
+        { "id": "mouse-paw", "label": "あんよ", "bbox": [148, 308, 104, 24] },
+        { "id": "mouse-cheese", "label": "ちーず", "bbox": [252, 285, 52, 38] }
+      ]
+    }
+  ]
+}

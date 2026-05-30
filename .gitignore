@@ -1,0 +1,19 @@
+# local junk
+tmp/
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/
+
+# claude workspace (auto-generated)
+.claude/
+
+# secrets (none in repo but be safe)
+.env
+.env.*
+*.key
+
+# logs
+*.log

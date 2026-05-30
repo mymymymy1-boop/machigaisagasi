@@ -1,0 +1,83 @@
+{
+  "scenes": [
+    {
+      "id": "sakura",
+      "category": "seasonal",
+      "name": "さくらのき",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><rect width=\"400\" height=\"400\" fill=\"#FFFFFF\"/><g id=\"ground\"><path d=\"M 30 340 Q 200 320 370 340 L 370 380 L 30 380 Z\" fill=\"#B5E48C\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"trunk\"><path d=\"M 180 340 L 175 220 Q 200 200 225 220 L 220 340 Z\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"branch-left\"><path d=\"M 180 240 Q 140 220 110 200\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"branch-right\"><path d=\"M 220 240 Q 260 220 295 205\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"blossom-top\"><circle cx=\"200\" cy=\"130\" r=\"55\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"185\" cy=\"125\" r=\"8\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"215\" cy=\"135\" r=\"8\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"blossom-left\"><circle cx=\"110\" cy=\"195\" r=\"40\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"100\" cy=\"195\" r=\"6\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"blossom-right\"><circle cx=\"295\" cy=\"200\" r=\"40\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"305\" cy=\"200\" r=\"6\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"petal-falling-1\"><ellipse cx=\"70\" cy=\"260\" rx=\"8\" ry=\"5\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"petal-falling-2\"><ellipse cx=\"340\" cy=\"280\" rx=\"8\" ry=\"5\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"sun\"><circle cx=\"350\" cy=\"60\" r=\"28\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"cloud\"><ellipse cx=\"70\" cy=\"70\" rx=\"35\" ry=\"18\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"55\" cy=\"65\" r=\"15\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"85\" cy=\"63\" r=\"13\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/></g></svg>",
+      "elements": [
+        { "id": "ground", "label": "くさのじめん", "bbox": [30, 320, 340, 60] },
+        { "id": "trunk", "label": "きのみき", "bbox": [170, 200, 60, 140] },
+        { "id": "branch-left", "label": "ひだりのえだ", "bbox": [105, 195, 80, 50] },
+        { "id": "branch-right", "label": "みぎのえだ", "bbox": [215, 200, 85, 45] },
+        { "id": "blossom-top", "label": "うえのはな", "bbox": [140, 70, 120, 120] },
+        { "id": "blossom-left", "label": "ひだりのはな", "bbox": [65, 150, 90, 90] },
+        { "id": "blossom-right", "label": "みぎのはな", "bbox": [250, 155, 90, 90] },
+        { "id": "petal-falling-1", "label": "ひだりのはなびら", "bbox": [60, 253, 20, 14] },
+        { "id": "petal-falling-2", "label": "みぎのはなびら", "bbox": [330, 273, 20, 14] },
+        { "id": "sun", "label": "おひさま", "bbox": [320, 30, 60, 60] },
+        { "id": "cloud", "label": "くも", "bbox": [35, 48, 75, 44] }
+      ]
+    },
+    {
+      "id": "natsu-matsuri",
+      "category": "seasonal",
+      "name": "なつまつり",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><rect width=\"400\" height=\"400\" fill=\"#FFFFFF\"/><g id=\"ground\"><rect x=\"0\" y=\"340\" width=\"400\" height=\"60\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"stand-roof\"><path d=\"M 90 200 L 200 160 L 310 200 L 290 215 L 110 215 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"stand-body\"><rect x=\"110\" y=\"215\" width=\"180\" height=\"125\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"stand-counter\"><rect x=\"110\" y=\"275\" width=\"180\" height=\"10\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"sign\"><rect x=\"165\" y=\"225\" width=\"70\" height=\"35\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"200\" cy=\"242\" r=\"10\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"lantern-left\"><ellipse cx=\"65\" cy=\"130\" rx=\"30\" ry=\"38\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\"/><rect x=\"45\" y=\"122\" width=\"40\" height=\"16\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"65\" y1=\"92\" x2=\"65\" y2=\"60\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"lantern-right\"><ellipse cx=\"335\" cy=\"130\" rx=\"30\" ry=\"38\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\"/><rect x=\"315\" y=\"122\" width=\"40\" height=\"16\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"335\" y1=\"92\" x2=\"335\" y2=\"60\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"fish-tank\"><rect x=\"125\" y=\"290\" width=\"70\" height=\"45\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><ellipse cx=\"150\" cy=\"312\" rx=\"8\" ry=\"5\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\"/><ellipse cx=\"175\" cy=\"320\" rx=\"7\" ry=\"4\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"mask-box\"><rect x=\"210\" y=\"290\" width=\"70\" height=\"45\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"230\" cy=\"312\" r=\"10\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"312\" r=\"10\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"flag-string\"><path d=\"M 40 50 Q 200 80 360 50\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\"/><polygon points=\"100,60 115,60 107,75\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"180,68 195,68 187,83\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\"/><polygon points=\"260,68 275,68 267,83\" fill=\"#B5E48C\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"moon\"><circle cx=\"60\" cy=\"40\" r=\"18\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\"/></g></svg>",
+      "elements": [
+        { "id": "ground", "label": "じめん", "bbox": [0, 340, 400, 60] },
+        { "id": "stand-roof", "label": "やたいのやね", "bbox": [90, 160, 220, 55] },
+        { "id": "stand-body", "label": "やたいのからだ", "bbox": [110, 215, 180, 125] },
+        { "id": "stand-counter", "label": "やたいのだい", "bbox": [110, 275, 180, 10] },
+        { "id": "sign", "label": "おみせのかんばん", "bbox": [165, 225, 70, 35] },
+        { "id": "lantern-left", "label": "ひだりのちょうちん", "bbox": [35, 60, 60, 110] },
+        { "id": "lantern-right", "label": "みぎのちょうちん", "bbox": [305, 60, 60, 110] },
+        { "id": "fish-tank", "label": "きんぎょすくい", "bbox": [125, 290, 70, 45] },
+        { "id": "mask-box", "label": "おめんのはこ", "bbox": [210, 290, 70, 45] },
+        { "id": "flag-string", "label": "おまつりのはた", "bbox": [40, 50, 320, 45] },
+        { "id": "moon", "label": "おつきさま", "bbox": [42, 22, 36, 36] }
+      ]
+    },
+    {
+      "id": "kouyou",
+      "category": "seasonal",
+      "name": "もみじのやま",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><rect width=\"400\" height=\"400\" fill=\"#FFFFFF\"/><g id=\"ground\"><path d=\"M 0 340 Q 200 325 400 340 L 400 400 L 0 400 Z\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"mountain\"><path d=\"M 30 340 L 150 180 L 250 240 L 370 340 Z\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"tree-trunk\"><rect x=\"190\" y=\"230\" width=\"20\" height=\"110\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"tree-crown\"><circle cx=\"200\" cy=\"180\" r=\"55\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"170\" cy=\"165\" r=\"30\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"235\" cy=\"170\" r=\"28\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"leaf-red\"><path d=\"M 80 290 L 70 275 L 75 270 L 80 278 L 85 270 L 90 275 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g><g id=\"leaf-yellow\"><path d=\"M 320 295 L 310 280 L 315 275 L 320 283 L 325 275 L 330 280 Z\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g><g id=\"leaf-orange\"><path d=\"M 120 320 L 110 305 L 115 300 L 120 308 L 125 300 L 130 305 Z\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g><g id=\"acorn\"><ellipse cx=\"280\" cy=\"330\" rx=\"10\" ry=\"14\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"2\"/><path d=\"M 270 322 Q 280 318 290 322 L 290 316 L 270 316 Z\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g><g id=\"mushroom\"><ellipse cx=\"60\" cy=\"330\" rx=\"18\" ry=\"10\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\"/><rect x=\"53\" y=\"330\" width=\"14\" height=\"15\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"55\" cy=\"326\" r=\"3\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"1\"/></g><g id=\"sun\"><circle cx=\"350\" cy=\"55\" r=\"28\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"cloud\"><ellipse cx=\"75\" cy=\"70\" rx=\"32\" ry=\"16\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"60\" cy=\"65\" r=\"13\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/></g></svg>",
+      "elements": [
+        { "id": "ground", "label": "じめん", "bbox": [0, 320, 400, 80] },
+        { "id": "mountain", "label": "やま", "bbox": [30, 180, 340, 160] },
+        { "id": "tree-trunk", "label": "きのみき", "bbox": [190, 230, 20, 110] },
+        { "id": "tree-crown", "label": "もみじのは", "bbox": [140, 130, 130, 100] },
+        { "id": "leaf-red", "label": "あかいはっぱ", "bbox": [68, 268, 24, 24] },
+        { "id": "leaf-yellow", "label": "きいろいはっぱ", "bbox": [308, 273, 24, 24] },
+        { "id": "leaf-orange", "label": "オレンジのはっぱ", "bbox": [108, 298, 24, 24] },
+        { "id": "acorn", "label": "どんぐり", "bbox": [268, 314, 24, 32] },
+        { "id": "mushroom", "label": "きのこ", "bbox": [42, 318, 36, 30] },
+        { "id": "sun", "label": "おひさま", "bbox": [320, 25, 60, 60] },
+        { "id": "cloud", "label": "くも", "bbox": [44, 50, 65, 38] }
+      ]
+    },
+    {
+      "id": "yukidaruma",
+      "category": "seasonal",
+      "name": "ゆきだるま",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><rect width=\"400\" height=\"400\" fill=\"#90BFD9\"/><g id=\"ground\"><path d=\"M 0 340 Q 200 320 400 340 L 400 400 L 0 400 Z\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"body-bottom\"><circle cx=\"200\" cy=\"285\" r=\"75\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"body-top\"><circle cx=\"200\" cy=\"175\" r=\"55\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"bucket-hat\"><rect x=\"165\" y=\"95\" width=\"70\" height=\"35\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"155\" y=\"125\" width=\"90\" height=\"10\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"eye-left\"><circle cx=\"183\" cy=\"170\" r=\"6\" fill=\"#333\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"eye-right\"><circle cx=\"217\" cy=\"170\" r=\"6\" fill=\"#333\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"nose\"><polygon points=\"195,180 230,188 195,196\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g><g id=\"mouth\"><path d=\"M 185 205 Q 200 215 215 205\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"scarf\"><rect x=\"155\" y=\"220\" width=\"90\" height=\"18\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"230\" y=\"235\" width=\"18\" height=\"35\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"arm-left\"><path d=\"M 130 270 L 90 245 M 100 245 L 90 245 L 92 258\" fill=\"none\" stroke=\"#D4A373\" stroke-width=\"5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></g><g id=\"arm-right\"><path d=\"M 270 270 L 310 245 M 300 245 L 310 245 L 308 258\" fill=\"none\" stroke=\"#D4A373\" stroke-width=\"5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></g><g id=\"button\"><circle cx=\"200\" cy=\"280\" r=\"7\" fill=\"#333\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"315\" r=\"7\" fill=\"#333\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"snowflake\"><path d=\"M 60 100 L 60 130 M 45 115 L 75 115 M 50 105 L 70 125 M 70 105 L 50 125\" stroke=\"#FFFFFF\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></g><g id=\"snowflake-right\"><path d=\"M 340 80 L 340 110 M 325 95 L 355 95 M 330 85 L 350 105 M 350 85 L 330 105\" stroke=\"#FFFFFF\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></g></svg>",
+      "elements": [
+        { "id": "ground", "label": "ゆきのじめん", "bbox": [0, 318, 400, 82] },
+        { "id": "body-bottom", "label": "したのからだ", "bbox": [125, 210, 150, 150] },
+        { "id": "body-top", "label": "あたま", "bbox": [145, 120, 110, 110] },
+        { "id": "bucket-hat", "label": "ぼうし", "bbox": [155, 95, 90, 40] },
+        { "id": "eye-left", "label": "ひだりのめ", "bbox": [175, 162, 16, 16] },
+        { "id": "eye-right", "label": "みぎのめ", "bbox": [209, 162, 16, 16] },
+        { "id": "nose", "label": "にんじんのはな", "bbox": [193, 178, 40, 20] },
+        { "id": "mouth", "label": "くち", "bbox": [183, 203, 34, 16] },
+        { "id": "scarf", "label": "マフラー", "bbox": [155, 220, 95, 55] },
+        { "id": "arm-left", "label": "ひだりのうで", "bbox": [85, 240, 50, 35] },
+        { "id": "arm-right", "label": "みぎのうで", "bbox": [265, 240, 50, 35] },
+        { "id": "button", "label": "ボタン", "bbox": [190, 270, 20, 55] },
+        { "id": "snowflake", "label": "ひだりのゆき", "bbox": [42, 100, 36, 32] },
+        { "id": "snowflake-right", "label": "みぎのゆき", "bbox": [322, 80, 36, 32] }
+      ]
+    }
+  ]
+}

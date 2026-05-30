@@ -1,0 +1,1894 @@
+{
+  "problems": [
+    {
+      "id": "B001",
+      "sceneId": "animals-neko",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "cat-body",
+        "transform": "hide",
+        "params": {},
+        "hitbox": [
+          90,
+          170,
+          220,
+          180
+        ]
+      }
+    },
+    {
+      "id": "B002",
+      "sceneId": "animals-inu",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "dog-head",
+        "transform": "recolor",
+        "params": {
+          "fill": "#6BCB77"
+        },
+        "hitbox": [
+          120,
+          85,
+          160,
+          160
+        ]
+      }
+    },
+    {
+      "id": "B003",
+      "sceneId": "animals-usagi",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "rabbit-ear-left",
+        "transform": "scale",
+        "params": {
+          "factor": 0.7
+        },
+        "hitbox": [
+          140,
+          30,
+          60,
+          130
+        ]
+      }
+    },
+    {
+      "id": "B004",
+      "sceneId": "animals-panda",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "panda-ear-right",
+        "transform": "flip",
+        "params": {},
+        "hitbox": [
+          221,
+          81,
+          68,
+          68
+        ]
+      }
+    },
+    {
+      "id": "B005",
+      "sceneId": "animals-tori",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "bird-beak",
+        "transform": "add-detail",
+        "params": {
+          "shape": "circle",
+          "r": 12,
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          178,
+          143,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B006",
+      "sceneId": "animals-sakana",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "fish-fin-bottom",
+        "transform": "remove-detail",
+        "params": {},
+        "hitbox": [
+          180,
+          255,
+          75,
+          65
+        ]
+      }
+    },
+    {
+      "id": "B007",
+      "sceneId": "animals-zou",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "elephant-mouth",
+        "transform": "count-change",
+        "params": {
+          "count": 2,
+          "dx": 25
+        },
+        "hitbox": [
+          137,
+          205,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B008",
+      "sceneId": "animals-nezumi",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "mouse-mouth",
+        "transform": "replace",
+        "params": {
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          175,
+          178,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B009",
+      "sceneId": "vehicles-kuruma",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "wheel-front",
+        "transform": "translate",
+        "params": {
+          "dx": 20,
+          "dy": 0
+        },
+        "hitbox": [
+          265,
+          270,
+          80,
+          80
+        ]
+      }
+    },
+    {
+      "id": "B010",
+      "sceneId": "vehicles-densha",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "train-wheel-left",
+        "transform": "duplicate",
+        "params": {
+          "dx": 30,
+          "dy": 0
+        },
+        "hitbox": [
+          98,
+          303,
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "id": "B011",
+      "sceneId": "vehicles-jitensya",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "ground",
+        "transform": "hide",
+        "params": {},
+        "hitbox": [
+          10,
+          328,
+          380,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B012",
+      "sceneId": "vehicles-hikouki",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "plane-trail",
+        "transform": "recolor",
+        "params": {
+          "fill": "#6BCB77"
+        },
+        "hitbox": [
+          6,
+          182,
+          50,
+          52
+        ]
+      }
+    },
+    {
+      "id": "B013",
+      "sceneId": "vehicles-fune",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "sun",
+        "transform": "scale",
+        "params": {
+          "factor": 0.7
+        },
+        "hitbox": [
+          300,
+          40,
+          80,
+          80
+        ]
+      }
+    },
+    {
+      "id": "B014",
+      "sceneId": "nature-ki",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "trunk",
+        "transform": "flip",
+        "params": {},
+        "hitbox": [
+          160,
+          205,
+          80,
+          175
+        ]
+      }
+    },
+    {
+      "id": "B015",
+      "sceneId": "nature-hana",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "leaf-right",
+        "transform": "add-detail",
+        "params": {
+          "shape": "circle",
+          "r": 12,
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          188,
+          218,
+          95,
+          55
+        ]
+      }
+    },
+    {
+      "id": "B016",
+      "sceneId": "nature-taiyou-kumo",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "sun-ray-left",
+        "transform": "remove-detail",
+        "params": {},
+        "hitbox": [
+          18,
+          116,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B017",
+      "sceneId": "nature-yama",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "sun",
+        "transform": "count-change",
+        "params": {
+          "count": 2,
+          "dx": 25
+        },
+        "hitbox": [
+          283,
+          33,
+          94,
+          94
+        ]
+      }
+    },
+    {
+      "id": "B018",
+      "sceneId": "nature-niji",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "arc-inner",
+        "transform": "replace",
+        "params": {
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          92,
+          237,
+          216,
+          118
+        ]
+      }
+    },
+    {
+      "id": "B019",
+      "sceneId": "food-ringo",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "apple-cheek-right",
+        "transform": "translate",
+        "params": {
+          "dx": 20,
+          "dy": 0
+        },
+        "hitbox": [
+          228,
+          248,
+          54,
+          54
+        ]
+      }
+    },
+    {
+      "id": "B020",
+      "sceneId": "food-keiki",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "cake-dot-pink",
+        "transform": "duplicate",
+        "params": {
+          "dx": 30,
+          "dy": 0
+        },
+        "hitbox": [
+          141,
+          211,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B021",
+      "sceneId": "food-obentou",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "bento-box",
+        "transform": "hide",
+        "params": {},
+        "hitbox": [
+          37,
+          87,
+          326,
+          256
+        ]
+      }
+    },
+    {
+      "id": "B022",
+      "sceneId": "food-aisu",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "aisu-sprinkle-bottom",
+        "transform": "recolor",
+        "params": {
+          "fill": "#6BCB77"
+        },
+        "hitbox": [
+          177,
+          182,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B023",
+      "sceneId": "food-pan",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "pan-seed-right",
+        "transform": "scale",
+        "params": {
+          "factor": 0.7
+        },
+        "hitbox": [
+          255,
+          155,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B024",
+      "sceneId": "household-isu-tsukue",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "desk-top",
+        "transform": "flip",
+        "params": {},
+        "hitbox": [
+          50,
+          170,
+          300,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B025",
+      "sceneId": "household-tokei",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "clock-frame",
+        "transform": "add-detail",
+        "params": {
+          "shape": "circle",
+          "r": 12,
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          40,
+          40,
+          320,
+          320
+        ]
+      }
+    },
+    {
+      "id": "B026",
+      "sceneId": "household-denki",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "shade-top",
+        "transform": "remove-detail",
+        "params": {},
+        "hitbox": [
+          120,
+          38,
+          160,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B027",
+      "sceneId": "household-daidokoro",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "cabinet-door-left",
+        "transform": "count-change",
+        "params": {
+          "count": 2,
+          "dx": 25
+        },
+        "hitbox": [
+          20,
+          250,
+          190,
+          120
+        ]
+      }
+    },
+    {
+      "id": "B028",
+      "sceneId": "household-ofuro",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "water",
+        "transform": "replace",
+        "params": {
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          55,
+          180,
+          290,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B029",
+      "sceneId": "school-randoseru",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "randoseru-charm",
+        "transform": "translate",
+        "params": {
+          "dx": 20,
+          "dy": 0
+        },
+        "hitbox": [
+          235,
+          135,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B030",
+      "sceneId": "school-kyoushitsu",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "kyoushitsu-window",
+        "transform": "duplicate",
+        "params": {
+          "dx": 30,
+          "dy": 0
+        },
+        "hitbox": [
+          280,
+          180,
+          90,
+          90
+        ]
+      }
+    },
+    {
+      "id": "B031",
+      "sceneId": "school-gakkou",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "gakkou-window-top-left",
+        "transform": "hide",
+        "params": {},
+        "hitbox": [
+          70,
+          155,
+          70,
+          60
+        ]
+      }
+    },
+    {
+      "id": "B032",
+      "sceneId": "school-bunbougu",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "bunbougu-notebook",
+        "transform": "recolor",
+        "params": {
+          "fill": "#6BCB77"
+        },
+        "hitbox": [
+          40,
+          170,
+          160,
+          160
+        ]
+      }
+    },
+    {
+      "id": "B033",
+      "sceneId": "park-suberidai",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "butterfly",
+        "transform": "scale",
+        "params": {
+          "factor": 0.7
+        },
+        "hitbox": [
+          230,
+          88,
+          56,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B034",
+      "sceneId": "park-suna-asobi",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "sky",
+        "transform": "flip",
+        "params": {},
+        "hitbox": [
+          0,
+          0,
+          400,
+          280
+        ]
+      }
+    },
+    {
+      "id": "B035",
+      "sceneId": "park-kouen-benchi",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "bench-leg-right",
+        "transform": "add-detail",
+        "params": {
+          "shape": "circle",
+          "r": 12,
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          280,
+          190,
+          50,
+          150
+        ]
+      }
+    },
+    {
+      "id": "B036",
+      "sceneId": "park-umi",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "beach",
+        "transform": "remove-detail",
+        "params": {},
+        "hitbox": [
+          0,
+          290,
+          400,
+          110
+        ]
+      }
+    },
+    {
+      "id": "B037",
+      "sceneId": "sakura",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "branch-right",
+        "transform": "count-change",
+        "params": {
+          "count": 2,
+          "dx": 25
+        },
+        "hitbox": [
+          205,
+          190,
+          105,
+          65
+        ]
+      }
+    },
+    {
+      "id": "B038",
+      "sceneId": "natsu-matsuri",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "sign",
+        "transform": "replace",
+        "params": {
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          155,
+          215,
+          90,
+          55
+        ]
+      }
+    },
+    {
+      "id": "B039",
+      "sceneId": "kouyou",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "leaf-yellow",
+        "transform": "translate",
+        "params": {
+          "dx": 20,
+          "dy": 0
+        },
+        "hitbox": [
+          298,
+          263,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B040",
+      "sceneId": "yukidaruma",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "button",
+        "transform": "duplicate",
+        "params": {
+          "dx": 30,
+          "dy": 0
+        },
+        "hitbox": [
+          180,
+          260,
+          50,
+          75
+        ]
+      }
+    },
+    {
+      "id": "B041",
+      "sceneId": "animals-neko",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "cat-eye-left",
+        "transform": "hide",
+        "params": {},
+        "hitbox": [
+          155,
+          135,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B042",
+      "sceneId": "animals-inu",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "dog-ear-left",
+        "transform": "recolor",
+        "params": {
+          "fill": "#6BCB77"
+        },
+        "hitbox": [
+          108,
+          90,
+          64,
+          110
+        ]
+      }
+    },
+    {
+      "id": "B043",
+      "sceneId": "animals-usagi",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "rabbit-nose",
+        "transform": "scale",
+        "params": {
+          "factor": 0.7
+        },
+        "hitbox": [
+          180,
+          202,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B044",
+      "sceneId": "animals-panda",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "panda-head",
+        "transform": "flip",
+        "params": {},
+        "hitbox": [
+          115,
+          85,
+          170,
+          170
+        ]
+      }
+    },
+    {
+      "id": "B045",
+      "sceneId": "animals-tori",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "bird-cheek",
+        "transform": "add-detail",
+        "params": {
+          "shape": "circle",
+          "r": 12,
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          145,
+          135,
+          110,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B046",
+      "sceneId": "animals-sakana",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "fish-scale-3",
+        "transform": "remove-detail",
+        "params": {},
+        "hitbox": [
+          235,
+          163,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B047",
+      "sceneId": "animals-zou",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "elephant-toenail",
+        "transform": "count-change",
+        "params": {
+          "count": 2,
+          "dx": 25
+        },
+        "hitbox": [
+          148,
+          325,
+          142,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B048",
+      "sceneId": "animals-nezumi",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "mouse-cheese",
+        "transform": "replace",
+        "params": {
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          242,
+          275,
+          72,
+          58
+        ]
+      }
+    },
+    {
+      "id": "B049",
+      "sceneId": "vehicles-kuruma",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "car-window-back",
+        "transform": "translate",
+        "params": {
+          "dx": 20,
+          "dy": 0
+        },
+        "hitbox": [
+          238,
+          165,
+          70,
+          65
+        ]
+      }
+    },
+    {
+      "id": "B050",
+      "sceneId": "vehicles-densha",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "train-window-2",
+        "transform": "duplicate",
+        "params": {
+          "dx": 30,
+          "dy": 0
+        },
+        "hitbox": [
+          230,
+          165,
+          75,
+          70
+        ]
+      }
+    },
+    {
+      "id": "B051",
+      "sceneId": "vehicles-jitensya",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "ground",
+        "transform": "hide",
+        "params": {},
+        "hitbox": [
+          10,
+          328,
+          380,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B052",
+      "sceneId": "vehicles-hikouki",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "plane-nose",
+        "transform": "recolor",
+        "params": {
+          "fill": "#6BCB77"
+        },
+        "hitbox": [
+          310,
+          168,
+          72,
+          64
+        ]
+      }
+    },
+    {
+      "id": "B053",
+      "sceneId": "vehicles-fune",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "ship-chimney",
+        "transform": "scale",
+        "params": {
+          "factor": 0.7
+        },
+        "hitbox": [
+          183,
+          75,
+          54,
+          90
+        ]
+      }
+    },
+    {
+      "id": "B054",
+      "sceneId": "nature-ki",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "leaves-top",
+        "transform": "flip",
+        "params": {},
+        "hitbox": [
+          118,
+          28,
+          164,
+          164
+        ]
+      }
+    },
+    {
+      "id": "B055",
+      "sceneId": "nature-hana",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "small-flower",
+        "transform": "add-detail",
+        "params": {
+          "shape": "circle",
+          "r": 12,
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          58,
+          333,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B056",
+      "sceneId": "nature-taiyou-kumo",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "sky-ground",
+        "transform": "remove-detail",
+        "params": {},
+        "hitbox": [
+          0,
+          330,
+          400,
+          70
+        ]
+      }
+    },
+    {
+      "id": "B057",
+      "sceneId": "nature-yama",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "mountain-big",
+        "transform": "count-change",
+        "params": {
+          "count": 2,
+          "dx": 25
+        },
+        "hitbox": [
+          40,
+          90,
+          320,
+          262
+        ]
+      }
+    },
+    {
+      "id": "B058",
+      "sceneId": "nature-niji",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "sun",
+        "transform": "replace",
+        "params": {
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          278,
+          38,
+          84,
+          84
+        ]
+      }
+    },
+    {
+      "id": "B059",
+      "sceneId": "food-ringo",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "apple-stem",
+        "transform": "translate",
+        "params": {
+          "dx": 20,
+          "dy": 0
+        },
+        "hitbox": [
+          183,
+          87,
+          50,
+          66
+        ]
+      }
+    },
+    {
+      "id": "B060",
+      "sceneId": "food-keiki",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "cake-strawberry-left",
+        "transform": "duplicate",
+        "params": {
+          "dx": 30,
+          "dy": 0
+        },
+        "hitbox": [
+          127,
+          157,
+          50,
+          56
+        ]
+      }
+    },
+    {
+      "id": "B061",
+      "sceneId": "food-obentou",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "bento-box",
+        "transform": "hide",
+        "params": {},
+        "hitbox": [
+          37,
+          87,
+          326,
+          256
+        ]
+      }
+    },
+    {
+      "id": "B062",
+      "sceneId": "food-aisu",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "aisu-cherry-stem",
+        "transform": "recolor",
+        "params": {
+          "fill": "#6BCB77"
+        },
+        "hitbox": [
+          212,
+          43,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B063",
+      "sceneId": "food-pan",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "pan-top-curve",
+        "transform": "scale",
+        "params": {
+          "factor": 0.7
+        },
+        "hitbox": [
+          67,
+          98,
+          266,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B064",
+      "sceneId": "household-isu-tsukue",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "chair-back",
+        "transform": "flip",
+        "params": {},
+        "hitbox": [
+          50,
+          180,
+          50,
+          95
+        ]
+      }
+    },
+    {
+      "id": "B065",
+      "sceneId": "household-tokei",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "number-6",
+        "transform": "add-detail",
+        "params": {
+          "shape": "circle",
+          "r": 12,
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          178,
+          293,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B066",
+      "sceneId": "household-denki",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "light-ray-right",
+        "transform": "remove-detail",
+        "params": {},
+        "hitbox": [
+          228,
+          183,
+          54,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B067",
+      "sceneId": "household-daidokoro",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "stove",
+        "transform": "count-change",
+        "params": {
+          "count": 2,
+          "dx": 25
+        },
+        "hitbox": [
+          210,
+          170,
+          160,
+          60
+        ]
+      }
+    },
+    {
+      "id": "B068",
+      "sceneId": "household-ofuro",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "duck",
+        "transform": "replace",
+        "params": {
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          133,
+          135,
+          85,
+          60
+        ]
+      }
+    },
+    {
+      "id": "B069",
+      "sceneId": "school-randoseru",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "randoseru-charm",
+        "transform": "translate",
+        "params": {
+          "dx": 20,
+          "dy": 0
+        },
+        "hitbox": [
+          235,
+          135,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B070",
+      "sceneId": "school-kyoushitsu",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "kyoushitsu-window",
+        "transform": "duplicate",
+        "params": {
+          "dx": 30,
+          "dy": 0
+        },
+        "hitbox": [
+          280,
+          180,
+          90,
+          90
+        ]
+      }
+    },
+    {
+      "id": "B071",
+      "sceneId": "school-gakkou",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "gakkou-tree",
+        "transform": "hide",
+        "params": {},
+        "hitbox": [
+          330,
+          245,
+          70,
+          100
+        ]
+      }
+    },
+    {
+      "id": "B072",
+      "sceneId": "school-bunbougu",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "bunbougu-notebook",
+        "transform": "recolor",
+        "params": {
+          "fill": "#6BCB77"
+        },
+        "hitbox": [
+          40,
+          170,
+          160,
+          160
+        ]
+      }
+    },
+    {
+      "id": "B073",
+      "sceneId": "park-suberidai",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "slide-handle-left",
+        "transform": "scale",
+        "params": {
+          "factor": 0.7
+        },
+        "hitbox": [
+          110,
+          86,
+          52,
+          52
+        ]
+      }
+    },
+    {
+      "id": "B074",
+      "sceneId": "park-suna-asobi",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "sand-mold-star",
+        "transform": "flip",
+        "params": {},
+        "hitbox": [
+          175,
+          275,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B075",
+      "sceneId": "park-kouen-benchi",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "ball",
+        "transform": "add-detail",
+        "params": {
+          "shape": "circle",
+          "r": 12,
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          318,
+          298,
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "id": "B076",
+      "sceneId": "park-umi",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "starfish",
+        "transform": "remove-detail",
+        "params": {},
+        "hitbox": [
+          165,
+          340,
+          60,
+          60
+        ]
+      }
+    },
+    {
+      "id": "B077",
+      "sceneId": "sakura",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "cloud",
+        "transform": "count-change",
+        "params": {
+          "count": 2,
+          "dx": 25
+        },
+        "hitbox": [
+          25,
+          38,
+          95,
+          64
+        ]
+      }
+    },
+    {
+      "id": "B078",
+      "sceneId": "natsu-matsuri",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "ground",
+        "transform": "replace",
+        "params": {
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          0,
+          330,
+          400,
+          70
+        ]
+      }
+    },
+    {
+      "id": "B079",
+      "sceneId": "kouyou",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "mountain",
+        "transform": "translate",
+        "params": {
+          "dx": 20,
+          "dy": 0
+        },
+        "hitbox": [
+          20,
+          170,
+          360,
+          180
+        ]
+      }
+    },
+    {
+      "id": "B080",
+      "sceneId": "yukidaruma",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "arm-left",
+        "transform": "duplicate",
+        "params": {
+          "dx": 30,
+          "dy": 0
+        },
+        "hitbox": [
+          75,
+          230,
+          70,
+          55
+        ]
+      }
+    },
+    {
+      "id": "B081",
+      "sceneId": "animals-neko",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "cat-whiskers",
+        "transform": "hide",
+        "params": {},
+        "hitbox": [
+          110,
+          163,
+          180,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B082",
+      "sceneId": "animals-inu",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "dog-ear-right",
+        "transform": "recolor",
+        "params": {
+          "fill": "#6BCB77"
+        },
+        "hitbox": [
+          228,
+          90,
+          64,
+          110
+        ]
+      }
+    },
+    {
+      "id": "B083",
+      "sceneId": "animals-usagi",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "rabbit-paw",
+        "transform": "scale",
+        "params": {
+          "factor": 0.7
+        },
+        "hitbox": [
+          131,
+          315,
+          138,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B084",
+      "sceneId": "animals-panda",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "panda-bamboo",
+        "transform": "flip",
+        "params": {},
+        "hitbox": [
+          178,
+          246,
+          50,
+          62
+        ]
+      }
+    },
+    {
+      "id": "B085",
+      "sceneId": "animals-tori",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "bird-wing-left",
+        "transform": "add-detail",
+        "params": {
+          "shape": "circle",
+          "r": 12,
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          88,
+          200,
+          80,
+          90
+        ]
+      }
+    },
+    {
+      "id": "B086",
+      "sceneId": "animals-sakana",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "fish-tail",
+        "transform": "remove-detail",
+        "params": {},
+        "hitbox": [
+          295,
+          135,
+          90,
+          130
+        ]
+      }
+    },
+    {
+      "id": "B087",
+      "sceneId": "animals-zou",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "elephant-ear",
+        "transform": "count-change",
+        "params": {
+          "count": 2,
+          "dx": 25
+        },
+        "hitbox": [
+          70,
+          125,
+          80,
+          100
+        ]
+      }
+    },
+    {
+      "id": "B088",
+      "sceneId": "animals-nezumi",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "mouse-ear-right",
+        "transform": "replace",
+        "params": {
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          205,
+          70,
+          80,
+          80
+        ]
+      }
+    },
+    {
+      "id": "B089",
+      "sceneId": "vehicles-kuruma",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "ground",
+        "transform": "translate",
+        "params": {
+          "dx": 20,
+          "dy": 0
+        },
+        "hitbox": [
+          10,
+          318,
+          380,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B090",
+      "sceneId": "vehicles-densha",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "train-body",
+        "transform": "duplicate",
+        "params": {
+          "dx": 30,
+          "dy": 0
+        },
+        "hitbox": [
+          40,
+          120,
+          340,
+          215
+        ]
+      }
+    },
+    {
+      "id": "B091",
+      "sceneId": "vehicles-jitensya",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "ground",
+        "transform": "hide",
+        "params": {},
+        "hitbox": [
+          10,
+          328,
+          380,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B092",
+      "sceneId": "vehicles-hikouki",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "plane-window-1",
+        "transform": "recolor",
+        "params": {
+          "fill": "#6BCB77"
+        },
+        "hitbox": [
+          110,
+          180,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B093",
+      "sceneId": "vehicles-fune",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "ship-cabin",
+        "transform": "scale",
+        "params": {
+          "factor": 0.7
+        },
+        "hitbox": [
+          150,
+          140,
+          120,
+          75
+        ]
+      }
+    },
+    {
+      "id": "B094",
+      "sceneId": "nature-ki",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "apple-right",
+        "transform": "flip",
+        "params": {},
+        "hitbox": [
+          216,
+          116,
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B095",
+      "sceneId": "nature-hana",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "petal-bottom",
+        "transform": "add-detail",
+        "params": {
+          "shape": "circle",
+          "r": 12,
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          158,
+          152,
+          84,
+          116
+        ]
+      }
+    },
+    {
+      "id": "B096",
+      "sceneId": "nature-taiyou-kumo",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 0,
+      "difference": {
+        "elementId": "cloud-big",
+        "transform": "remove-detail",
+        "params": {},
+        "hitbox": [
+          208,
+          102,
+          150,
+          102
+        ]
+      }
+    },
+    {
+      "id": "B097",
+      "sceneId": "nature-yama",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 1,
+      "difference": {
+        "elementId": "tree-right",
+        "transform": "count-change",
+        "params": {
+          "count": 2,
+          "dx": 25
+        },
+        "hitbox": [
+          313,
+          258,
+          54,
+          95
+        ]
+      }
+    },
+    {
+      "id": "B098",
+      "sceneId": "nature-niji",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 2,
+      "difference": {
+        "elementId": "arc-outer",
+        "transform": "replace",
+        "params": {
+          "fill": "#A66DD4"
+        },
+        "hitbox": [
+          20,
+          165,
+          360,
+          190
+        ]
+      }
+    },
+    {
+      "id": "B099",
+      "sceneId": "food-ringo",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 3,
+      "difference": {
+        "elementId": "apple-mouth",
+        "transform": "translate",
+        "params": {
+          "dx": 20,
+          "dy": 0
+        },
+        "hitbox": [
+          172,
+          275,
+          56,
+          50
+        ]
+      }
+    },
+    {
+      "id": "B100",
+      "sceneId": "food-keiki",
+      "title": "ちがう えを みつけよう",
+      "oddIndex": 4,
+      "difference": {
+        "elementId": "cake-plate",
+        "transform": "duplicate",
+        "params": {
+          "dx": 30,
+          "dy": 0
+        },
+        "hitbox": [
+          30,
+          332,
+          340,
+          56
+        ]
+      }
+    }
+  ]
+}

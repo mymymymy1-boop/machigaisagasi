@@ -1,0 +1,99 @@
+{
+  "scenes": [
+    {
+      "id": "vehicles-kuruma",
+      "category": "vehicles",
+      "name": "くるま",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><g id=\"ground\"><line x1=\"20\" y1=\"330\" x2=\"380\" y2=\"330\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"car-body\"><path d=\"M60 290 L60 240 Q60 220 80 220 L130 220 L160 170 Q170 160 185 160 L280 160 Q295 160 305 170 L335 220 L355 220 Q360 220 360 230 L360 290 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"car-roof\"><path d=\"M175 175 L200 220 L300 220 L280 175 Z\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"car-window-front\"><path d=\"M185 180 L207 215 L240 215 L240 180 Z\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"car-window-back\"><path d=\"M250 180 L250 215 L293 215 L275 180 Z\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"car-door\"><path d=\"M170 220 L170 290 L260 290 L260 220\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"248\" cy=\"255\" r=\"4\" fill=\"#333\"/></g><g id=\"car-headlight\"><circle cx=\"340\" cy=\"245\" r=\"12\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"car-taillight\"><circle cx=\"75\" cy=\"245\" r=\"10\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"wheel-front\"><circle cx=\"305\" cy=\"310\" r=\"28\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"305\" cy=\"310\" r=\"10\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"wheel-back\"><circle cx=\"110\" cy=\"310\" r=\"28\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"110\" cy=\"310\" r=\"10\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"car-bumper\"><line x1=\"60\" y1=\"285\" x2=\"360\" y2=\"285\" stroke=\"#333\" stroke-width=\"3\"/></g></svg>",
+      "elements": [
+        { "id": "ground", "label": "じめん", "bbox": [20, 328, 360, 4] },
+        { "id": "car-body", "label": "くるまのボディ", "bbox": [60, 160, 300, 130] },
+        { "id": "car-roof", "label": "くるまのやね", "bbox": [175, 170, 130, 55] },
+        { "id": "car-window-front", "label": "まえのまど", "bbox": [185, 175, 60, 45] },
+        { "id": "car-window-back", "label": "うしろのまど", "bbox": [248, 175, 50, 45] },
+        { "id": "car-door", "label": "くるまのドア", "bbox": [165, 215, 100, 80] },
+        { "id": "car-headlight", "label": "ヘッドライト", "bbox": [325, 230, 30, 30] },
+        { "id": "car-taillight", "label": "テールランプ", "bbox": [62, 232, 26, 26] },
+        { "id": "wheel-front", "label": "まえのタイヤ", "bbox": [275, 280, 60, 60] },
+        { "id": "wheel-back", "label": "うしろのタイヤ", "bbox": [80, 280, 60, 60] },
+        { "id": "car-bumper", "label": "バンパー", "bbox": [60, 283, 300, 4] }
+      ]
+    },
+    {
+      "id": "vehicles-densha",
+      "category": "vehicles",
+      "name": "でんしゃ",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><g id=\"rail\"><line x1=\"20\" y1=\"340\" x2=\"380\" y2=\"340\" stroke=\"#333\" stroke-width=\"3\"/><line x1=\"40\" y1=\"355\" x2=\"60\" y2=\"355\" stroke=\"#333\" stroke-width=\"3\"/><line x1=\"110\" y1=\"355\" x2=\"130\" y2=\"355\" stroke=\"#333\" stroke-width=\"3\"/><line x1=\"180\" y1=\"355\" x2=\"200\" y2=\"355\" stroke=\"#333\" stroke-width=\"3\"/><line x1=\"250\" y1=\"355\" x2=\"270\" y2=\"355\" stroke=\"#333\" stroke-width=\"3\"/><line x1=\"320\" y1=\"355\" x2=\"340\" y2=\"355\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"train-body\"><path d=\"M50 200 Q50 130 100 130 L350 130 Q370 130 370 150 L370 320 L50 320 Z\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"train-roof-stripe\"><rect x=\"50\" y=\"150\" width=\"320\" height=\"15\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"train-front-window\"><path d=\"M70 180 Q70 150 100 150 L150 150 L150 220 L70 220 Z\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"train-window-1\"><rect x=\"170\" y=\"175\" width=\"55\" height=\"50\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"train-window-2\"><rect x=\"240\" y=\"175\" width=\"55\" height=\"50\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"train-window-3\"><rect x=\"310\" y=\"175\" width=\"50\" height=\"50\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"train-headlight\"><circle cx=\"90\" cy=\"260\" r=\"12\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"train-door\"><rect x=\"175\" y=\"240\" width=\"50\" height=\"80\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\"/><line x1=\"200\" y1=\"245\" x2=\"200\" y2=\"315\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"train-wheel-left\"><circle cx=\"130\" cy=\"335\" r=\"20\" fill=\"#333\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"130\" cy=\"335\" r=\"7\" fill=\"#FFFFFF\"/></g><g id=\"train-wheel-right\"><circle cx=\"290\" cy=\"335\" r=\"20\" fill=\"#333\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"290\" cy=\"335\" r=\"7\" fill=\"#FFFFFF\"/></g></svg>",
+      "elements": [
+        { "id": "rail", "label": "せんろ", "bbox": [20, 338, 360, 22] },
+        { "id": "train-body", "label": "でんしゃのボディ", "bbox": [50, 130, 320, 195] },
+        { "id": "train-roof-stripe", "label": "きいろのライン", "bbox": [50, 150, 320, 20] },
+        { "id": "train-front-window", "label": "うんてんしつのまど", "bbox": [70, 150, 80, 70] },
+        { "id": "train-window-1", "label": "まどひだり", "bbox": [170, 175, 55, 50] },
+        { "id": "train-window-2", "label": "まどまんなか", "bbox": [240, 175, 55, 50] },
+        { "id": "train-window-3", "label": "まどみぎ", "bbox": [310, 175, 50, 50] },
+        { "id": "train-headlight", "label": "でんしゃのライト", "bbox": [78, 248, 24, 24] },
+        { "id": "train-door", "label": "でんしゃのドア", "bbox": [175, 240, 50, 80] },
+        { "id": "train-wheel-left", "label": "ひだりのしゃりん", "bbox": [108, 313, 44, 44] },
+        { "id": "train-wheel-right", "label": "みぎのしゃりん", "bbox": [268, 313, 44, 44] }
+      ]
+    },
+    {
+      "id": "vehicles-jitensya",
+      "category": "vehicles",
+      "name": "じてんしゃ",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><g id=\"ground\"><line x1=\"20\" y1=\"340\" x2=\"380\" y2=\"340\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"wheel-back\"><circle cx=\"110\" cy=\"290\" r=\"50\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"110\" cy=\"290\" r=\"8\" fill=\"#333\"/><line x1=\"110\" y1=\"240\" x2=\"110\" y2=\"340\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"60\" y1=\"290\" x2=\"160\" y2=\"290\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"wheel-front\"><circle cx=\"290\" cy=\"290\" r=\"50\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\"/><circle cx=\"290\" cy=\"290\" r=\"8\" fill=\"#333\"/><line x1=\"290\" y1=\"240\" x2=\"290\" y2=\"340\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"240\" y1=\"290\" x2=\"340\" y2=\"290\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"bike-frame\"><path d=\"M110 290 L200 200 L290 290 M200 200 L240 290 M200 200 L200 150\" fill=\"none\" stroke=\"#333\" stroke-width=\"4\" stroke-linejoin=\"round\"/></g><g id=\"bike-seat\"><path d=\"M180 145 Q200 138 220 145 L215 155 L185 155 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"bike-handle\"><path d=\"M290 290 L290 160 L260 160 M290 160 L320 160\" fill=\"none\" stroke=\"#333\" stroke-width=\"4\" stroke-linejoin=\"round\"/></g><g id=\"bike-basket\"><path d=\"M260 100 L320 100 L325 150 L255 150 Z\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"270\" y1=\"110\" x2=\"272\" y2=\"145\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"285\" y1=\"108\" x2=\"285\" y2=\"148\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"300\" y1=\"108\" x2=\"302\" y2=\"148\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"bike-pedal\"><circle cx=\"200\" cy=\"290\" r=\"10\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\"/><line x1=\"200\" y1=\"280\" x2=\"200\" y2=\"300\" stroke=\"#333\" stroke-width=\"4\"/></g><g id=\"bike-bell\"><circle cx=\"270\" cy=\"170\" r=\"8\" fill=\"#B5E48C\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"bike-reflector\"><rect x=\"95\" y=\"310\" width=\"30\" height=\"10\" rx=\"2\" fill=\"#FFD93D\" stroke=\"#333\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g></svg>",
+      "elements": [
+        { "id": "ground", "label": "じめん", "bbox": [20, 338, 360, 4] },
+        { "id": "wheel-back", "label": "うしろのタイヤ", "bbox": [58, 238, 104, 104] },
+        { "id": "wheel-front", "label": "まえのタイヤ", "bbox": [238, 238, 104, 104] },
+        { "id": "bike-frame", "label": "じてんしゃのフレーム", "bbox": [105, 145, 190, 150] },
+        { "id": "bike-seat", "label": "サドル", "bbox": [178, 138, 45, 20] },
+        { "id": "bike-handle", "label": "ハンドル", "bbox": [255, 155, 70, 140] },
+        { "id": "bike-basket", "label": "かご", "bbox": [253, 98, 75, 55] },
+        { "id": "bike-pedal", "label": "ペダル", "bbox": [188, 278, 24, 24] },
+        { "id": "bike-bell", "label": "ベル", "bbox": [260, 160, 20, 20] },
+        { "id": "bike-reflector", "label": "リフレクター", "bbox": [93, 308, 34, 14] }
+      ]
+    },
+    {
+      "id": "vehicles-hikouki",
+      "category": "vehicles",
+      "name": "ひこうき",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><g id=\"cloud-left\"><path d=\"M40 110 Q30 95 45 90 Q50 75 70 80 Q80 70 95 80 Q110 80 105 100 Q90 110 70 108 Q55 115 40 110 Z\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"cloud-right\"><path d=\"M310 320 Q300 305 315 300 Q320 285 340 290 Q350 280 365 290 Q380 290 375 310 Q360 320 340 318 Q325 325 310 320 Z\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"plane-body\"><path d=\"M60 220 Q40 215 40 200 Q40 185 60 180 L320 180 Q360 180 370 200 Q360 220 320 220 Z\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"plane-nose\"><path d=\"M320 180 Q360 180 370 200 Q360 220 320 220\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"plane-cockpit\"><path d=\"M300 200 Q310 185 330 190 Q345 195 345 205 L300 205 Z\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"plane-wing\"><path d=\"M150 195 L230 195 L260 250 L180 250 Z\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"plane-tail\"><path d=\"M60 180 L80 130 L110 130 L100 180 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"plane-window-1\"><circle cx=\"130\" cy=\"200\" r=\"8\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"plane-window-2\"><circle cx=\"170\" cy=\"200\" r=\"8\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"plane-window-3\"><circle cx=\"210\" cy=\"200\" r=\"8\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"plane-window-4\"><circle cx=\"250\" cy=\"200\" r=\"8\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"plane-trail\"><path d=\"M40 200 Q25 200 20 195 M40 210 Q25 215 18 220\" fill=\"none\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g></svg>",
+      "elements": [
+        { "id": "cloud-left", "label": "ひだりのくも", "bbox": [30, 70, 85, 50] },
+        { "id": "cloud-right", "label": "みぎのくも", "bbox": [300, 280, 85, 50] },
+        { "id": "plane-body", "label": "ひこうきのボディ", "bbox": [40, 178, 332, 44] },
+        { "id": "plane-nose", "label": "ひこうきのさき", "bbox": [320, 178, 52, 44] },
+        { "id": "plane-cockpit", "label": "そうじゅうしつ", "bbox": [298, 185, 50, 22] },
+        { "id": "plane-wing", "label": "つばさ", "bbox": [150, 193, 112, 60] },
+        { "id": "plane-tail", "label": "おびれ", "bbox": [60, 128, 52, 54] },
+        { "id": "plane-window-1", "label": "まどひとつめ", "bbox": [120, 190, 20, 20] },
+        { "id": "plane-window-2", "label": "まどふたつめ", "bbox": [160, 190, 20, 20] },
+        { "id": "plane-window-3", "label": "まどみっつめ", "bbox": [200, 190, 20, 20] },
+        { "id": "plane-window-4", "label": "まどよっつめ", "bbox": [240, 190, 20, 20] },
+        { "id": "plane-trail", "label": "ひこうきぐも", "bbox": [16, 192, 30, 32] }
+      ]
+    },
+    {
+      "id": "vehicles-fune",
+      "category": "vehicles",
+      "name": "ふね",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\"><g id=\"sea\"><path d=\"M20 320 Q60 310 100 320 T180 320 T260 320 T340 320 T380 320 L380 380 L20 380 Z\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/><path d=\"M40 340 Q70 335 100 340 M150 350 Q180 345 210 350 M260 340 Q290 335 320 340\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/></g><g id=\"sun\"><circle cx=\"340\" cy=\"80\" r=\"30\" fill=\"#FFEB99\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"ship-hull\"><path d=\"M60 250 L340 250 L310 320 L90 320 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"ship-deck\"><rect x=\"120\" y=\"200\" width=\"180\" height=\"55\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"ship-cabin\"><rect x=\"160\" y=\"150\" width=\"100\" height=\"55\" fill=\"#FFE5B4\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"ship-window-1\"><circle cx=\"150\" cy=\"225\" r=\"10\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"ship-window-2\"><circle cx=\"210\" cy=\"225\" r=\"10\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"ship-window-3\"><circle cx=\"270\" cy=\"225\" r=\"10\" fill=\"#90BFD9\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"ship-chimney\"><rect x=\"195\" y=\"90\" width=\"30\" height=\"65\" fill=\"#D4A373\" stroke=\"#333\" stroke-width=\"3\"/><rect x=\"193\" y=\"85\" width=\"34\" height=\"10\" fill=\"#333\" stroke=\"#333\" stroke-width=\"3\"/></g><g id=\"ship-smoke\"><path d=\"M205 80 Q190 70 195 55 Q210 50 215 60 Q225 50 235 60 Q235 75 220 78 Q210 85 205 80 Z\" fill=\"#FFFFFF\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g><g id=\"ship-flag\"><line x1=\"245\" y1=\"150\" x2=\"245\" y2=\"105\" stroke=\"#333\" stroke-width=\"3\"/><path d=\"M245 110 L275 120 L245 130 Z\" fill=\"#FFB5A7\" stroke=\"#333\" stroke-width=\"3\" stroke-linejoin=\"round\"/></g></svg>",
+      "elements": [
+        { "id": "sea", "label": "うみ", "bbox": [20, 308, 360, 72] },
+        { "id": "sun", "label": "たいよう", "bbox": [310, 50, 60, 60] },
+        { "id": "ship-hull", "label": "ふねのそこ", "bbox": [60, 248, 280, 74] },
+        { "id": "ship-deck", "label": "デッキ", "bbox": [120, 200, 180, 55] },
+        { "id": "ship-cabin", "label": "そうじゅうしつ", "bbox": [160, 150, 100, 55] },
+        { "id": "ship-window-1", "label": "まどひだり", "bbox": [138, 213, 24, 24] },
+        { "id": "ship-window-2", "label": "まどまんなか", "bbox": [198, 213, 24, 24] },
+        { "id": "ship-window-3", "label": "まどみぎ", "bbox": [258, 213, 24, 24] },
+        { "id": "ship-chimney", "label": "えんとつ", "bbox": [193, 85, 34, 70] },
+        { "id": "ship-smoke", "label": "けむり", "bbox": [188, 48, 50, 35] },
+        { "id": "ship-flag", "label": "はた", "bbox": [243, 105, 35, 50] }
+      ]
+    }
+  ]
+}
