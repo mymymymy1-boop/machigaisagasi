@@ -8,11 +8,11 @@
     { "id": "a1", "hint": "もみじ葉 (左の銀杏の枝先付近)", "hitbox": [110, 200, 40, 40], "kind": "shape-add", "params": { "shape": "leaf-maple", "size": 36, "color": "#B85439" } },
     { "id": "a2", "hint": "ぎんなんの葉 (右の銀杏のすぐ手前)", "hitbox": [900, 380, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-ginkgo", "size": 34, "color": "#D4A35E" } },
     { "id": "a3", "hint": "雲 (太陽の右の空)", "hitbox": [620, 60, 80, 50], "kind": "shape-add", "params": { "shape": "cloud", "size": 70, "color": "#FFFDF2" } },
-    { "id": "a4", "hint": "石畳の隙間に小さな石", "hitbox": [495, 1010, 40, 35], "kind": "shape-add", "params": { "shape": "acorn", "size": 32, "color": "#8B6F47" } },
-    { "id": "a5", "hint": "もみじ葉 (右下の地面)", "hitbox": [840, 1290, 36, 36], "kind": "shape-add", "params": { "shape": "leaf-maple", "size": 32, "color": "#A65033" } },
-    { "id": "a6", "hint": "ぎんなん葉 (鳩の右側)", "hitbox": [155, 1480, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-ginkgo", "size": 34, "color": "#C49751" } },
+    { "id": "a4", "hint": "石畳の上に小さな石", "hitbox": [430, 730, 40, 35], "kind": "shape-add", "params": { "shape": "acorn", "size": 32, "color": "#8B6F47" } },
+    { "id": "a5", "hint": "もみじ葉 (右上の空)", "hitbox": [820, 60, 36, 36], "kind": "shape-add", "params": { "shape": "leaf-maple", "size": 32, "color": "#A65033" } },
+    { "id": "a6", "hint": "ぎんなん葉 (鳥居奥の参道)", "hitbox": [500, 470, 36, 36], "kind": "shape-add", "params": { "shape": "leaf-ginkgo", "size": 32, "color": "#C49751" } },
     { "id": "a7", "hint": "もみじ葉 (鳥居の左の柱付近)", "hitbox": [200, 340, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-maple", "size": 34, "color": "#A85436" } },
-    { "id": "a8", "hint": "ぎんなん葉 (左下の地面)", "hitbox": [70, 1380, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-ginkgo", "size": 34, "color": "#D4A35E" } },
+    { "id": "a8", "hint": "ぎんなん葉 (鳥居右柱)", "hitbox": [790, 350, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-ginkgo", "size": 34, "color": "#D4A35E" } },
     { "id": "a9", "hint": "雲 (左上の空)", "hitbox": [70, 70, 80, 50], "kind": "shape-add", "params": { "shape": "cloud", "size": 70, "color": "#FFFDF2" } },
     { "id": "a10", "hint": "もみじ葉 (鳥居の上の梁)", "hitbox": [490, 280, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-maple", "size": 32, "color": "#B85439" } }
   ]

@@ -6,9 +6,9 @@
   "note": "微差版: 30-40px の muted シェイプ。base に溶け込む配置。",
   "variants": [
     { "id": "v1", "label": "1まいめ", "hint": "ピンクの花 (右下の花畑)", "hitbox": [580, 1400, 40, 40], "kind": "shape-add", "params": { "shape": "flower", "size": 34, "color": "#E89BAA" } },
-    { "id": "v2", "label": "2まいめ", "hint": "雲 (右上の空)", "hitbox": [820, 50, 90, 55], "kind": "shape-add", "params": { "shape": "cloud", "size": 75, "color": "#FFFDF2" } },
+    { "id": "v2", "label": "2まいめ", "hint": "雲 (太陽の右の空)", "hitbox": [560, 50, 90, 55], "kind": "shape-add", "params": { "shape": "cloud", "size": 75, "color": "#FFFDF2" } },
     { "id": "v3", "label": "3まいめ", "hint": "ちょうちょ (中央右の空)", "hitbox": [620, 230, 40, 40], "kind": "shape-add", "params": { "shape": "butterfly", "size": 36, "color": "#D69A4C" } },
     { "id": "v4", "label": "4まいめ", "hint": "もみじ葉 (砂場の右脇)", "hitbox": [380, 920, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-maple", "size": 32, "color": "#B85439" } },
-    { "id": "v5", "label": "5まいめ", "hint": "ぎんなん葉 (桜の木の根元)", "hitbox": [810, 580, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-ginkgo", "size": 34, "color": "#D4A35E" } }
+    { "id": "v5", "label": "5まいめ", "hint": "ぎんなん葉 (大きな木の手前の芝生)", "hitbox": [430, 880, 38, 38], "kind": "shape-add", "params": { "shape": "leaf-ginkgo", "size": 34, "color": "#D4A35E" } }
   ]
 }
