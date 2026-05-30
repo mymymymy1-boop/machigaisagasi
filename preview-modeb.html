@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mode B テスト: 5枚それぞれに1ヶ所違い (文字なし)</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #FFF9E6; color: #333; font-family: "Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",system-ui,sans-serif; }
+  header { position: sticky; top: 0; background: #FFEB99; padding: 14px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); z-index: 10; }
+  h1 { margin: 0; font-size: 18px; }
+  .sub { font-size: 12px; color: #5a4a1a; margin-top: 4px; }
+  main { padding: 16px 12px 80px; max-width: 1200px; margin: 0 auto; }
+  .section { background: #fff; border-radius: 22px; padding: 16px; margin-bottom: 24px; box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+  .section h2 { margin: 0 0 12px; font-size: 17px; color: #4a3a0e; }
+  .base-wrap { display: flex; justify-content: center; margin-bottom: 8px; }
+  .base-wrap img { max-width: 480px; width: 100%; border-radius: 14px; border: 3px solid #FFD66A; }
+  .variant-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .variant-grid .cell { background: #FFF9E6; border-radius: 12px; padding: 6px; text-align: center; }
+  .variant-grid .cell img { display: block; width: 100%; height: auto; border-radius: 8px; }
+  .variant-grid .cell .label { font-size: 13px; font-weight: 700; padding: 6px 0 2px; color: #4a3a0e; }
+  .diffs { background: #FFFAE5; border-radius: 14px; padding: 12px 16px; margin-top: 16px; font-size: 13px; color: #5a4a1a; }
+  .diffs summary { cursor: pointer; font-weight: 700; font-size: 14px; padding: 4px 0; }
+  .diffs ol { margin: 6px 0 0; padding-left: 22px; }
+  .diffs li { padding: 2px 0; }
+  .note { background: #FFE9B0; border-radius: 14px; padding: 12px 16px; margin: 16px 0; font-size: 13px; color: #4a3a0e; }
+  .nav { display: flex; gap: 12px; justify-content: center; padding: 16px; flex-wrap: wrap; }
+  .nav a { padding: 10px 18px; background: #FFEB99; border-radius: 999px; text-decoration: none; color: #4a3a0e; font-weight: 700; font-size: 14px; }
+  @media (max-width: 720px) {
+    .variant-grid { grid-template-columns: repeat(2, 1fr); }
+    .variant-grid .cell:nth-child(5) { grid-column: 1 / -1; }
+  }
+  @media (max-width: 380px) {
+    .variant-grid { grid-template-columns: 1fr; }
+    .variant-grid .cell:nth-child(5) { grid-column: auto; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Mode B テスト: 公園であそぶ子供たち</h1>
+  <div class="sub">1ベース + 5バリアント (各1ヶ所、文字なし)</div>
+</header>
+<main>
+
+<div class="section">
+  <h2>📷 ベース画像 (参考用、ゲーム本番では非表示)</h2>
+  <div class="base-wrap">
+    <img src="data/test-modeb/kouen-asobi-base.png" alt="ベース">
+  </div>
+</div>
+
+<div class="section">
+  <h2>🎯 5枚バリアント — 各画像に1ヶ所だけ独自の違いがある</h2>
+  <div class="variant-grid">
+    <div class="cell"><div class="label">1</div><img src="data/test-modeb/kouen-asobi-v1.png" alt="v1"></div>
+    <div class="cell"><div class="label">2</div><img src="data/test-modeb/kouen-asobi-v2.png" alt="v2"></div>
+    <div class="cell"><div class="label">3</div><img src="data/test-modeb/kouen-asobi-v3.png" alt="v3"></div>
+    <div class="cell"><div class="label">4</div><img src="data/test-modeb/kouen-asobi-v4.png" alt="v4"></div>
+    <div class="cell"><div class="label">5</div><img src="data/test-modeb/kouen-asobi-v5.png" alt="v5"></div>
+  </div>
+  <details class="diffs">
+    <summary>各画像の独自ポイント (答え)</summary>
+    <ol>
+      <li>1: すべり台の女の子の髪リボン 2個→1個</li>
+      <li>2: 砂場のバケツの色 青→赤</li>
+      <li>3: 赤チューリップ 5本→4本</li>
+      <li>4: 三輪車の男の子のヘルメット 白→青</li>
+      <li>5: 桜の木の位置/花の量の変化</li>
+    </ol>
+  </details>
+</div>
+
+<div class="note">
+  <b>⚠️ 既知の問題:</b> gpt-image-1 の edit API は「同じ画像で1ヶ所だけ変える」指示でも、線の太さや色合いなど他の細部が微妙に変動 (ドリフト) します。同じシーンを並べると child が意図しない差分も発見する可能性。本番版では <b>1ベース画像 + プログラムによる差分オーバーレイ</b> で完全にコントロールする方法をおすすめします (説明はチャット側)。
+</div>
+
+</main>
+<div class="nav">
+  <a href="preview-v2.html">← Mode A v2</a>
+  <a href="preview.html">v1</a>
+  <a href="./">ホーム</a>
+</div>
+</body>
+</html>
