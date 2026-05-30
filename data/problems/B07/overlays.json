@@ -1,0 +1,95 @@
+{
+  "id": "B07",
+  "mode": "B",
+  "topic": "ryouri-otetsudai",
+  "baseImg": "base.png",
+  "imgW": 1024,
+  "imgH": 1536,
+  "variants": [
+    {
+      "id": "b1",
+      "hint": "cloud added",
+      "hitbox": [
+        450,
+        550,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "cloud",
+        "size": 33,
+        "color": "#FFFDF2"
+      },
+      "label": "1まいめ"
+    },
+    {
+      "id": "b2",
+      "hint": "cloud added",
+      "hitbox": [
+        750,
+        250,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "cloud",
+        "size": 40,
+        "color": "#FFFDF2"
+      },
+      "label": "2まいめ"
+    },
+    {
+      "id": "b3",
+      "hint": "butterfly added",
+      "hitbox": [
+        350,
+        650,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "butterfly",
+        "size": 38,
+        "color": "#C87B3C"
+      },
+      "label": "3まいめ"
+    },
+    {
+      "id": "b4",
+      "hint": "bird added",
+      "hitbox": [
+        500,
+        500,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "bird",
+        "size": 39,
+        "color": "#8B6F5E"
+      },
+      "label": "4まいめ"
+    },
+    {
+      "id": "b5",
+      "hint": "flower added",
+      "hitbox": [
+        950,
+        150,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "flower",
+        "size": 34,
+        "color": "#E89BAA"
+      },
+      "label": "5まいめ"
+    }
+  ]
+}

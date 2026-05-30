@@ -1,0 +1,170 @@
+{
+  "id": "A10",
+  "mode": "A",
+  "topic": "christmas-livingroom",
+  "baseImg": "base.png",
+  "imgW": 1024,
+  "imgH": 1536,
+  "overlays": [
+    {
+      "id": "a1",
+      "hint": "flower added",
+      "hitbox": [
+        400,
+        30,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "flower",
+        "size": 33,
+        "color": "#D69A9A"
+      }
+    },
+    {
+      "id": "a2",
+      "hint": "bird added",
+      "hitbox": [
+        700,
+        350,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "bird",
+        "size": 37,
+        "color": "#9B7A65"
+      }
+    },
+    {
+      "id": "a3",
+      "hint": "cloud added",
+      "hitbox": [
+        600,
+        40,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "cloud",
+        "size": 37,
+        "color": "#FFFDF2"
+      }
+    },
+    {
+      "id": "a4",
+      "hint": "acorn added",
+      "hitbox": [
+        200,
+        20,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "acorn",
+        "size": 32,
+        "color": "#9E7B53"
+      }
+    },
+    {
+      "id": "a5",
+      "hint": "flower added",
+      "hitbox": [
+        950,
+        60,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "flower",
+        "size": 32,
+        "color": "#E89BAA"
+      }
+    },
+    {
+      "id": "a6",
+      "hint": "leaf-maple added",
+      "hitbox": [
+        250,
+        550,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "leaf-maple",
+        "size": 36,
+        "color": "#C95C44"
+      }
+    },
+    {
+      "id": "a7",
+      "hint": "leaf-ginkgo added",
+      "hitbox": [
+        800,
+        50,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "leaf-ginkgo",
+        "size": 36,
+        "color": "#C49751"
+      }
+    },
+    {
+      "id": "a8",
+      "hint": "flower added",
+      "hitbox": [
+        900,
+        400,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "flower",
+        "size": 39,
+        "color": "#F0A8B5"
+      }
+    },
+    {
+      "id": "a9",
+      "hint": "leaf-maple added",
+      "hitbox": [
+        500,
+        300,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "leaf-maple",
+        "size": 40,
+        "color": "#C95C44"
+      }
+    },
+    {
+      "id": "a10",
+      "hint": "acorn added",
+      "hitbox": [
+        300,
+        250,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "acorn",
+        "size": 39,
+        "color": "#9E7B53"
+      }
+    }
+  ]
+}

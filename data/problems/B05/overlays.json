@@ -1,0 +1,95 @@
+{
+  "id": "B05",
+  "mode": "B",
+  "topic": "jitensha",
+  "baseImg": "base.png",
+  "imgW": 1024,
+  "imgH": 1536,
+  "variants": [
+    {
+      "id": "b1",
+      "hint": "butterfly added",
+      "hitbox": [
+        150,
+        200,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "butterfly",
+        "size": 38,
+        "color": "#B8743A"
+      },
+      "label": "1まいめ"
+    },
+    {
+      "id": "b2",
+      "hint": "butterfly added",
+      "hitbox": [
+        100,
+        1400,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "butterfly",
+        "size": 36,
+        "color": "#B8743A"
+      },
+      "label": "2まいめ"
+    },
+    {
+      "id": "b3",
+      "hint": "butterfly added",
+      "hitbox": [
+        700,
+        1440,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "butterfly",
+        "size": 33,
+        "color": "#B8743A"
+      },
+      "label": "3まいめ"
+    },
+    {
+      "id": "b4",
+      "hint": "bird added",
+      "hitbox": [
+        900,
+        70,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "bird",
+        "size": 35,
+        "color": "#8B6F5E"
+      },
+      "label": "4まいめ"
+    },
+    {
+      "id": "b5",
+      "hint": "cloud added",
+      "hitbox": [
+        300,
+        1450,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "cloud",
+        "size": 36,
+        "color": "#FAF3E0"
+      },
+      "label": "5まいめ"
+    }
+  ]
+}

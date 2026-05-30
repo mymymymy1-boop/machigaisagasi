@@ -1,0 +1,170 @@
+{
+  "id": "A04",
+  "mode": "A",
+  "topic": "kitchen-bento",
+  "baseImg": "base.png",
+  "imgW": 1024,
+  "imgH": 1536,
+  "overlays": [
+    {
+      "id": "a1",
+      "hint": "flower added",
+      "hitbox": [
+        750,
+        250,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "flower",
+        "size": 33,
+        "color": "#E89BAA"
+      }
+    },
+    {
+      "id": "a2",
+      "hint": "acorn added",
+      "hitbox": [
+        250,
+        750,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "acorn",
+        "size": 38,
+        "color": "#9E7B53"
+      }
+    },
+    {
+      "id": "a3",
+      "hint": "bird added",
+      "hitbox": [
+        450,
+        550,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "bird",
+        "size": 40,
+        "color": "#9B7A65"
+      }
+    },
+    {
+      "id": "a4",
+      "hint": "leaf-ginkgo added",
+      "hitbox": [
+        500,
+        500,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "leaf-ginkgo",
+        "size": 35,
+        "color": "#C49751"
+      }
+    },
+    {
+      "id": "a5",
+      "hint": "cloud added",
+      "hitbox": [
+        400,
+        600,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "cloud",
+        "size": 38,
+        "color": "#FFFDF2"
+      }
+    },
+    {
+      "id": "a6",
+      "hint": "cloud added",
+      "hitbox": [
+        600,
+        400,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "cloud",
+        "size": 34,
+        "color": "#FFFDF2"
+      }
+    },
+    {
+      "id": "a7",
+      "hint": "cloud added",
+      "hitbox": [
+        850,
+        200,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "cloud",
+        "size": 39,
+        "color": "#FAF3E0"
+      }
+    },
+    {
+      "id": "a8",
+      "hint": "flower added",
+      "hitbox": [
+        800,
+        50,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "flower",
+        "size": 33,
+        "color": "#F0A8B5"
+      }
+    },
+    {
+      "id": "a9",
+      "hint": "cloud added",
+      "hitbox": [
+        900,
+        100,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "cloud",
+        "size": 38,
+        "color": "#FAF3E0"
+      }
+    },
+    {
+      "id": "a10",
+      "hint": "leaf-ginkgo added",
+      "hitbox": [
+        700,
+        300,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "leaf-ginkgo",
+        "size": 38,
+        "color": "#E3B66E"
+      }
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "B04",
+  "mode": "B",
+  "topic": "toshokan",
+  "baseImg": "base.png",
+  "imgW": 1024,
+  "imgH": 1536,
+  "variants": [
+    {
+      "id": "b1",
+      "hint": "cloud added",
+      "hitbox": [
+        950,
+        1450,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "cloud",
+        "size": 35,
+        "color": "#FFFDF2"
+      },
+      "label": "1まいめ"
+    },
+    {
+      "id": "b2",
+      "hint": "flower added",
+      "hitbox": [
+        10,
+        500,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "flower",
+        "size": 33,
+        "color": "#D69A9A"
+      },
+      "label": "2まいめ"
+    },
+    {
+      "id": "b3",
+      "hint": "cloud added",
+      "hitbox": [
+        600,
+        10,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "cloud",
+        "size": 39,
+        "color": "#FFFDF2"
+      },
+      "label": "3まいめ"
+    },
+    {
+      "id": "b4",
+      "hint": "acorn added",
+      "hitbox": [
+        950,
+        10,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "acorn",
+        "size": 36,
+        "color": "#9E7B53"
+      },
+      "label": "4まいめ"
+    },
+    {
+      "id": "b5",
+      "hint": "flower added",
+      "hitbox": [
+        500,
+        1450,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "flower",
+        "size": 40,
+        "color": "#F0A8B5"
+      },
+      "label": "5まいめ"
+    }
+  ]
+}

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="まちがいさがし">
+<meta name="theme-color" content="#FFEB99">
+<title>まちがいさがし v2</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #FFF9E6; color: #333; font-family: "Hiragino Maru Gothic ProN","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",system-ui,sans-serif; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; overscroll-behavior: none; }
+  header { position: sticky; top: 0; background: #FFEB99; padding: 10px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); z-index: 10; padding-top: calc(10px + env(safe-area-inset-top)); display: flex; align-items: center; gap: 12px; }
+  .hd-back { background: #fff; border: none; border-radius: 999px; padding: 8px 14px; font-size: 14px; font-weight: 700; color: #4a3a0e; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; display: none; }
+  .hd-back.show { display: block; }
+  .hd-title { flex: 1; font-size: 16px; font-weight: 700; text-align: center; }
+  .hd-progress { font-size: 14px; background: #fff3c4; border-radius: 999px; padding: 4px 12px; color: #b8530a; font-weight: 700; }
+  main { padding: 12px; max-width: 1100px; margin: 0 auto; padding-bottom: 80px; }
+
+  /* HOME */
+  #home-section h1 { font-size: 22px; text-align: center; margin: 16px 0 20px; color: #4a3a0e; }
+  .section-label { font-size: 16px; font-weight: 700; color: #5a4a1a; margin: 24px 0 10px; padding-left: 4px; }
+  .problem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .problem-card { position: relative; background: #fff; border-radius: 16px; padding: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); cursor: pointer; touch-action: manipulation; }
+  .problem-card.cleared { background: #DDF0C8; }
+  .problem-card .thumb { width: 100%; aspect-ratio: 2/3; background: #FFF9E6; border-radius: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .problem-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .problem-card .info { padding: 6px 4px 0; text-align: center; }
+  .problem-card .topic { display: block; font-size: 13px; font-weight: 700; color: #4a3a0e; }
+  .problem-card .mode-badge { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #FFD66A; color: #4a3a0e; margin-top: 4px; }
+  .problem-card .mode-badge.B { background: #B5E48C; }
+  .problem-card .cleared-mark { position: absolute; top: 6px; right: 6px; background: #6BCB77; color: #fff; border-radius: 50%; width: 24px; height: 24px; font-size: 16px; display: none; align-items: center; justify-content: center; }
+  .problem-card.cleared .cleared-mark { display: flex; }
+  .empty { text-align: center; color: #888; padding: 40px 20px; }
+
+  /* PLAY common */
+  .play-area { display: none; }
+  .play-area.active { display: block; }
+
+  /* MODE A */
+  .mode-a-row { display: flex; gap: 8px; margin-bottom: 12px; }
+  .img-wrap { position: relative; flex: 1; min-width: 0; background: #fff; border-radius: 14px; padding: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); overflow: hidden; }
+  .img-wrap canvas { display: block; width: 100%; height: auto; border-radius: 10px; pointer-events: none; }
+  .img-wrap .found-svg { position: absolute; top: 4px; left: 4px; width: calc(100% - 8px); height: calc(100% - 8px); pointer-events: none; }
+  .img-wrap.tappable { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+
+  /* MODE B */
+  .mode-b-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 12px; }
+  .mode-b-cell { background: #fff; border-radius: 10px; padding: 3px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); position: relative; touch-action: manipulation; }
+  .mode-b-cell.cleared { background: #B5E48C; }
+  .mode-b-cell canvas { display: block; width: 100%; height: auto; border-radius: 8px; pointer-events: none; }
+  .mode-b-cell .num { position: absolute; top: 4px; left: 4px; background: #FFD66A; color: #4a3a0e; border-radius: 999px; width: 22px; height: 22px; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; z-index: 2; }
+  .mode-b-cell.cleared .num { background: #6BCB77; color: #fff; }
+  .mode-b-cell .check { position: absolute; top: 6px; right: 6px; font-size: 18px; color: #fff; background: #6BCB77; border-radius: 50%; width: 24px; height: 24px; display: none; align-items: center; justify-content: center; z-index: 2; }
+  .mode-b-cell.cleared .check { display: flex; }
+  @media (max-width: 720px) {
+    .mode-b-grid { grid-template-columns: repeat(3, 1fr); }
+    .mode-b-cell:nth-child(4) { grid-column: 1 / span 1; }
+    .mode-b-cell:nth-child(5) { grid-column: 2 / span 1; }
+  }
+  @media (max-width: 380px) {
+    .mode-b-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* common popup */
+  .bubble { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #fff; border: 2px solid #FFD66A; border-radius: 16px; padding: 10px 18px; font-size: 14px; font-weight: 700; color: #4a3a0e; box-shadow: 0 4px 12px rgba(0,0,0,0.1); opacity: 0; transition: opacity 200ms, transform 200ms; pointer-events: none; z-index: 100; }
+  .bubble.show { opacity: 1; transform: translateX(-50%) translateY(-4px); }
+  .modal { position: fixed; inset: 0; background: rgba(255, 249, 230, 0.94); display: none; align-items: center; justify-content: center; z-index: 200; padding: 24px; }
+  .modal.show { display: flex; }
+  .modal-card { background: #fff; border-radius: 24px; padding: 28px 24px; max-width: 360px; width: 100%; text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+  .modal-card h2 { margin: 0 0 12px; font-size: 22px; color: #4a3a0e; }
+  .modal-card .stars { font-size: 36px; margin: 8px 0; }
+  .modal-card button { margin: 8px 4px; padding: 12px 22px; border: none; border-radius: 999px; background: #FFD66A; color: #4a3a0e; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer; touch-action: manipulation; }
+</style>
+</head>
+<body>
+
+<header>
+  <button class="hd-back" id="hd-back">← ホーム</button>
+  <div class="hd-title" id="hd-title">まちがいさがし</div>
+  <div class="hd-progress" id="hd-progress" style="display:none">0 / 10</div>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="home-section">
+    <h1>もんだいを えらんでね</h1>
+    <div id="home-list"></div>
+  </section>
+
+  <!-- MODE A -->
+  <section class="play-area" id="mode-a-section">
+    <div class="mode-a-row">
+      <div class="img-wrap" id="wrap-a-left">
+        <canvas id="canvas-a-left"></canvas>
+        <svg class="found-svg" id="svg-a-left" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+      <div class="img-wrap tappable" id="wrap-a-right">
+        <canvas id="canvas-a-right"></canvas>
+        <svg class="found-svg" id="svg-a-right" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODE B -->
+  <section class="play-area" id="mode-b-section">
+    <div class="mode-b-grid" id="mode-b-grid"></div>
+  </section>
+</main>
+
+<div class="bubble" id="bubble"></div>
+
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <h2 id="modal-title">よく できたね！</h2>
+    <div class="stars" id="modal-stars">⭐⭐⭐</div>
+    <p id="modal-text" style="margin: 12px 0;"></p>
+    <button id="modal-next">つぎの もんだい</button>
+    <button id="modal-home">ホームへ</button>
+  </div>
+</div>
+
+<script>
+(async () => {
+  const IMG_W = 1024, IMG_H = 1536;
+  const STORAGE_KEY = 'mchg.cleared.v2';
+
+  // Hiragana topic names
+  const TOPIC_LABELS = {
+    'shichi-go-san': 'しちごさん',
+    'youchien-jiyu-jikan': 'ようちえん',
+    'tanabata-kazari': 'たなばた',
+    'kitchen-bento': 'おべんとう',
+    'doubutsuen-iriguchi': 'どうぶつえん',
+    'oshougatsu': 'おしょうがつ',
+    'ohanami': 'おはなみ',
+    'shoutengai': 'しょうてんがい',
+    'kaisuiyoku': 'かいすいよく',
+    'christmas-livingroom': 'クリスマス',
+    'kouen-asobi': 'こうえん',
+    'asa-no-shokutaku': 'あさごはん',
+    'oniwa': 'おにわ',
+    'toshokan': 'としょかん',
+    'jitensha': 'じてんしゃ',
+    'origami': 'おりがみ',
+    'ryouri-otetsudai': 'りょうり',
+    'oekaki-jikan': 'おえかき',
+    'pool': 'プール',
+    'picnic': 'ピクニック',
+  };
+
+  // Load progress
+  let cleared = new Set();
+  try { cleared = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); } catch(e){}
+  function saveCleared() { localStorage.setItem(STORAGE_KEY, JSON.stringify([...cleared])); }
+
+  // Load problem index
+  let allProblems = [];
+  try {
+    allProblems = (await fetch('data/problems/index.json').then(r => r.json())).problems || [];
+  } catch (e) {
+    console.error('index load fail', e);
+    document.getElementById('home-list').innerHTML = '<p class="empty">もんだいが まだ ないよ</p>';
+    return;
+  }
+
+  // Render home
+  function renderHome() {
+    const homeList = document.getElementById('home-list');
+    const modeA = allProblems.filter(p => p.mode === 'A');
+    const modeB = allProblems.filter(p => p.mode === 'B');
+    let html = '';
+    if (modeA.length) {
+      html += '<div class="section-label">🅰️ 2まいから 10こ さがすモード</div>';
+      html += '<div class="problem-grid">';
+      modeA.forEach(p => html += problemCard(p));
+      html += '</div>';
+    }
+    if (modeB.length) {
+      html += '<div class="section-label">🅱️ 5まい それぞれ ちがう ところを さがすモード</div>';
+      html += '<div class="problem-grid">';
+      modeB.forEach(p => html += problemCard(p));
+      html += '</div>';
+    }
+    homeList.innerHTML = html;
+    homeList.querySelectorAll('.problem-card').forEach(card => {
+      card.addEventListener('pointerdown', () => loadProblem(card.dataset.id));
+    });
+  }
+
+  function problemCard(p) {
+    const isCleared = cleared.has(p.id);
+    const label = TOPIC_LABELS[p.topic] || p.topic;
+    return `<div class="problem-card ${isCleared ? 'cleared' : ''}" data-id="${p.id}">
+      <div class="thumb"><img loading="lazy" src="data/problems/${p.id}/base.png" alt="${label}"></div>
+      <div class="info">
+        <span class="topic">${label}</span>
+        <span class="mode-badge ${p.mode}">${p.mode === 'A' ? '2まい・10こ' : '5まい・5こ'}</span>
+      </div>
+      <span class="cleared-mark">✓</span>
+    </div>`;
+  }
+
+  // ============== Drawing primitives (copied from test-playable) ==============
+  const LINE_COLOR = '#3a2d1a';
+
+  function drawOverlay(ctx, ov, baseImg) {
+    const [x, y, w, h] = ov.hitbox;
+    const cx = x + w/2, cy = y + h/2;
+    if (ov.kind === 'shape-add') {
+      const shape = ov.params.shape;
+      const color = ov.params.color;
+      const size = ov.params.size;
+      if (shape === 'flower') drawFlower(ctx, cx, cy, size, color);
+      else if (shape === 'butterfly') drawButterfly(ctx, cx, cy, size, color);
+      else if (shape === 'bird') drawBird(ctx, cx, cy, size, color);
+      else if (shape === 'lantern') drawLantern(ctx, cx, cy, size, color);
+      else if (shape === 'mushroom') drawMushroom(ctx, cx, cy, size, color);
+      else if (shape === 'leaf-maple') drawMapleLeaf(ctx, cx, cy, size, color);
+      else if (shape === 'leaf-ginkgo') drawGinkgoLeaf(ctx, cx, cy, size, color);
+      else if (shape === 'acorn') drawAcorn(ctx, cx, cy, size, color);
+      else if (shape === 'cloud') drawCloud(ctx, cx, cy, size, color);
+    }
+  }
+
+  function drawFlower(ctx, cx, cy, size, color) {
+    const r = size * 0.18, dist = size * 0.28;
+    ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 2;
+    for (let i = 0; i < 5; i++) {
+      const a = i * 2*Math.PI/5 - Math.PI/2;
+      const px = cx + Math.cos(a) * dist;
+      const py = cy + Math.sin(a) * dist;
+      ctx.fillStyle = color;
+      ctx.beginPath(); ctx.arc(px, py, r, 0, 2*Math.PI); ctx.fill(); ctx.stroke();
+    }
+    ctx.fillStyle = '#FFD93D';
+    ctx.beginPath(); ctx.arc(cx, cy, size*0.16, 0, 2*Math.PI); ctx.fill(); ctx.stroke();
+  }
+
+  function drawButterfly(ctx, cx, cy, size, color) {
+    ctx.fillStyle = color;
+    ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.ellipse(cx - size*0.22, cy, size*0.28, size*0.38, -0.35, 0, 2*Math.PI); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.ellipse(cx + size*0.22, cy, size*0.28, size*0.38, 0.35, 0, 2*Math.PI); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = LINE_COLOR;
+    ctx.beginPath(); ctx.ellipse(cx, cy, size*0.06, size*0.34, 0, 0, 2*Math.PI); ctx.fill();
+  }
+
+  function drawBird(ctx, cx, cy, size, color) {
+    ctx.fillStyle = color; ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.ellipse(cx, cy, size*0.35, size*0.22, 0, 0, 2*Math.PI); ctx.fill(); ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(cx - size*0.15, cy - size*0.1);
+    ctx.quadraticCurveTo(cx, cy - size*0.4, cx + size*0.2, cy - size*0.1);
+    ctx.quadraticCurveTo(cx, cy, cx - size*0.15, cy - size*0.1);
+    ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#FFA63D';
+    ctx.beginPath();
+    ctx.moveTo(cx + size*0.32, cy - size*0.04);
+    ctx.lineTo(cx + size*0.46, cy);
+    ctx.lineTo(cx + size*0.32, cy + size*0.04);
+    ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = LINE_COLOR;
+    ctx.beginPath(); ctx.arc(cx + size*0.18, cy - size*0.04, size*0.04, 0, 2*Math.PI); ctx.fill();
+  }
+
+  function drawLantern(ctx, cx, cy, size, color) {
+    ctx.fillStyle = color; ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 2;
+    const w = size * 0.5, h = size * 0.7;
+    ctx.beginPath(); ctx.ellipse(cx, cy, w/2, h/2, 0, 0, 2*Math.PI); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = LINE_COLOR;
+    ctx.fillRect(cx - w*0.4, cy - h*0.55, w*0.8, h*0.08);
+    ctx.fillRect(cx - w*0.4, cy + h*0.47, w*0.8, h*0.08);
+  }
+
+  function drawMushroom(ctx, cx, cy, size, color) {
+    ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 2;
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(cx, cy - size*0.05, size*0.4, Math.PI, 0);
+    ctx.lineTo(cx + size*0.4, cy + size*0.05);
+    ctx.lineTo(cx - size*0.4, cy + size*0.05);
+    ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#FFF9E6';
+    ctx.beginPath(); ctx.arc(cx - size*0.18, cy - size*0.05, size*0.07, 0, 2*Math.PI); ctx.fill();
+    ctx.beginPath(); ctx.arc(cx + size*0.15, cy - size*0.15, size*0.06, 0, 2*Math.PI); ctx.fill();
+    ctx.fillStyle = '#FBE8C6';
+    ctx.beginPath();
+    ctx.rect(cx - size*0.18, cy + size*0.05, size*0.36, size*0.3);
+    ctx.fill(); ctx.stroke();
+  }
+
+  function drawMapleLeaf(ctx, cx, cy, size, color) {
+    ctx.fillStyle = color; ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 2;
+    ctx.save(); ctx.translate(cx, cy);
+    const r = size * 0.5;
+    ctx.beginPath();
+    for (let i = 0; i < 5; i++) {
+      const a = i * (2*Math.PI/5) - Math.PI/2;
+      const x1 = Math.cos(a) * r;
+      const y1 = Math.sin(a) * r;
+      const a2 = a + Math.PI/5;
+      const x2 = Math.cos(a2) * r * 0.42;
+      const y2 = Math.sin(a2) * r * 0.42;
+      if (i === 0) ctx.moveTo(x1, y1); else ctx.lineTo(x1, y1);
+      ctx.lineTo(x2, y2);
+    }
+    ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0, r * 0.4); ctx.lineTo(0, r * 0.95); ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawGinkgoLeaf(ctx, cx, cy, size, color) {
+    ctx.fillStyle = color; ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 2;
+    ctx.save(); ctx.translate(cx, cy);
+    ctx.beginPath();
+    ctx.moveTo(0, size*0.35);
+    ctx.quadraticCurveTo(-size*0.5, -size*0.15, -size*0.3, -size*0.35);
+    ctx.quadraticCurveTo(-size*0.1, -size*0.25, 0, -size*0.3);
+    ctx.quadraticCurveTo(size*0.1, -size*0.25, size*0.3, -size*0.35);
+    ctx.quadraticCurveTo(size*0.5, -size*0.15, 0, size*0.35);
+    ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0, size*0.35); ctx.lineTo(0, size*0.55); ctx.stroke();
+    ctx.restore();
+  }
+
+  function drawAcorn(ctx, cx, cy, size, color) {
+    ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 2;
+    ctx.fillStyle = color;
+    ctx.beginPath(); ctx.ellipse(cx, cy + size*0.05, size*0.25, size*0.32, 0, 0, 2*Math.PI); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#6B5544';
+    ctx.beginPath(); ctx.arc(cx, cy - size*0.2, size*0.28, Math.PI, 0);
+    ctx.lineTo(cx + size*0.28, cy - size*0.15);
+    ctx.lineTo(cx - size*0.28, cy - size*0.15);
+    ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(cx, cy - size*0.4); ctx.lineTo(cx, cy - size*0.5); ctx.stroke();
+  }
+
+  function drawCloud(ctx, cx, cy, size, color) {
+    ctx.fillStyle = color; ctx.strokeStyle = LINE_COLOR; ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(cx - size*0.25, cy + size*0.05, size*0.22, 0, 2*Math.PI);
+    ctx.arc(cx, cy - size*0.05, size*0.28, 0, 2*Math.PI);
+    ctx.arc(cx + size*0.25, cy + size*0.05, size*0.22, 0, 2*Math.PI);
+    ctx.arc(cx + size*0.05, cy + size*0.18, size*0.20, 0, 2*Math.PI);
+    ctx.arc(cx - size*0.1, cy + size*0.18, size*0.18, 0, 2*Math.PI);
+    ctx.fill(); ctx.stroke();
+  }
+
+  // ============== Problem loading ==============
+  let currentProblem = null;
+  let modeAState = null, modeBState = null;
+  let currentBaseImg = null;
+
+  async function loadProblem(id) {
+    const p = allProblems.find(x => x.id === id);
+    if (!p) return;
+    try {
+      const [data, img] = await Promise.all([
+        fetch(`data/problems/${id}/overlays.json`).then(r => r.json()),
+        loadImg(`data/problems/${id}/base.png`),
+      ]);
+      currentProblem = data;
+      currentBaseImg = img;
+      if (data.mode === 'A') startModeA(data, img);
+      else startModeB(data, img);
+    } catch (e) {
+      console.error('load fail', e);
+      alert('もんだいを よみこめませんでした');
+    }
+  }
+
+  function loadImg(src) {
+    return new Promise(res => { const im = new Image(); im.onload = () => res(im); im.src = src; });
+  }
+
+  // ============== Mode A ==============
+  function startModeA(data, baseImg) {
+    modeAState = { overlays: data.overlays, found: new Set() };
+    const left = document.getElementById('canvas-a-left');
+    const right = document.getElementById('canvas-a-right');
+    left.width = IMG_W; left.height = IMG_H;
+    right.width = IMG_W; right.height = IMG_H;
+    left.getContext('2d').drawImage(baseImg, 0, 0, IMG_W, IMG_H);
+    const rctx = right.getContext('2d');
+    rctx.drawImage(baseImg, 0, 0, IMG_W, IMG_H);
+    data.overlays.forEach(ov => drawOverlay(rctx, ov, baseImg));
+    // clear found indicators
+    document.getElementById('svg-a-left').innerHTML = '';
+    document.getElementById('svg-a-right').innerHTML = '';
+    showScreen('mode-a');
+    document.getElementById('hd-title').textContent = (TOPIC_LABELS[data.topic] || data.topic);
+    updateProgressA();
+  }
+
+  function hookModeA() {
+    const HIT_TOL = 30;
+    document.getElementById('wrap-a-right').addEventListener('pointerdown', (ev) => {
+      if (!modeAState) return;
+      ev.preventDefault();
+      const canvas = document.getElementById('canvas-a-right');
+      const rect = canvas.getBoundingClientRect();
+      const cx = ev.clientX - rect.left;
+      const cy = ev.clientY - rect.top;
+      const sx = (cx / rect.width) * IMG_W;
+      const sy = (cy / rect.height) * IMG_H;
+      for (let i = 0; i < modeAState.overlays.length; i++) {
+        if (modeAState.found.has(i)) continue;
+        const [bx, by, bw, bh] = modeAState.overlays[i].hitbox;
+        if (sx >= bx - HIT_TOL && sx <= bx + bw + HIT_TOL
+            && sy >= by - HIT_TOL && sy <= by + bh + HIT_TOL) {
+          markFoundA(i);
+          return;
+        }
+      }
+      showBubble('もういちど みてみよう');
+    });
+  }
+
+  function markFoundA(idx) {
+    modeAState.found.add(idx);
+    const [bx, by, bw, bh] = modeAState.overlays[idx].hitbox;
+    const r = Math.max(bw, bh) / 2 + 16;
+    drawFoundCircle('svg-a-left', bx+bw/2, by+bh/2, r);
+    drawFoundCircle('svg-a-right', bx+bw/2, by+bh/2, r);
+    showBubble('みつけたね！');
+    updateProgressA();
+    if (modeAState.found.size >= modeAState.overlays.length) setTimeout(() => completeProblem(), 600);
+  }
+
+  function drawFoundCircle(svgId, cx, cy, r) {
+    const svg = document.getElementById(svgId);
+    const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c.setAttribute('cx', cx); c.setAttribute('cy', cy); c.setAttribute('r', r);
+    c.setAttribute('fill', 'none'); c.setAttribute('stroke', '#FF6B6B');
+    c.setAttribute('stroke-width', 8); c.setAttribute('opacity', '0.9');
+    svg.appendChild(c);
+  }
+
+  function updateProgressA() {
+    const el = document.getElementById('hd-progress');
+    el.style.display = 'block';
+    el.textContent = modeAState.found.size + ' / ' + modeAState.overlays.length;
+  }
+
+  // ============== Mode B ==============
+  function startModeB(data, baseImg) {
+    modeBState = { overlays: data.variants, cleared: new Set() };
+    const grid = document.getElementById('mode-b-grid');
+    grid.innerHTML = '';
+    data.variants.forEach((ov, idx) => {
+      const cell = document.createElement('div');
+      cell.className = 'mode-b-cell';
+      cell.dataset.idx = idx;
+      cell.innerHTML = `<div class="num">${idx+1}</div><div class="check">✓</div>`;
+      const canvas = document.createElement('canvas');
+      canvas.width = IMG_W; canvas.height = IMG_H;
+      cell.appendChild(canvas);
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(baseImg, 0, 0, IMG_W, IMG_H);
+      drawOverlay(ctx, ov, baseImg);
+      cell.addEventListener('pointerdown', (ev) => onTapB(ev, idx, canvas));
+      grid.appendChild(cell);
+    });
+    showScreen('mode-b');
+    document.getElementById('hd-title').textContent = (TOPIC_LABELS[data.topic] || data.topic);
+    updateProgressB();
+  }
+
+  function onTapB(ev, idx, canvas) {
+    if (!modeBState) return;
+    ev.preventDefault();
+    if (modeBState.cleared.has(idx)) return;
+    const rect = canvas.getBoundingClientRect();
+    const cx = ev.clientX - rect.left;
+    const cy = ev.clientY - rect.top;
+    const sx = (cx / rect.width) * IMG_W;
+    const sy = (cy / rect.height) * IMG_H;
+    const HIT_TOL = 50;
+    const ov = modeBState.overlays[idx];
+    const [bx, by, bw, bh] = ov.hitbox;
+    if (sx >= bx - HIT_TOL && sx <= bx + bw + HIT_TOL
+        && sy >= by - HIT_TOL && sy <= by + bh + HIT_TOL) {
+      modeBState.cleared.add(idx);
+      const cell = document.querySelector(`.mode-b-cell[data-idx="${idx}"]`);
+      cell.classList.add('cleared');
+      showBubble('せいかい！');
+      updateProgressB();
+      if (modeBState.cleared.size >= modeBState.overlays.length) setTimeout(() => completeProblem(), 600);
+    } else {
+      showBubble('ちがう ばしょ かな');
+    }
+  }
+
+  function updateProgressB() {
+    const el = document.getElementById('hd-progress');
+    el.style.display = 'block';
+    el.textContent = modeBState.cleared.size + ' / ' + modeBState.overlays.length;
+  }
+
+  // ============== Completion ==============
+  function completeProblem() {
+    if (!currentProblem) return;
+    cleared.add(currentProblem.id);
+    saveCleared();
+    const m = document.getElementById('modal');
+    document.getElementById('modal-title').textContent = 'よく できたね！';
+    document.getElementById('modal-stars').textContent = '⭐⭐⭐';
+    document.getElementById('modal-text').textContent =
+      currentProblem.mode === 'A' ? '10こ ぜんぶ みつけたよ' : '5まい ぜんぶ みつけたよ';
+    m.classList.add('show');
+  }
+
+  // ============== UI ==============
+  let bubbleTimer = null;
+  function showBubble(text) {
+    const b = document.getElementById('bubble');
+    b.textContent = text; b.classList.add('show');
+    clearTimeout(bubbleTimer);
+    bubbleTimer = setTimeout(() => b.classList.remove('show'), 1200);
+  }
+
+  function showScreen(id) {
+    document.querySelectorAll('.play-area, #home-section').forEach(s => {
+      s.classList.remove('active');
+      s.style.display = 'none';
+    });
+    if (id === 'home') {
+      document.getElementById('home-section').style.display = '';
+      document.getElementById('hd-back').classList.remove('show');
+      document.getElementById('hd-title').textContent = 'まちがいさがし';
+      document.getElementById('hd-progress').style.display = 'none';
+      modeAState = null; modeBState = null;
+      renderHome();
+    } else {
+      document.getElementById(id + '-section').style.display = 'block';
+      document.getElementById(id + '-section').classList.add('active');
+      document.getElementById('hd-back').classList.add('show');
+    }
+  }
+
+  function goToNextProblem() {
+    if (!currentProblem) return;
+    const idx = allProblems.findIndex(p => p.id === currentProblem.id);
+    const next = allProblems[idx + 1];
+    if (next) loadProblem(next.id);
+    else showScreen('home');
+  }
+
+  document.getElementById('hd-back').addEventListener('pointerdown', () => {
+    document.getElementById('modal').classList.remove('show');
+    showScreen('home');
+  });
+  document.getElementById('modal-next').addEventListener('pointerdown', () => {
+    document.getElementById('modal').classList.remove('show');
+    goToNextProblem();
+  });
+  document.getElementById('modal-home').addEventListener('pointerdown', () => {
+    document.getElementById('modal').classList.remove('show');
+    showScreen('home');
+  });
+
+  // Init
+  hookModeA();
+  renderHome();
+  showScreen('home');
+})();
+</script>
+</body>
+</html>

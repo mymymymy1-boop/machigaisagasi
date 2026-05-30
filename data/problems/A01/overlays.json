@@ -1,0 +1,170 @@
+{
+  "id": "A01",
+  "mode": "A",
+  "topic": "shichi-go-san",
+  "baseImg": "base.png",
+  "imgW": 1024,
+  "imgH": 1536,
+  "overlays": [
+    {
+      "id": "a1",
+      "hint": "acorn added",
+      "hitbox": [
+        50,
+        50,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "acorn",
+        "size": 39,
+        "color": "#6B5544"
+      }
+    },
+    {
+      "id": "a2",
+      "hint": "leaf-ginkgo added",
+      "hitbox": [
+        600,
+        80,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "leaf-ginkgo",
+        "size": 32,
+        "color": "#C49751"
+      }
+    },
+    {
+      "id": "a3",
+      "hint": "butterfly added",
+      "hitbox": [
+        700,
+        650,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "butterfly",
+        "size": 38,
+        "color": "#B8743A"
+      }
+    },
+    {
+      "id": "a4",
+      "hint": "cloud added",
+      "hitbox": [
+        300,
+        550,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "cloud",
+        "size": 33,
+        "color": "#FFFDF2"
+      }
+    },
+    {
+      "id": "a5",
+      "hint": "mushroom added",
+      "hitbox": [
+        800,
+        90,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "mushroom",
+        "size": 34,
+        "color": "#A8755C"
+      }
+    },
+    {
+      "id": "a6",
+      "hint": "butterfly added",
+      "hitbox": [
+        100,
+        500,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "butterfly",
+        "size": 32,
+        "color": "#C87B3C"
+      }
+    },
+    {
+      "id": "a7",
+      "hint": "acorn added",
+      "hitbox": [
+        500,
+        300,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "acorn",
+        "size": 38,
+        "color": "#6B5544"
+      }
+    },
+    {
+      "id": "a8",
+      "hint": "leaf-ginkgo added",
+      "hitbox": [
+        950,
+        100,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "leaf-ginkgo",
+        "size": 33,
+        "color": "#C49751"
+      }
+    },
+    {
+      "id": "a9",
+      "hint": "cloud added",
+      "hitbox": [
+        400,
+        70,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "cloud",
+        "size": 38,
+        "color": "#FAF3E0"
+      }
+    },
+    {
+      "id": "a10",
+      "hint": "leaf-maple added",
+      "hitbox": [
+        100,
+        200,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "leaf-maple",
+        "size": 37,
+        "color": "#B85439"
+      }
+    }
+  ]
+}

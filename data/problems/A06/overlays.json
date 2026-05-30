@@ -1,0 +1,170 @@
+{
+  "id": "A06",
+  "mode": "A",
+  "topic": "oshougatsu",
+  "baseImg": "base.png",
+  "imgW": 1024,
+  "imgH": 1536,
+  "overlays": [
+    {
+      "id": "a1",
+      "hint": "bird added",
+      "hitbox": [
+        200,
+        100,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "bird",
+        "size": 40,
+        "color": "#9B7A65"
+      }
+    },
+    {
+      "id": "a2",
+      "hint": "mushroom added",
+      "hitbox": [
+        950,
+        300,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "mushroom",
+        "size": 35,
+        "color": "#8E6748"
+      }
+    },
+    {
+      "id": "a3",
+      "hint": "mushroom added",
+      "hitbox": [
+        450,
+        100,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "mushroom",
+        "size": 33,
+        "color": "#A8755C"
+      }
+    },
+    {
+      "id": "a4",
+      "hint": "cloud added",
+      "hitbox": [
+        750,
+        100,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "cloud",
+        "size": 32,
+        "color": "#FAF3E0"
+      }
+    },
+    {
+      "id": "a5",
+      "hint": "leaf-maple added",
+      "hitbox": [
+        550,
+        350,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "leaf-maple",
+        "size": 34,
+        "color": "#B85439"
+      }
+    },
+    {
+      "id": "a6",
+      "hint": "flower added",
+      "hitbox": [
+        900,
+        50,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "flower",
+        "size": 37,
+        "color": "#E89BAA"
+      }
+    },
+    {
+      "id": "a7",
+      "hint": "cloud added",
+      "hitbox": [
+        600,
+        50,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "cloud",
+        "size": 40,
+        "color": "#FFFDF2"
+      }
+    },
+    {
+      "id": "a8",
+      "hint": "butterfly added",
+      "hitbox": [
+        700,
+        300,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "butterfly",
+        "size": 33,
+        "color": "#C87B3C"
+      }
+    },
+    {
+      "id": "a9",
+      "hint": "flower added",
+      "hitbox": [
+        300,
+        50,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "flower",
+        "size": 37,
+        "color": "#D69A9A"
+      }
+    },
+    {
+      "id": "a10",
+      "hint": "bird added",
+      "hitbox": [
+        100,
+        500,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "bird",
+        "size": 33,
+        "color": "#9B7A65"
+      }
+    }
+  ]
+}

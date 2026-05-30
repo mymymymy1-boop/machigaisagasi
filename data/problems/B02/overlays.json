@@ -1,0 +1,95 @@
+{
+  "id": "B02",
+  "mode": "B",
+  "topic": "asa-no-shokutaku",
+  "baseImg": "base.png",
+  "imgW": 1024,
+  "imgH": 1536,
+  "variants": [
+    {
+      "id": "b1",
+      "hint": "acorn added",
+      "hitbox": [
+        950,
+        300,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "acorn",
+        "size": 33,
+        "color": "#8B6F47"
+      },
+      "label": "1まいめ"
+    },
+    {
+      "id": "b2",
+      "hint": "leaf-maple added",
+      "hitbox": [
+        50,
+        1100,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "leaf-maple",
+        "size": 37,
+        "color": "#C95C44"
+      },
+      "label": "2まいめ"
+    },
+    {
+      "id": "b3",
+      "hint": "flower added",
+      "hitbox": [
+        50,
+        800,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "flower",
+        "size": 39,
+        "color": "#F0A8B5"
+      },
+      "label": "3まいめ"
+    },
+    {
+      "id": "b4",
+      "hint": "bird added",
+      "hitbox": [
+        950,
+        800,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "bird",
+        "size": 33,
+        "color": "#9B7A65"
+      },
+      "label": "4まいめ"
+    },
+    {
+      "id": "b5",
+      "hint": "leaf-maple added",
+      "hitbox": [
+        500,
+        50,
+        50,
+        50
+      ],
+      "kind": "shape-add",
+      "params": {
+        "shape": "leaf-maple",
+        "size": 38,
+        "color": "#C95C44"
+      },
+      "label": "5まいめ"
+    }
+  ]
+}
